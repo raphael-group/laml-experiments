@@ -1,0 +1,18 @@
+Preliminary results for barcode 10 of TLSCL (June 1st 2023)
+Included files:
++ Input_data: (copied from Palash's directory on the server /n/fs/ragr-data/users/palash/multi-linTracer/data/tlsc/input)
+    + bar10_character_matrix.csv: character matrix; used to produce all trees except for bar10_CassILP.nwk
+    + bar10_BenLaw_character_matrix.txt: character matrix obtained from Richard (Ben Law's), used to produce bar10_CassILP.nwk
+    + bar10_mutation_prior.csv: prior mutation probabilities
++ Competing_methods:
+    + bar10_startlenni.nwk: STARTLE-NNI tree, computed by Gillian. A copy from the server /n/fs/ragr-research/projects/problin_experiments/Real_biodata/run_tlscl/out_startle_bar10/startlenni_tree.newick
+      * To reproduce: use the script (will run STARTLE for all barcodes): /n/fs/ragr-research/projects/problin_experiments/Real_biodata/run_tlscl/run_startle.sh , which calls /n/fs/ragr-research/projects/problin_experiments/Real_biodata/scripts/run_startle_tlscl_collapse.pl. The script first produces a fully resolved tree than collapses mutationless branches
+    + bar10_CassILP.nwk: Cassiopeia-ILP tree, obtained from Richard. A copy from the server /n/fs/ragr-research/projects/problin_experiments/Real_biodata/run_tlscl/process_bar10/cass-ilp/Bar10_newick_noMutationlessEdges_Labeled.nwk
+      * NOTE: this tree has only 305 leaves, smaller than the total number of cells (316)
+      * To reproduce: (according Richard) max potential graph layer size of 1000 (default of Cassiopeia is 10000)
++ Problin_trees:
+    + bar10_multiProgen.nwk: problin results with multi progenitor constraint on tree search. Enforce ultrametric 
+    * To reproduce: ...
+    Final step: "Replacement"- remove the missing groups other than "missing_3" (6 cells in total), add them back to the tree so that the likelihood is optimized (arbitrary order). Re-optimize branch lengths, phi, and nu afterward.
+    + bar10_noConstraint.nwk: problin results without multi progenitor constraint on tree search. Enforce ultrametric
+    * To reproduce: ...
