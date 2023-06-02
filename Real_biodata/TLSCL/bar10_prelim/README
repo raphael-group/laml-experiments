@@ -12,7 +12,23 @@ Included files:
       * To reproduce: (according Richard) max potential graph layer size of 1000 (default of Cassiopeia is 10000)
 + Problin_trees:
     + bar10_multiProgen.nwk: problin results with multi progenitor constraint on tree search. Enforce ultrametric 
-    * To reproduce: ...
-    Final step: "Replacement"- remove the missing groups other than "missing_3" (6 cells in total), add them back to the tree so that the likelihood is optimized (arbitrary order). Re-optimize branch lengths, phi, and nu afterward.
+    * To reproduce: 
+        - Step 1-2: Shared with below.
+        - Step 3: Cut independent clades from the t3_r4 tree, and run problin_toposearch with ultrametric constraint only on each of the independent clades. --topology_search --ultrametric --maxIters 2500.
+            directory: /n/fs/ragr-research/projects/problin_experiments/Real_biodata/run_tlscl/process_bar10/runjobs/t3_indep_clades
+        - Step 4: Stitch the optimized clades together to a root with branch lengths 0 (multi-progenitor model). 
+        - Step 5: collapse short branches. We plotted the histogram (30 bins) of branch lengths, and chose a threshold of 0.007 to collapse short branches. Recompute the likelihood. 
+        - Step 6: "Replacement"- remove the missing groups other than "missing_3" (6 cells in total), add them back to the tree so that the likelihood is optimized (arbitrary order). Re-optimize branch lengths, phi, and nu afterward.
     + bar10_noConstraint.nwk: problin results without multi progenitor constraint on tree search. Enforce ultrametric
-    * To reproduce: ...
+    * To reproduce: 
+        - Step 1: build the t3 tree with cluster constraints.
+        - Step 2: run problin toposearch with cluster constraints (10 replicates):  --resolve_search --ultrametric --maxruntime 604800. We chose rep4, which had the best likelihood (11508).
+            directory: /n/fs/ragr-research/projects/problin_experiments/Real_biodata/run_tlscl/process_bar10/runjobs/t3_trees
+        - Step 3: run problin toposearch with no constraints except ultrametric (10 replicates): --topology_search --ultrametric --maxIters 250. We chose rep0, which had the best likelihood (10862).
+            directory: /n/fs/ragr-research/projects/problin_experiments/Real_biodata/run_tlscl/process_bar10/runjobs/t3_r4_jumpstart
+        - Step 4: run problin toposearch with no constraints except ultrametric again (10 replicates): -topology_search --ultrametric --maxIters 2500. We chose rep rep5, which had the best likelihood (10,447).
+            directory: /n/fs/ragr-research/projects/problin_experiments/Real_biodata/run_tlscl/process_bar10/runjobs/t3_r4_r0_jumpstart_parsub/EM_problin_v3_r5.txt
+        - Step 5: collapse short branches. We plotted the histogram of branch lengths, and chose a threshold of 0.01 to collapse short branches. Recompute the likelihood.
+
+
+
