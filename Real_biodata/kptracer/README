@@ -1,0 +1,17 @@
+Result files for KPTracer on Sample 3724_NT_All (Jul 13, 2023)
+    Includes three folders: pruned_1461, pruned_resolved, published
+
+    * pruned_1461/ 
+        - `cell_names.txt`: the names of all 1461 cell names randomly chosen as representatives for an duplicated sequences
+        - `character_matrix_dedup.csv`: corresponding deduplicated character matrix
+        - `*.nwk`: the Startle-NNI, Cassiopeia-Hybrid and Problin trees pruned to the same set of 1461 cells. The Problin tree was inferred with Problin v0.3p using the pruned Startle-NNI tree as a starting tree, with 1 initial, and with the ultrametric flag.
+
+    * pruned_resolved/
+        - `*_21108.nwk`: For each of the three pruned trees, for each sequence with pruned identical sequences, add all identical cells back into the tree, in a polytomy. 
+
+    * published/
+        - `*.nwk`: The published Startle-NNI and Cassiopeia-Hybrid trees. 
+
+    * notebooks/
+        - `metastasis_story_clean.ipynb`: This notebook was adapted from the Startle-NNI authors' to compute the number of migrations given a tree topology.
+
