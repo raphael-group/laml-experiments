@@ -1,8 +1,9 @@
 Result files for KPTracer on Sample 3724_NT_All (Jul 13, 2023)
+    * 3724_NT_All_character_matrix.txt: the full character matrix 
+    * 3724_NT_All_priors_norm.pkl: the prior on per-site-per-state rate
     Includes three folders: pruned_1461, pruned_resolved, published
-
     * pruned_1461/ 
-        - `cell_names.txt`: the names of all 1461 cell names randomly chosen as representatives for an duplicated sequences
+        - `cell_names.txt`: the names of all 1461 cell names randomly chosen as representatives for duplicated sequences
         - `character_matrix_dedup.csv`: corresponding deduplicated character matrix
         - `*.nwk`: the Startle-NNI, Cassiopeia-Hybrid and Problin trees pruned to the same set of 1461 cells. The Problin tree was inferred with Problin v0.3p using the pruned Startle-NNI tree as a starting tree, with 1 initial, and with the ultrametric flag.
 
