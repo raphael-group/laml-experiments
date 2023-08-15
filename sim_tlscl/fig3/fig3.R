@@ -66,25 +66,55 @@ ggplot(df1[df1$Method != "true",], aes(x=nu, y=phi, color=Method,group=Method,sh
   scale_shape_manual(values = c(0, 2, 6, 9, 10)) +
   #annotate("text", x=x_s, y=y_s, label=labels, size=8/.pt) + 
   
-  annotate("text", x=x_s, y=y_s + 0.01, ymin=0,ymax=0, label=labels_cass, size=8/.pt) +
-  annotate("pointrange", x=x_s - 0.021, y=y_s + 0.01, ymin=0,ymax=0, color="pink", size=0.25) +
+  annotate("text", x=x_s + 0.005, y=y_s + 0.01, label=labels_cass, size=8/.pt) +
+  #annotate("pointrange", x=x_s - 0.021, y=y_s + 0.01, ymin=0,ymax=0, color="pink", size=0.25) +
+  # c(0, 2, 6, 9, 10)
+  annotate("pointrange", x=0.420 - 0.021, y=0.015 + 0.01, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
+  annotate("pointrange", x=0.350 - 0.021, y=0.080 + 0.01, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
+  annotate("pointrange", x=0.235 - 0.021, y=0.144 + 0.01, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
+  annotate("pointrange", x=0.150 - 0.021, y=0.200 + 0.01, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
+  annotate("pointrange", x=0.045 - 0.021, y=0.250 + 0.01, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
   
-  annotate("text", x=x_s, y=y_s, ymin=0,ymax=0, label=labels_startle, size=8/.pt) +
-  annotate("pointrange", x=x_s - 0.021, y=y_s, ymin=0,ymax=0, color="lightgreen", size=0.25) +
+  annotate("text", x=x_s + 0.005, y=y_s, label=labels_startle, size=8/.pt) +
+  #annotate("pointrange", x=x_s - 0.021, y=y_s, ymin=0,ymax=0, color="lightgreen", size=0.25) +
+  annotate("pointrange", x=0.420 - 0.021, y=0.015, ymin=0,ymax=0, color="lightgreen", size=0.25) +
+  annotate("pointrange", x=0.045 - 0.021, y=0.250, ymin=0,ymax=0, color="lightgreen", size=0.25) +
+  annotate("pointrange", x=0.350 - 0.021, y=0.080, ymin=0,ymax=0, color="lightgreen", size=0.25) +
+  annotate("pointrange", x=0.235 - 0.021, y=0.144, ymin=0,ymax=0, color="lightgreen", size=0.25) +
+  annotate("pointrange", x=0.150 - 0.021, y=0.200, ymin=0,ymax=0, color="lightgreen", size=0.25) +
   
-  annotate("text", x=x_s, y=y_s - 0.01, ymin=0,ymax=0, label=labels_problin, size=8/.pt, fontface=2) +
-  annotate("pointrange", x=x_s - 0.021, y=y_s - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("text", x=x_s + 0.005, y=y_s - 0.01, label=labels_problin, size=8/.pt, fontface=2) +
+  #annotate("pointrange", x=x_s - 0.021, y=y_s - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("pointrange", x=0.420 - 0.021, y=0.015 - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("pointrange", x=0.045 - 0.021, y=0.250 - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("pointrange", x=0.350 - 0.021, y=0.080 - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("pointrange", x=0.235 - 0.021, y=0.144 - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("pointrange", x=0.150 - 0.021, y=0.200 - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  
   geom_point(data=df1[df1$Method == "true",],aes(x=nu,y=phi,group=Method,shape=modelcondition),color="black",size=3.5, fill="black") +
   xlab("Heritable Missing Rate") + 
   ylab("Dropout Missing Rate") +
   theme_classic() +
-  theme(legend.position = c(0.88, 0.7), legend.direction="vertical") + #c(0.2, 0.9), legend.direction = "horizontal", legend.justification="left") + #c(0.88,0.7)) +
+  guides(shape=guide_legend(nrow=3,order=1), color="none") +
+  
+  annotate("pointrange", x=0.31, y=0.2, ymin=0, ymax=0, color="pink", size=0.25) +
+  annotate("pointrange", x=0.31, y=0.18, ymin=0, ymax=0, color="lightgreen", size=0.25) +
+  annotate("pointrange", x=0.31, y=0.16, ymin=0, ymax=0, color="lightblue", size=0.25) +
+  annotate("text", x=0.4, y=0.2, ymin=0, ymax=0, label="Cassiopeia-Greedy", size=8/.pt, fontface=1) +
+  annotate("text", x=0.37, y=0.18, ymin=0, ymax=0, label="Startle-NNI", size=8/.pt, fontface=1) +
+  annotate("text", x=0.36, y=0.16, ymin=0, ymax=0, label="ProbLin", size=8/.pt, fontface=1) +
+  
+  #guides(shape=guide_legend(nrow=3,order=1), color=guide_legend(nrow=3, order=2, label.hjust=1)) +
+  #theme(legend.position = 'right') +
+  #theme(legend.position="None") + 
+  theme(legend.position = c(0.75, 0.85), legend.direction="vertical")  +
+  #theme(legend.position=c(0.2, 0.4), legend.direction = "horizontal") + #c(0.88,0.7)) +
   theme(legend.title = element_blank()) +
   coord_cartesian(xlim=c(0,0.45), clip="off") +
   annotate("text", x=-0.05, y=0.28, label="(B)", clip="off", size=5)
+  #guides(color = guide_legend(nrow = 2))
 
-
-ggsave("figures/sim_tlscl_estparams.pdf", width=5, height=5)
+ggsave("sim_tlscl_estparams.pdf", width=4, height=4)
 
 # RF DISTANCE PLOT
 
@@ -103,7 +133,7 @@ d$truetopo_LLH <- as.numeric(d$truetopo_LLH)
 d[complete.cases(d), ]
 df <- data.frame((100-d$true_phi)/100, d$cassg_rf, d$startle_rf, d$problin_rf)
 #df <- data.frame((100-d$true_phi)/100, d$cassg_rf, d$startle_rf, d$problin_rf, d_ultra_merged$NoConstraint)
-colnames(df) <- c("sProp", "Cassiopeia-Greedy", "Startle", "Problin")
+colnames(df) <- c("sProp", "Cassiopeia-Greedy", "Startle-NNI", "Problin")
 
 #colnames(df) <- c("sProp", "Cassiopeia-Greedy", "Startle", "Problin", "Problin (No Ultrametric)")
 df <- melt(df, "sProp")
@@ -119,18 +149,43 @@ df['modelcondition'] <- ifelse(df$sProp == 0, "s0d100",
 df$modelcondition
 xx = unique(df$sProp*100)
 labels = unique(df$modelcondition)
-ggplot(df, aes(x=sProp*100, y=value, color=Method))  + stat_summary(size=0.2) + 
-  geom_line(stat='summary') + 
-  ylab("RF Error") + 
-  xlab("Heritable Missing (%)") +
-  annotate("text", x=xx, y=0.0, label=labels, size=8/.pt) + 
-  theme_classic() + 
-  theme(legend.position = c(0.25,0.25)) +
-  theme(legend.title = element_blank()) +
-  coord_cartesian(xlim=c(0,100), clip="off") +
-  annotate("text", x=-11, y=0.7, label="(A)", size=5)
+#ggplot(df, aes(x=sProp*100, y=value, color=Method))  + stat_summary(size=0.2) + 
+#  geom_line(stat='summary') + 
+#  ylab("RF Error") + 
+#  xlab("Heritable Missing (%)") +
+#  annotate("text", x=xx, y=0.0, label=labels, size=8/.pt) + 
+#  theme_classic() + 
+#  theme(legend.position = c(0.25,0.25)) +
+#  theme(legend.title = element_blank()) +
+#  coord_cartesian(xlim=c(0,100), clip="off") +
+#  annotate("text", x=-11, y=0.7, label="(A)", size=5)
 #theme(legend.position= "none")
 # theme(legend.position = "bottom", legend.title = element_blank())
 
-ggsave("figures/sim_tlscl_rfdist.pdf", width=5, height=5)
+ggplot(df, aes(x=sProp/4, y=value, color=Method))  + stat_summary(size=0.2) + 
+  geom_line(stat='summary') + 
+  ylab("RF Error") + 
+  xlab("Heritable Missing (%)") +
+  annotate("text", x=xx/400 + 0.004, y=0.0, label=labels, size=8/.pt) + 
+  theme_classic() + 
+  theme(legend.position = c(0.25,0.25)) +
+  theme(legend.title = element_blank()) +
+  coord_cartesian(xlim=c(0,0.254), clip="off") +
+  annotate("text", x=-11, y=0.7, label="(A)", size=5)
+
+
+ggsave("sim_tlscl_rfdist.pdf", width=4, height=4)
 # as dropout decreases, so does startle rf distance from true tree
+
+
+mean(df[df$Method == 'Problin' & df$modelcondition == 's0d100',]$value)
+mean(df[df$Method == 'Problin' & df$modelcondition == 's100d0',]$value)
+
+mean(df[df$Method == 'Startle-NNI' & df$modelcondition == 's0d100',]$value)
+mean(df[df$Method == 'Startle-NNI' & df$modelcondition == 's100d0',]$value)
+
+
+
+
+
+
