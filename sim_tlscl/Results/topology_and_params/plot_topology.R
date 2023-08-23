@@ -28,8 +28,9 @@ xx = unique(rfdist$sProp*100)
 labels = unique(rfdist$modelcondition[,1])
 labels
 labels = c("h0d100", "h100d0", "h25d75", "h50d50", "h75d25")
-rfdist=rfdist[,c(1,2,3,5,4,6,7)]
-colnames(rfdist) = c('tcount', 'ModelCond', 'Cass-greedy', 'Startle-NNI', 'ProbLin', 'modelcondition', 'sProp')
+head(rfdist)
+rfdist=rfdist[,c(1,2,3,4,6,5,7,8)]
+colnames(rfdist) = c('tcount', 'ModelCond', 'Cass-greedy', 'Neighbor-Joining', 'Startle-NNI', 'ProbLin', 'modelcondition', 'sProp')
 df = melt(rfdist, id=c("tcount", "sProp", "modelcondition", "ModelCond"))
 
 ggplot(df, aes(x=sProp/4, y=value, color=variable)) +
