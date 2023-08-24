@@ -1,4 +1,4 @@
-setwd("/Users/gc3045/problin_experiments/sim_tlscl/fig3")
+setwd("/Users/gc3045/problin_experiments/sim_tlscl/Results/topology_and_params")
 library(extrafont)
 font_import() 
 loadfonts(device="pdf")
@@ -20,13 +20,13 @@ head(d)
 
 write.csv(d, "problintopo_estmissingparams_merged.txt")
 
-df1 <- data.frame(d$modelcondition, d$cassg_phi, d$startle_phi, d$problin_phi, d$true_phi_value, d$rep)
-colnames(df1) <- c("modelcondition", "Cassiopeia-\nGreedy","Startle", "Problin", "true","rep")
+df1 <- data.frame(d$modelcondition, d$cassg_phi, d$nj_phi, d$startle_phi, d$problin_phi, d$true_phi_value, d$rep)
+colnames(df1) <- c("modelcondition", "Cassiopeia-\nGreedy", "Neighbor-Joining", "Startle-NNI", "Problin", "true","rep")
 df1 <- melt(df1, c("modelcondition","rep"))
 colnames(df1) <- c("modelcondition","rep", "Method", "phi")
 
-df2 <- data.frame(d$modelcondition, d$cassg_nu, d$startle_nu, d$problin_nu, d$true_nu_value,d$rep)
-colnames(df2) <- c("modelcondition", "Cassiopeia-\nGreedy", "Startle", "Problin", "true","rep")
+df2 <- data.frame(d$modelcondition, d$cassg_nu, d$nj_nu, d$startle_nu, d$problin_nu, d$true_nu_value,d$rep)
+colnames(df2) <- c("modelcondition", "Cassiopeia-\nGreedy", "Neighbor-Joining", "Startle-NNI", "Problin", "true","rep")
 df2 <- melt(df2, c("modelcondition","rep"))
 colnames(df2) <- c("modelcondition","rep", "Method", "nu")
 
@@ -56,6 +56,7 @@ labels = c('0.0407\n0.0431\n**0.0160**',
 labels_cass = c('0.042', '0.006', '0.053', '0.035', '0.021')
 labels_startle = c('0.051', '0.005', '0.040', '0.021', '0.016')
 labels_problin = c('0.016', '0.005', '0.027', '0.018', '0.016')
+labels_nj = c('0.047', '0.005', '0.056', '0.025', '0.016')
 #labels=c("a", "b", "c", "d", "e")
 # (a = s100d0, b = s0d100, c = s75d25, d = s50d50, e = s25d75)
 
@@ -70,30 +71,39 @@ ggplot(df1[df1$Method != "true",], aes(x=nu, y=phi, color=Method,group=Method,sh
   scale_shape_manual(values = c(0, 2, 6, 9, 10)) +
   #annotate("text", x=x_s, y=y_s, label=labels, size=8/.pt) + 
   
-  annotate("text", x=x_s + 0.005, y=y_s + 0.01, label=labels_cass, size=8/.pt) +
+  annotate("text", x=x_s + 0.005, y=y_s + 0.02, label=labels_cass, size=8/.pt) +
   #annotate("pointrange", x=x_s - 0.021, y=y_s + 0.01, ymin=0,ymax=0, color="pink", size=0.25) +
   # c(0, 2, 6, 9, 10)
-  annotate("pointrange", x=0.420 - 0.021, y=0.015 + 0.01, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
-  annotate("pointrange", x=0.350 - 0.021, y=0.080 + 0.01, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
-  annotate("pointrange", x=0.235 - 0.021, y=0.144 + 0.01, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
-  annotate("pointrange", x=0.150 - 0.021, y=0.200 + 0.01, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
-  annotate("pointrange", x=0.045 - 0.021, y=0.250 + 0.01, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
+  annotate("pointrange", x=0.420 - 0.021, y=0.015 + 0.02, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
+  annotate("pointrange", x=0.350 - 0.021, y=0.080 + 0.02, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
+  annotate("pointrange", x=0.235 - 0.021, y=0.144 + 0.02, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
+  annotate("pointrange", x=0.150 - 0.021, y=0.200 + 0.02, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
+  annotate("pointrange", x=0.045 - 0.021, y=0.250 + 0.02, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
+  
+  annotate("text", x=x_s + 0.005, y=y_s + 0.01, label=labels_nj, size=8/.pt) +
+  #annotate("pointrange", x=x_s - 0.021, y=y_s + 0.01, ymin=0,ymax=0, color="pink", size=0.25) +
+  # c(0, 2, 6, 9, 10)
+  annotate("pointrange", x=0.420 - 0.021, y=0.015 + 0.01, ymin=0,ymax=0, color="lightgreen", size=0.25, shape=10) +
+  annotate("pointrange", x=0.350 - 0.021, y=0.080 + 0.01, ymin=0,ymax=0, color="lightgreen", size=0.25, shape=10) +
+  annotate("pointrange", x=0.235 - 0.021, y=0.144 + 0.01, ymin=0,ymax=0, color="lightgreen", size=0.25, shape=10) +
+  annotate("pointrange", x=0.150 - 0.021, y=0.200 + 0.01, ymin=0,ymax=0, color="lightgreen", size=0.25, shape=10) +
+  annotate("pointrange", x=0.045 - 0.021, y=0.250 + 0.01, ymin=0,ymax=0, color="lightgreen", size=0.25, shape=10) +
   
   annotate("text", x=x_s + 0.005, y=y_s, label=labels_startle, size=8/.pt) +
   #annotate("pointrange", x=x_s - 0.021, y=y_s, ymin=0,ymax=0, color="lightgreen", size=0.25) +
-  annotate("pointrange", x=0.420 - 0.021, y=0.015, ymin=0,ymax=0, color="lightgreen", size=0.25) +
-  annotate("pointrange", x=0.045 - 0.021, y=0.250, ymin=0,ymax=0, color="lightgreen", size=0.25) +
-  annotate("pointrange", x=0.350 - 0.021, y=0.080, ymin=0,ymax=0, color="lightgreen", size=0.25) +
-  annotate("pointrange", x=0.235 - 0.021, y=0.144, ymin=0,ymax=0, color="lightgreen", size=0.25) +
-  annotate("pointrange", x=0.150 - 0.021, y=0.200, ymin=0,ymax=0, color="lightgreen", size=0.25) +
+  annotate("pointrange", x=0.420 - 0.021, y=0.015, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("pointrange", x=0.045 - 0.021, y=0.250, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("pointrange", x=0.350 - 0.021, y=0.080, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("pointrange", x=0.235 - 0.021, y=0.144, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("pointrange", x=0.150 - 0.021, y=0.200, ymin=0,ymax=0, color="lightblue", size=0.25) +
   
   annotate("text", x=x_s + 0.005, y=y_s - 0.01, label=labels_problin, size=8/.pt, fontface=2) +
   #annotate("pointrange", x=x_s - 0.021, y=y_s - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
-  annotate("pointrange", x=0.420 - 0.021, y=0.015 - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
-  annotate("pointrange", x=0.045 - 0.021, y=0.250 - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
-  annotate("pointrange", x=0.350 - 0.021, y=0.080 - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
-  annotate("pointrange", x=0.235 - 0.021, y=0.144 - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
-  annotate("pointrange", x=0.150 - 0.021, y=0.200 - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("pointrange", x=0.420 - 0.021, y=0.015 - 0.01, ymin=0,ymax=0, color="purple", size=0.25) +
+  annotate("pointrange", x=0.045 - 0.021, y=0.250 - 0.01, ymin=0,ymax=0, color="purple", size=0.25) +
+  annotate("pointrange", x=0.350 - 0.021, y=0.080 - 0.01, ymin=0,ymax=0, color="purple", size=0.25) +
+  annotate("pointrange", x=0.235 - 0.021, y=0.144 - 0.01, ymin=0,ymax=0, color="purple", size=0.25) +
+  annotate("pointrange", x=0.150 - 0.021, y=0.200 - 0.01, ymin=0,ymax=0, color="purple", size=0.25) +
   
   geom_point(data=df1[df1$Method == "true",],aes(x=nu,y=phi,group=Method,shape=modelcondition),color="black",size=3.5, fill="black") +
   xlab("Heritable Missing Rate") + 
@@ -101,13 +111,16 @@ ggplot(df1[df1$Method != "true",], aes(x=nu, y=phi, color=Method,group=Method,sh
   theme_classic() +
   guides(shape=guide_legend(nrow=3,order=1), color="none") +
   
-  annotate("pointrange", x=0.31, y=0.2, ymin=0, ymax=0, color="pink", size=0.25) +
-  annotate("pointrange", x=0.31, y=0.18, ymin=0, ymax=0, color="lightgreen", size=0.25) +
-  annotate("pointrange", x=0.31, y=0.16, ymin=0, ymax=0, color="lightblue", size=0.25) +
-  annotate("text", x=0.4, y=0.2, ymin=0, ymax=0, label="Cassiopeia-Greedy", size=8/.pt, fontface=1) +
+  annotate("pointrange", x=0.31, y=0.22, ymin=0, ymax=0, color="pink", size=0.25) +
+  annotate("pointrange", x=0.31, y=0.2, ymin=0, ymax=0, color="lightgreen", size=0.25) +
+  annotate("pointrange", x=0.31, y=0.18, ymin=0, ymax=0, color="lightblue", size=0.25) +
+  annotate("pointrange", x=0.31, y=0.16, ymin=0, ymax=0, color="purple", size=0.25) +
+  
+  annotate("text", x=0.4, y=0.22, ymin=0, ymax=0, label="Cassiopeia-Greedy", size=8/.pt, fontface=1) +
+  annotate("text", x=0.4, y=0.2, ymin=0, ymax=0, label="Neighbor-Joining", size=8/.pt, fontface=1) +
   annotate("text", x=0.374, y=0.18, ymin=0, ymax=0, label="Startle-NNI", size=8/.pt, fontface=1) +
   annotate("text", x=0.36, y=0.16, ymin=0, ymax=0, label="ProbLin", size=8/.pt, fontface=1) +
-  
+
   #guides(shape=guide_legend(nrow=3,order=1), color=guide_legend(nrow=3, order=2, label.hjust=1)) +
   #theme(legend.position = 'right') +
   #theme(legend.position="None") + 
