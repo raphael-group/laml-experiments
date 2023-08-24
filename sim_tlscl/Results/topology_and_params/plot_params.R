@@ -116,15 +116,15 @@ ggplot(df1[df1$Method != "true",], aes(x=nu, y=phi, color=Method,group=Method,sh
   annotate("pointrange", x=0.31, y=0.18, ymin=0, ymax=0, color="lightblue", size=0.25) +
   annotate("pointrange", x=0.31, y=0.16, ymin=0, ymax=0, color="purple", size=0.25) +
   
-  annotate("text", x=0.4, y=0.22, ymin=0, ymax=0, label="Cassiopeia-Greedy", size=8/.pt, fontface=1) +
-  annotate("text", x=0.4, y=0.2, ymin=0, ymax=0, label="Neighbor-Joining", size=8/.pt, fontface=1) +
+  annotate("text", x=0.38, y=0.22, ymin=0, ymax=0, label="Cass-greedy", size=8/.pt, fontface=1) +
+  annotate("text", x=0.395, y=0.2, ymin=0, ymax=0, label="Neighbor-Joining", size=8/.pt, fontface=1) +
   annotate("text", x=0.374, y=0.18, ymin=0, ymax=0, label="Startle-NNI", size=8/.pt, fontface=1) +
   annotate("text", x=0.36, y=0.16, ymin=0, ymax=0, label="ProbLin", size=8/.pt, fontface=1) +
 
   #guides(shape=guide_legend(nrow=3,order=1), color=guide_legend(nrow=3, order=2, label.hjust=1)) +
   #theme(legend.position = 'right') +
   #theme(legend.position="None") + 
-  theme(legend.position = c(0.75, 0.85), legend.direction="vertical")  +
+  theme(legend.position = c(0.75, 0.94), legend.direction="vertical")  +
   #theme(legend.position=c(0.2, 0.4), legend.direction = "horizontal") + #c(0.88,0.7)) +
   theme(legend.title = element_blank()) +
   coord_cartesian(xlim=c(0,0.45), clip="off") +
