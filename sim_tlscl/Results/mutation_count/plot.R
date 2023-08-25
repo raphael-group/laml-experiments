@@ -4,7 +4,7 @@ require(ggplot2)
 
 d = read.table("count_mutations.txt",header=T)
 
-d$method = factor(d$method,levels = c("NJ","Cass-greedy","Startle","Problin"),labels=c("Neighbor-Joining","Cass-greedy","Startle-NNI","Problin"))
+d$method = factor(d$method,levels = c("Cass-greedy","NJ","Startle","Problin"),labels=c("Cass-greedy","Neighbor-Joining","Startle-NNI","Problin"))
 
 ggplot(d,aes(x=trueNmus,y=estNmus,color=method)) + 
   stat_summary(size=0.2,alpha=1) + 
