@@ -1,21 +1,16 @@
 # RF DISTANCE PLOT
 library(extrafont)
 font_import() 
+
 loadfonts(device="pdf")
-setwd("/Users/gc3045/problin_experiments/sim_tlscl/fig3")
 library("stringr")                       # Load stringr package
 library("ggplot2")
-#install.packages("reshape")
 library("reshape")
+
+setwd("/Users/gc3045/problin_experiments/sim_tlscl/Results/topology_and_params")
 rfdist = read.table("collected_rf_stats.txt", sep=",",header=T)
 head(rfdist)
 rfdist['modelcondition'] <- str_split_fixed(rfdist$ModelCond, "p", 2)
-#rfdist['modelcond'] <- str_split_fixed(rfdist['modelcondition'][,1], "p", 2)
-colnames(rfdist)
-#colnames(d_ultra) = c('modelcond', 'jobidx', 'ultra', 'noconstraint', 'modelcondition', 'prior_idx')
-head(rfdist)
-
-head(df)
 
 rfdist['sProp'] <- ifelse(rfdist$modelcondition[,1] == "s0d100", 0,
                                ifelse(rfdist$modelcondition[,1] == "s25d75", 0.25, 
@@ -28,8 +23,9 @@ xx = unique(rfdist$sProp*100)
 labels = unique(rfdist$modelcondition[,1])
 labels
 labels = c("h0d100", "h100d0", "h25d75", "h50d50", "h75d25")
-rfdist=rfdist[,c(1,2,3,5,4,6,7)]
-colnames(rfdist) = c('tcount', 'ModelCond', 'Cass-greedy', 'Startle-NNI', 'ProbLin', 'modelcondition', 'sProp')
+head(rfdist)
+rfdist=rfdist[,c(1,2,3,4,6,5,7,8)]
+colnames(rfdist) = c('tcount', 'ModelCond', 'Cass-greedy', 'Neighbor-Joining', 'Startle-NNI', 'ProbLin', 'modelcondition', 'sProp')
 df = melt(rfdist, id=c("tcount", "sProp", "modelcondition", "ModelCond"))
 
 ggplot(df, aes(x=sProp/4, y=value, color=variable)) +
@@ -44,7 +40,7 @@ ggplot(df, aes(x=sProp/4, y=value, color=variable)) +
   coord_cartesian(xlim=c(0,0.254), clip="off") +
   annotate("text", x=-0.026, y=0.7, label="(A)", size=7, family="Times New Roman")
 
-ggsave("sim_tlscl_rfdist.pdf", width=4, height=4)
+ggsave("sim_tlscl_rfdist.pdf", width=4, height=4, family="Times")
 
 
 mean(rfdist$`Startle-NNI`[rfdist$modelcondition == 's0d100']) # 0.440225
