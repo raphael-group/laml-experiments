@@ -3,7 +3,7 @@ library(extrafont)
 font_import() 
 loadfonts(device="pdf")
 
-
+library(scales)
 require(ggplot2)
 library('stringr')
 library(reshape2)
@@ -33,16 +33,19 @@ colnames(df2) <- c("modelcondition","rep", "Method", "nu")
 df1$nu = as.numeric(df2$nu)
 df1$phi = as.numeric(df1$phi)
 
-ggplot(df1[df1$Method != "true",], aes(x=phi, y=nu, color=Method,group=Method,shape=modelcondition, label="0.45")) + 
-  geom_point(alpha=0.5,size=1) +
-  # geom_text(x=0.25, y = 0, label="s0d100") + 
-  scale_shape_manual(values = c(0, 2, 6, 9, 10)) +
-  geom_point(data=df1[df1$Method == "true",],aes(x=phi,y=nu,group=Method,shape=modelcondition),color="black",size=3.5, fill="black") +
-  xlab("Dropout Missing Rate") + 
-  ylab("Heritable Missing Rate") +
-  theme_classic() +
-  theme(legend.position = c(0.88,0.7)) +
-  theme(legend.title = element_blank()) 
+#ggplot(df1[df1$Method != "true",], aes(x=phi, y=nu, color=Method,group=Method,shape=modelcondition, label="0.45")) + 
+#  geom_point(alpha=0.7,size=1) +
+#  # geom_text(x=0.25, y = 0, label="s0d100") + 
+#  scale_shape_manual(values = c(0, 2, 6, 9, 10)) +
+#  geom_point(data=df1[df1$Method == "true",],aes(x=phi,y=nu,group=Method,shape=modelcondition),color="black",size=3.5, fill="black") +
+#  xlab("Dropout Missing Rate") + 
+#  ylab("Heritable Missing Rate") +
+#  theme_classic() +
+#  guides(color="none") + 
+#  scale_color_brewer(palette = "Dark2") + 
+#  # theme(legend.position = "topright") +
+#  theme(legend.position = c(0.88,0.9)) +
+#  theme(legend.title = element_blank()) 
 
 xx = df1[df1$Method == "true",]
 x_s = c(0.42, 0.045, 0.35, 0.235, 0.15) # unique(xx$phi)
@@ -65,45 +68,53 @@ df1[df1 == "s100d0"] <- "h100d0"
 df1[df1 == "s25d75"] <- "h25d75"
 df1[df1 == "s50d50"] <- "h50d50"
 
+#> hue_pal()(5)
+# "#F8766D" "#A3A500" "#00BF7D" "#00B0F6" "#E76BF3"
+red <- "#F8766D"
+leaf_green <- "#A3A500"
+mint_green <- "#00BF7D"
+blue <- "#00B0F6"
+purple <- "#E76BF3"
+
 ggplot(df1[df1$Method != "true",], aes(x=nu, y=phi, color=Method,group=Method,shape=modelcondition, label="0.45")) + 
   geom_point(alpha=0.5,size=1) +
   # geom_text(x=0.25, y = 0, label="s0d100") + 
+  guides(color="none") + 
+  #scale_color_brewer(palette = "Dark2") + 
   scale_shape_manual(values = c(0, 2, 6, 9, 10)) +
   #annotate("text", x=x_s, y=y_s, label=labels, size=8/.pt) + 
   
   annotate("text", x=x_s + 0.005, y=y_s + 0.02, label=labels_cass, size=8/.pt) +
   #annotate("pointrange", x=x_s - 0.021, y=y_s + 0.01, ymin=0,ymax=0, color="pink", size=0.25) +
   # c(0, 2, 6, 9, 10)
-  annotate("pointrange", x=0.420 - 0.021, y=0.015 + 0.02, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
-  annotate("pointrange", x=0.350 - 0.021, y=0.080 + 0.02, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
-  annotate("pointrange", x=0.235 - 0.021, y=0.144 + 0.02, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
-  annotate("pointrange", x=0.150 - 0.021, y=0.200 + 0.02, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
-  annotate("pointrange", x=0.045 - 0.021, y=0.250 + 0.02, ymin=0,ymax=0, color="pink", size=0.25, shape=10) +
+  annotate("point", x=0.420 - 0.021, y=0.015 + 0.02, ymin=0,ymax=0, color=red, size=2, shape=2, alpha=1) +
+  annotate("point", x=0.350 - 0.021, y=0.080 + 0.02, ymin=0,ymax=0, color=red, size=2, shape=13, alpha=1) +
+  annotate("point", x=0.235 - 0.021, y=0.144 + 0.02, ymin=0,ymax=0, color=red, size=2, shape=9, alpha=1) +
+  annotate("point", x=0.150 - 0.021, y=0.200 + 0.02, ymin=0,ymax=0, color=red, size=2, shape=6, alpha=1) +
+  annotate("point", x=0.045 - 0.021, y=0.250 + 0.02, ymin=0,ymax=0, color=red, size=2, shape=0, alpha=1) +
   
   annotate("text", x=x_s + 0.005, y=y_s + 0.01, label=labels_nj, size=8/.pt) +
   #annotate("pointrange", x=x_s - 0.021, y=y_s + 0.01, ymin=0,ymax=0, color="pink", size=0.25) +
   # c(0, 2, 6, 9, 10)
-  annotate("pointrange", x=0.420 - 0.021, y=0.015 + 0.01, ymin=0,ymax=0, color="lightgreen", size=0.25, shape=10) +
-  annotate("pointrange", x=0.350 - 0.021, y=0.080 + 0.01, ymin=0,ymax=0, color="lightgreen", size=0.25, shape=10) +
-  annotate("pointrange", x=0.235 - 0.021, y=0.144 + 0.01, ymin=0,ymax=0, color="lightgreen", size=0.25, shape=10) +
-  annotate("pointrange", x=0.150 - 0.021, y=0.200 + 0.01, ymin=0,ymax=0, color="lightgreen", size=0.25, shape=10) +
-  annotate("pointrange", x=0.045 - 0.021, y=0.250 + 0.01, ymin=0,ymax=0, color="lightgreen", size=0.25, shape=10) +
+  annotate("point", x=0.420 - 0.021, y=0.015 + 0.01, ymin=0,ymax=0, color=leaf_green, size=2, shape=2, alpha=1) +
+  annotate("point", x=0.350 - 0.021, y=0.080 + 0.01, ymin=0,ymax=0, color=leaf_green, size=2, shape=13, alpha=1) +
+  annotate("point", x=0.235 - 0.021, y=0.144 + 0.01, ymin=0,ymax=0, color=leaf_green, size=2, shape=9, alpha=1) +
+  annotate("point", x=0.150 - 0.021, y=0.200 + 0.01, ymin=0,ymax=0, color=leaf_green, size=2, shape=6, alpha=1) +
+  annotate("point", x=0.045 - 0.021, y=0.250 + 0.01, ymin=0,ymax=0, color=leaf_green, size=2, shape=0, alpha=1) +
   
   annotate("text", x=x_s + 0.005, y=y_s, label=labels_startle, size=8/.pt) +
-  #annotate("pointrange", x=x_s - 0.021, y=y_s, ymin=0,ymax=0, color="lightgreen", size=0.25) +
-  annotate("pointrange", x=0.420 - 0.021, y=0.015, ymin=0,ymax=0, color="lightblue", size=0.25) +
-  annotate("pointrange", x=0.045 - 0.021, y=0.250, ymin=0,ymax=0, color="lightblue", size=0.25) +
-  annotate("pointrange", x=0.350 - 0.021, y=0.080, ymin=0,ymax=0, color="lightblue", size=0.25) +
-  annotate("pointrange", x=0.235 - 0.021, y=0.144, ymin=0,ymax=0, color="lightblue", size=0.25) +
-  annotate("pointrange", x=0.150 - 0.021, y=0.200, ymin=0,ymax=0, color="lightblue", size=0.25) +
+  annotate("point", x=0.420 - 0.021, y=0.015, ymin=0,ymax=0, color=mint_green, size=2, shape=2, alpha=1) +
+  annotate("point", x=0.045 - 0.021, y=0.250, ymin=0,ymax=0, color=mint_green, size=2, shape=0, alpha=1) +
+  annotate("point", x=0.350 - 0.021, y=0.080, ymin=0,ymax=0, color=mint_green, size=2, shape=13, alpha=1) +
+  annotate("point", x=0.235 - 0.021, y=0.144, ymin=0,ymax=0, color=mint_green, size=2, shape=9, alpha=1) +
+  annotate("point", x=0.150 - 0.021, y=0.200, ymin=0,ymax=0, color=mint_green, size=2, shape=6, alpha=1) +
   
   annotate("text", x=x_s + 0.005, y=y_s - 0.01, label=labels_problin, size=8/.pt, fontface=2) +
-  #annotate("pointrange", x=x_s - 0.021, y=y_s - 0.01, ymin=0,ymax=0, color="lightblue", size=0.25) +
-  annotate("pointrange", x=0.420 - 0.021, y=0.015 - 0.01, ymin=0,ymax=0, color="purple", size=0.25) +
-  annotate("pointrange", x=0.045 - 0.021, y=0.250 - 0.01, ymin=0,ymax=0, color="purple", size=0.25) +
-  annotate("pointrange", x=0.350 - 0.021, y=0.080 - 0.01, ymin=0,ymax=0, color="purple", size=0.25) +
-  annotate("pointrange", x=0.235 - 0.021, y=0.144 - 0.01, ymin=0,ymax=0, color="purple", size=0.25) +
-  annotate("pointrange", x=0.150 - 0.021, y=0.200 - 0.01, ymin=0,ymax=0, color="purple", size=0.25) +
+  annotate("point", x=0.420 - 0.021, y=0.015 - 0.01, ymin=0,ymax=0, color=purple, size=2, shape=2, alpha=1) +
+  annotate("point", x=0.045 - 0.021, y=0.250 - 0.01, ymin=0,ymax=0, color=purple, size=2, shape=0, alpha=1) +
+  annotate("point", x=0.350 - 0.021, y=0.080 - 0.01, ymin=0,ymax=0, color=purple, size=2, shape=13, alpha=1) +
+  annotate("point", x=0.235 - 0.021, y=0.144 - 0.01, ymin=0,ymax=0, color=purple, size=2, shape=9, alpha=1) +
+  annotate("point", x=0.150 - 0.021, y=0.200 - 0.01, ymin=0,ymax=0, color=purple, size=2, shape=6, alpha=1) +
   
   geom_point(data=df1[df1$Method == "true",],aes(x=nu,y=phi,group=Method,shape=modelcondition),color="black",size=3.5, fill="black") +
   xlab("Heritable Missing Rate") + 
@@ -111,15 +122,15 @@ ggplot(df1[df1$Method != "true",], aes(x=nu, y=phi, color=Method,group=Method,sh
   theme_classic() +
   guides(shape=guide_legend(nrow=3,order=1), color="none") +
   
-  annotate("pointrange", x=0.31, y=0.22, ymin=0, ymax=0, color="pink", size=0.25) +
-  annotate("pointrange", x=0.31, y=0.2, ymin=0, ymax=0, color="lightgreen", size=0.25) +
-  annotate("pointrange", x=0.31, y=0.18, ymin=0, ymax=0, color="lightblue", size=0.25) +
-  annotate("pointrange", x=0.31, y=0.16, ymin=0, ymax=0, color="purple", size=0.25) +
+  #annotate("pointrange", x=0.31, y=0.22, ymin=0, ymax=0, color="red", alpha=1, size=0.25) +
+  #annotate("pointrange", x=0.31, y=0.2, ymin=0, ymax=0, color="darkgreen", alpha=1, size=0.25) +
+  #annotate("pointrange", x=0.31, y=0.18, ymin=0, ymax=0, color="lightblue", alpha=1, size=0.25) +
+  #annotate("pointrange", x=0.31, y=0.16, ymin=0, ymax=0, color="purple", alpha=1, size=0.25) +
   
-  annotate("text", x=0.38, y=0.22, ymin=0, ymax=0, label="Cass-greedy", size=8/.pt, fontface=1) +
-  annotate("text", x=0.395, y=0.2, ymin=0, ymax=0, label="Neighbor-Joining", size=8/.pt, fontface=1) +
-  annotate("text", x=0.374, y=0.18, ymin=0, ymax=0, label="Startle-NNI", size=8/.pt, fontface=1) +
-  annotate("text", x=0.36, y=0.16, ymin=0, ymax=0, label="ProbLin", size=8/.pt, fontface=1) +
+  #annotate("text", x=0.38, y=0.22, ymin=0, ymax=0, label="Cass-greedy", size=8/.pt, fontface=1) +
+  #annotate("text", x=0.395, y=0.2, ymin=0, ymax=0, label="Neighbor-Joining", size=8/.pt, fontface=1) +
+  #annotate("text", x=0.374, y=0.18, ymin=0, ymax=0, label="Startle-NNI", size=8/.pt, fontface=1) +
+  #annotate("text", x=0.36, y=0.16, ymin=0, ymax=0, label="ProbLin", size=8/.pt, fontface=1) +
 
   #guides(shape=guide_legend(nrow=3,order=1), color=guide_legend(nrow=3, order=2, label.hjust=1)) +
   #theme(legend.position = 'right') +
@@ -127,8 +138,8 @@ ggplot(df1[df1$Method != "true",], aes(x=nu, y=phi, color=Method,group=Method,sh
   theme(legend.position = c(0.75, 0.94), legend.direction="vertical")  +
   #theme(legend.position=c(0.2, 0.4), legend.direction = "horizontal") + #c(0.88,0.7)) +
   theme(legend.title = element_blank()) +
-  coord_cartesian(xlim=c(0,0.45), clip="off") +
-  annotate("text", x=-0.05, y=0.28, label="(B)", clip="off", family="Times New Roman", size=7)
+  coord_cartesian(xlim=c(0,0.45), clip="off") #+
+  #annotate("text", x=-0.05, y=0.28, label="(B)", clip="off", family="Times New Roman", size=7)
 #guides(color = guide_legend(nrow = 2))
 
 ggsave("sim_tlscl_estmissingparams.pdf", width=4, height=4)

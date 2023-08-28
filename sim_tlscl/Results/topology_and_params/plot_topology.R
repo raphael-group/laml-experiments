@@ -37,12 +37,20 @@ ggplot(df, aes(x=sProp/4, y=value, color=variable)) +
   theme_classic() + 
   theme(legend.position = c(0.25,0.25)) +
   theme(legend.title = element_blank()) +
-  coord_cartesian(xlim=c(0,0.254), clip="off") +
-  annotate("text", x=-0.026, y=0.7, label="(A)", size=7, family="Times New Roman")
+  coord_cartesian(xlim=c(0,0.254), clip="off") # +
+  # annotate("text", x=-0.026, y=0.7, label="(A)", size=7, family="Times New Roman")
 
 ggsave("sim_tlscl_rfdist.pdf", width=4, height=4, family="Times")
 
 
 mean(rfdist$`Startle-NNI`[rfdist$modelcondition == 's0d100']) # 0.440225
-mean(rfdist$`Startle-NNI`[rfdist$modelcondition == 's100d0']) # 0.3370662
+mean(rfdist$ProbLin[rfdist$modelcondition == 's0d100']) # 0.3839675
 
+mean(rfdist$`Startle-NNI`[rfdist$modelcondition == 's100d0']) # 0.3370662
+mean(rfdist$ProbLin[rfdist$modelcondition == 's100d0']) # 0.1947369
+
+mean(rfdist$`Startle-NNI`[rfdist$modelcondition == 's25d75']) # 0.3907478
+mean(rfdist$ProbLin[rfdist$modelcondition == 's25d75']) # 0.3222671
+
+mean(rfdist$`Startle-NNI`[rfdist$modelcondition == 's50d50']) # 0.3900285
+mean(rfdist$ProbLin[rfdist$modelcondition == 's50d50']) # 0.3116599
