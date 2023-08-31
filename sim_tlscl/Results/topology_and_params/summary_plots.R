@@ -65,18 +65,18 @@ ggplot(df2,aes(x=variable,y=value)) + geom_boxplot() + stat_summary() +
 # log odds normed by wMP 
 head(d)
 
-d$norm_startle_wp <- d$startle_wp - d$truetopo_wp
-d$norm_cassg_wp <- d$cassg_wp - d$truetopo_wp
-d$norm_problin_wp <- d$problin_wp - d$truetopo_wp
-d$norm_nj_wp <- d$nj_wp - d$truetopo_wp
-wp_df = d[, c("modelcondition", "norm_startle_wp", "norm_cassg_wp", "norm_problin_wp", "norm_nj_wp")]
+d$scaled_startle_wp <- d$startle_wp - d$truetopo_wp
+d$scaled_cassg_wp <- d$cassg_wp - d$truetopo_wp
+d$scaled_problin_wp <- d$problin_wp - d$truetopo_wp
+d$scaled_nj_wp <- d$nj_wp - d$truetopo_wp
+wp_df = d[, c("modelcondition", "scaled_startle_wp", "scaled_cassg_wp", "scaled_problin_wp", "scaled_nj_wp")]
 head(wp_df)
 df2 <- melt(wp_df)
 head(df2)
 
 df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","ProbLin", "Neighbor-Joining"))
 ggplot(df2,aes(x=variable,y=value)) + geom_boxplot() + stat_summary() + 
-  facet_wrap(~modelcondition) + theme_classic() +
+  #facet_wrap(~modelcondition) + theme_classic() +
   xlab("Method") + 
   ylab("Log Weighted Parsimony Score Ratio (method - true topo)") + 
   geom_hline(yintercept=0, linetype="dashed", color="blue") + theme_classic()
@@ -84,4 +84,22 @@ ggplot(df2,aes(x=variable,y=value)) + geom_boxplot() + stat_summary() +
 
 
 
+# log odds normed by nwMP 
+head(d)
+
+d$scaled2_startle_wp <- d$norm_startle_wp - d$norm_truetopo_wp
+d$scaled2_cassg_wp <- d$norm_cassg_wp - d$norm_truetopo_wp
+d$scaled2_problin_wp <- d$norm_problin_wp - d$norm_truetopo_wp
+d$scaled2_nj_wp <- d$norm_nj_wp - d$norm_truetopo_wp
+wp_df = d[, c("modelcondition", "scaled2_startle_wp", "scaled2_cassg_wp", "scaled2_problin_wp", "scaled2_nj_wp")]
+head(wp_df)
+df2 <- melt(wp_df)
+head(df2)
+
+df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","ProbLin", "Neighbor-Joining"))
+ggplot(df2,aes(x=variable,y=value)) + geom_boxplot() + stat_summary() + 
+  #facet_wrap(~modelcondition) + theme_classic() +
+  xlab("Method") + 
+  ylab("Log Weighted Parsimony Score Ratio (method - true topo)") + 
+  geom_hline(yintercept=0, linetype="dashed", color="blue") + theme_classic()
 
