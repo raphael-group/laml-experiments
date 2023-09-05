@@ -33,12 +33,12 @@ ggplot(df, aes(x=sProp/4, y=value, color=variable)) +
   geom_line(stat='summary') + 
   ylab("RF Error") + 
   xlab("Heritable Missing (%)") +
-  annotate("text", x=xx/400 + 0.004, y=0.0, label=labels, size=8/.pt) + 
+  annotate("text", x=xx/400 + 0.004, y=0.0, label=labels, size=11/.pt) + 
   scale_x_continuous(breaks = seq(0,0.25,0.25/4)) +
   theme_classic() + 
   theme(legend.position = c(0.25,0.25)) +
-  theme(legend.title = element_blank()) 
-  #coord_cartesian(xlim=c(0,0.254), clip="off") #+
+  theme(legend.title = element_blank()) +
+  coord_cartesian(xlim=c(-0.004,0.254), clip="off") #+
   # annotate("text", x=-0.026, y=0.7, label="(A)", size=7, family="Times New Roman")
 
 ggsave("sim_tlscl_rfdist.pdf", width=4, height=4, family="Times")
