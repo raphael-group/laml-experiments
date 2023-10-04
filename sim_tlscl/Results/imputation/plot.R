@@ -10,8 +10,8 @@ ggplot(d,aes(x=model,y=accuracy,fill=type)) + geom_boxplot() +
   theme_classic() + theme(legend.title = element_blank(), legend.position = "bottom",axis.title.x = element_blank())
 ggsave("missing_impute.pdf",width=4,height = 4)
 
-round(mean(d[d$model=="s0d100",]$accuracy),2); round(sd(d[d$model=="s0d100",]$accuracy),3)
-round(mean(d[d$model=="s25d75",]$accuracy),2); round(sd(d[d$model=="s25d75",]$accuracy),3)
-round(mean(d[d$model=="s50d50",]$accuracy),2); round(sd(d[d$model=="s50d50",]$accuracy),3)
-round(mean(d[d$model=="s75d25",]$accuracy),2); round(sd(d[d$model=="s75d25",]$accuracy),3)
-round(mean(d[d$model=="s100d0",]$accuracy),2); round(sd(d[d$model=="s100d0",]$accuracy),3)
+round(mean(d[d$model=="h0d100",]$accuracy),2); round(sd(d[d$model=="s0d100",]$accuracy),3)
+round(mean(d[d$model=="h25d75",]$accuracy),2); round(sd(d[d$model=="s25d75",]$accuracy),3)
+round(mean(d[d$model=="h50d50",]$accuracy),2); round(sd(d[d$model=="s50d50",]$accuracy),3)
+round(mean(d[d$model=="h75d25",]$accuracy),2); round(sd(d[d$model=="s75d25",]$accuracy),3)
+round(mean(d[d$model=="h100d0",]$accuracy),2); round(sd(d[d$model=="s100d0",]$accuracy),3)

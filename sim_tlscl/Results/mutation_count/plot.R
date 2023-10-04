@@ -12,7 +12,7 @@ ggplot(d,aes(x=trueNmus,y=estNmus,color=method)) +
   #geom_smooth(size=1,method="lm",se = F) + 
   geom_abline(linetype=1) +
   xlab("True number of mutations") + ylab("Estimated number of mutations") + 
-  theme_classic() + theme(legend.title = element_blank(), legend.position = "None")
+  theme_classic() + theme(legend.title = element_blank(), legend.position = "bottom")
 ggsave("count_mutations.pdf",width=4,height=4)
 
 ggplot(d,aes(x=method,y=estNmus-trueNmus,fill=method)) + geom_boxplot(outlier.size = 0.2) + 

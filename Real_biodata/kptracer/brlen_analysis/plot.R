@@ -1,4 +1,14 @@
-setwd("/Users/uym2/Documents/Explore/kptracer_brlen_analysis")
+setwd("/Users/uym2/my_gits/problin_experiments/Real_biodata/kptracer/brlen_analysis")
+
+d = read.table("MP_ML_d2root.txt",header=T)
+
+ggplot(d[d$sample %in% c("3432_NT_T1","3435_NT_T4","3520_NT_T1","3703_NT_T1","3703_NT_T2","3703_NT_T3"),],
+       aes(x=d2root,y=dMP/nsites/dML)) + geom_point() + geom_smooth(method="lm") + 
+        scale_y_log10() + 
+        xlab("Distance to root (ML estimate)") + ylab("dMP/dML") + 
+        facet_wrap(~sample,scale="free") + theme_classic()
+ggsave("MP_ML_d2root.pdf",width=4,height=4)
+
 
 require(ggplot2)
 
@@ -7,7 +17,7 @@ d = read.table("brlen_vs_expression.txt",header=T)
 ggplot(d,aes(x=dT_ML,y=dT_MP/nSite)) + 
   geom_point(size=1,alpha=0.5) + 
   stat_smooth(method = "loess", formula = y ~ x-1,se=F) + 
-  xlab("ML branch length") + ylab("MP #mutations per site") + 
+  xlab("ML branch length") + ylab("MP normalized #mutations") + 
   theme_classic() + facet_wrap(~sample,scale="free")
 ggsave("dT_ML_vs_dT_MP.pdf",width=4,height=4)
 
@@ -19,7 +29,7 @@ dE_melt$variable = factor(dE_melt$variable,labels=c("Topology distance","MP dist
 
 ggplot(dE_melt,aes(x=dE_type,y=value,group=variable,fill=variable)) + 
   geom_col(position = "dodge",color="black") + 
-  facet_wrap(~sample,scale="free") + 
+  facet_wrap(~sample,scale="free",nrow=2) + 
   xlab("Expression distance") +
   ylab("Mutual information") + 
   theme_classic() + theme(legend.position = "bottom",legend.title = element_blank())
