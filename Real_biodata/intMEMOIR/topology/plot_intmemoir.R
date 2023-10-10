@@ -1,20 +1,22 @@
-setwd("/Users/gc3045/problin/scp_files/intMemoir")
+setwd("/Users/gc3045/problin_experiments/Real_biodata/intMEMOIR/topology")
 
 require(ggplot2)
 library('stringr')
 library(reshape2)
 
 d = read.table("intMemoir_results.txt", sep=",",header=T)
-d
+length(d$Sample)
+
 #d[d$Sample == "s5c3",]
 #d[d$Sample == "s9c3",]
 #head(d[order(d$NumNodes, decreasing=TRUE),], 10)
 
-# tidetree_results = read.table("/Users/gc3045/problin/postprocess_indep_tidetree/score_trees.txt", sep=",", header=T)
-tidetree_results = read.table("/Users/gc3045/problin/postprocess_indep_tidetree/all_trees_scores.txt", sep=",", header=T)
+tidetree_results = read.table("all_pubtrees_scores.txt", sep=",", header=T)
 samples = unique(tidetree_results$sample)
 d = d[d$Sample %in% samples,]
 d
+length(d$Sample)
+
 
 tidetree_results
 tidetree_results$rf <- as.numeric(tidetree_results$rf)
