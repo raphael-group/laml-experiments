@@ -10,15 +10,16 @@ d$Scaled_First_Reseeding = d$First_Reseeding * 6 / d$Num_Intervals
 head(d)
 library(dplyr)
 
-round_to_2_decimal <- function(value) {
-  return(as.character(round(value, 2)))
+round_to_1_decimal <- function(value) {
+  return(as.character(round(value, 1)))
 }
 
 # Calculating average and confidence interval for each column
 mean_val <- mean(d$Scaled_First_Metastasis, na.rm = TRUE)
+median_val <- median(d$Scaled_First_Metastasis, na.rm = TRUE)
 sd_val <- sd(d$Scaled_First_Metastasis, na.rm = TRUE)
 
-ci <- quantile(d$Scaled_First_Metastasis, c(0.025, 0.975))
+ci <- quantile(d$Scaled_First_Metastasis, c(0.125, 0.875))
 plot_column1 <- ggplot(d, aes(x = Scaled_First_Metastasis, color = "Column 1")) +
   geom_density() +
   scale_x_continuous(limits = c(0, 6), breaks=seq(0, 6, by = 1)) +
@@ -26,15 +27,16 @@ plot_column1 <- ggplot(d, aes(x = Scaled_First_Metastasis, color = "Column 1")) 
   geom_vline(xintercept = mean_val, color = "red", linetype = "solid") +
   geom_vline(xintercept = ci[1], color = "blue", linetype = "dashed") +  # Lower bound of CI
   geom_vline(xintercept = ci[2], color = "blue", linetype = "dashed") +  # Upper bound of CI
-  annotate("text", x = mean_val, y = 0, label = round_to_2_decimal(mean_val), vjust = -1) +
-  annotate("text", x = ci[1], y = 0, label = round_to_2_decimal(ci[1]), vjust = -1) +
-  annotate("text", x = ci[2], y = 0, label = round_to_2_decimal(ci[2]), vjust = -1) +
+  annotate("text", x = mean_val, y = 0, label = round_to_1_decimal(mean_val), vjust = -1) +
+  annotate("text", x = ci[1], y = 0, label = round_to_1_decimal(ci[1]), vjust = -1) +
+  annotate("text", x = ci[2], y = 0, label = round_to_1_decimal(ci[2]), vjust = -1) +
   theme_classic() +
   theme(legend.position = "none")
 
 mean_val <- mean(d$Scaled_Peak_Metastasis, na.rm = TRUE)
+median_val <- median(d$Scaled_Peak_Metastasis, na.rm = TRUE)
 sd_val <- sd(d$Scaled_Peak_Metastasis, na.rm = TRUE)
-ci <- quantile(d$Scaled_Peak_Metastasis, c(0.025, 0.975))
+ci <- quantile(d$Scaled_Peak_Metastasis, c(0.125, 0.875))
 plot_column2 <- ggplot(d, aes(x = Scaled_Peak_Metastasis, color = "Column 2")) +
   geom_density() +
   scale_x_continuous(limits = c(0, 6), breaks=seq(0, 6, by = 1)) +
@@ -42,15 +44,16 @@ plot_column2 <- ggplot(d, aes(x = Scaled_Peak_Metastasis, color = "Column 2")) +
   geom_vline(xintercept = mean_val, color = "red", linetype = "solid") +
   geom_vline(xintercept = ci[1], color = "blue", linetype = "dashed") +  # Lower bound of CI
   geom_vline(xintercept = ci[2], color = "blue", linetype = "dashed") +  # Upper bound of CI
-  annotate("text", x = mean_val, y = 0, label = round_to_2_decimal(mean_val), vjust = -1) +
-  annotate("text", x = ci[1], y = 0, label = round_to_2_decimal(ci[1]), vjust = -1) +
-  annotate("text", x = ci[2], y = 0, label = round_to_2_decimal(ci[2]), vjust = -1) +
+  annotate("text", x = mean_val, y = 0, label = round_to_1_decimal(mean_val), vjust = -1) +
+  annotate("text", x = ci[1], y = 0, label = round_to_1_decimal(ci[1]), vjust = -1) +
+  annotate("text", x = ci[2], y = 0, label = round_to_1_decimal(ci[2]), vjust = -1) +
   theme_classic() + 
   theme(legend.position = "none")
 
 mean_val <- mean(d$Scaled_First_Reseeding, na.rm = TRUE)
+median_val <- median(d$Scaled_First_Reseeding, na.rm = TRUE)
 sd_val <- sd(d$Scaled_First_Reseeding, na.rm = TRUE)
-ci <- quantile(d$Scaled_First_Reseeding, c(0.025, 0.975))
+ci <- quantile(d$Scaled_First_Reseeding, c(0.125, 0.875))
 plot_column3 <- ggplot(d, aes(x = Scaled_First_Reseeding, color = "Column 3")) +
   geom_density() +
   scale_x_continuous(limits = c(0, 6), breaks=seq(0, 6, by = 1)) +
@@ -58,9 +61,9 @@ plot_column3 <- ggplot(d, aes(x = Scaled_First_Reseeding, color = "Column 3")) +
   geom_vline(xintercept = mean_val, color = "red", linetype = "solid") +
   geom_vline(xintercept = ci[1], color = "blue", linetype = "dashed") +  # Lower bound of CI
   geom_vline(xintercept = ci[2], color = "blue", linetype = "dashed") +  # Upper bound of CI
-  annotate("text", x = mean_val, y = 0, label = round_to_2_decimal(mean_val), vjust = -1) +
-  annotate("text", x = ci[1], y = 0, label = round_to_2_decimal(ci[1]), vjust = -1) +
-  annotate("text", x = ci[2], y = 0, label = round_to_2_decimal(ci[2]), vjust = -1) +
+  annotate("text", x = mean_val, y = 0, label = round_to_1_decimal(mean_val), vjust = -1) +
+  annotate("text", x = ci[1], y = 0, label = round_to_1_decimal(ci[1]), vjust = -1) +
+  annotate("text", x = ci[2], y = 0, label = round_to_1_decimal(ci[2]), vjust = -1) +
   theme_classic() + 
   theme(legend.position = "none")
 
