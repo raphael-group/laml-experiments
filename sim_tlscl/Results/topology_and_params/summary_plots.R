@@ -1,4 +1,4 @@
-#setwd("/Users/gc3045/problin_experiments/sim_tlscl/Results/topology_and_params")
+setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/sim_tlscl/Results/topology_and_params")
 library(extrafont)
 font_import() 
 loadfonts(device="pdf")
@@ -34,7 +34,7 @@ rf_df = d[, c("modelcondition", "startle_rf", "cassg_rf", "problin_rf", "nj_rf")
 df2 <- melt(rf_df)
 df2
 #df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","Cass-ilp", "ProbLin", "Neighbor-Joining"))
-df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","ProbLin", "Neighbor-Joining"))
+df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","LAML", "Neighbor-Joining"))
 
 ggplot(df2,aes(x=variable,y=value)) + geom_boxplot() + stat_summary() + 
   #facet_wrap(~modelcondition) + theme_classic() +
@@ -79,14 +79,14 @@ df2 <- melt(llh_df)
 head(df2)
 
 # df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","Cass-ilp", "ProbLin", "Neighbor-Joining"))
-df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy", "ProbLin", "Neighbor-Joining"))
+df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy", "LAML", "Neighbor-Joining"))
 
 plot1 <- ggplot(df2,aes(x=variable,y=value)) + geom_boxplot() + stat_summary() + 
   #facet_wrap(~modelcondition) + theme_classic() +
   xlab("Method") + ylab("Likelihood Log Odds") + 
   geom_hline(yintercept=0, linetype="dashed", color="blue") + theme_classic()
-ggsave("sim_tlscl_logllo.pdf", width=8, height=5)
-#ggsave("sim_tlscl_logllo.png", width=8, height=5)
+#ggsave("sim_tlscl_allsamples.pdf", width=8, height=5)
+ggsave("sim_tlscl_logllo.png", width=8, height=5)
 
 
 
@@ -105,7 +105,7 @@ head(wp_df)
 df2 <- melt(wp_df)
 head(df2)
 
-df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","ProbLin", "Neighbor-Joining"))
+df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","LAML", "Neighbor-Joining"))
 plot2 <- ggplot(df2,aes(x=variable,y=-value)) + geom_boxplot() + stat_summary() + 
   #facet_wrap(~modelcondition) + theme_classic() +
   xlab("Method") + 

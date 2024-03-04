@@ -1,4 +1,4 @@
-setwd('/Users/gc3045/sc-mail-experiments/sim_tlscl/Results/runtime')
+setwd('/Users/gc3045/scmail_v1/sc-mail-experiments/sim_tlscl/Results/runtime')
 
 time_to_seconds <- function(time_str) {
   minutes <- as.numeric(regmatches(time_str, regexpr("\\d+(?=m)", time_str, perl = TRUE)))
@@ -30,16 +30,16 @@ d <- rbind(d, nj_runtime)
 dim(d)
 #time_to_seconds("1m11.820s")
 
-d$method = factor(d$Method,levels=c("nj", "cassgreedy","scmail","startle"),labels = c("Neighbor-\nJoining", "Cassiopeia-\nGreedy","Startle-NNI","sc-MAIL"))
+d$method = factor(d$Method,levels=c("nj", "cassgreedy","scmail","startle"),labels = c("Neighbor-\nJoining", "Cassiopeia-\nGreedy","Startle-NNI","LAML"))
 
 df <- d %>%
   mutate(total_time = ifelse(method == "Startle-NNI", TotalSeconds[which(method == "Startle-NNI")] + TotalSeconds[which(method == "Cassiopeia-Greedy")], TotalSeconds))
 head(df)
 df2 <- df %>%
-  mutate(total_time = ifelse(method == "sc-MAIL", total_time[which(method == "Startle-NNI")] + total_time[which(method == "sc-MAIL")], total_time))
+  mutate(total_time = ifelse(method == "LAML", total_time[which(method == "Startle-NNI")] + total_time[which(method == "LAML")], total_time))
 head(df2)
 
-scmail_df <- subset(df2, method == "sc-MAIL")
+scmail_df <- subset(df2, method == "LAML")
 startle_df <- subset(df2, method == "Startle-NNI")
 cassg_df <- subset(df2, method == "Cassiopeia-\nGreedy")
 head(cassg_df)
@@ -54,8 +54,8 @@ p1 <- ggplot(df2,aes(x=method,y=TotalSeconds/60)) +
   xlab("") +
   labs(x = "", y = "Runtime (m)", title = "Topology Est. Runtime\n(All model conditions)") + 
   scale_color_discrete(guide = FALSE) +
-  theme_classic() + theme(text = element_text(size=15)) #, legend.title = element_blank(),legend.position = "bottom") #+ 
-  #scale_x_discrete(labels = c("1" = "Cassiopeia-Greedy", "2" = "sc-MAIL", "3" = "Startle-NNI"))
+  theme_classic() + theme(text = element_text(size=15)) + #, legend.title = element_blank(),legend.position = "bottom") #+ 
+  scale_x_discrete(labels = c("1" = "Neighbor-Joining", "Cassiopeia-Greedy", "2" = "LAML", "3" = "Startle-NNI"))
 # ggsave("brlen_ratio_trueTopo.pdf",width=6,height=4)
 ggsave("simtlscl_topology_runtime_comparison.pdf", width=6, height=4)
 
@@ -84,7 +84,7 @@ head(d2)
 
 d1_filtered <- d1[d1$Sample %in% d2$Sample, ]
 merged_df <- rbind(d1_filtered, d2)
-merged_df$Method = factor(merged_df$method,levels= c("Neighbor-Joining", "Cassiopeia-Greedy","Startle-NNI","sc-MAIL", "Cassiopeia-ILP"), labels = c("Neighbor-\nJoining", "Cassiopeia-\nGreedy","Startle-NNI","sc-MAIL","Cassiopeia-\nILP"))
+merged_df$Method = factor(merged_df$method,levels= c("Neighbor-Joining", "Cassiopeia-Greedy","Startle-NNI","sc-MAIL", "Cassiopeia-ILP"), labels = c("Neighbor-\nJoining", "Cassiopeia-\nGreedy","Startle-NNI","LAML","Cassiopeia-\nILP"))
 
 p2 <- ggplot(merged_df,aes(x=method,y=TotalSeconds/60)) +
   stat_summary() + 

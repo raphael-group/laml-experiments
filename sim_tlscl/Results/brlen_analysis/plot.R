@@ -1,4 +1,4 @@
-setwd("/Users/uym2/my_gits/problin_experiments/sim_tlscl/Results/brlen_analysis")
+setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/sim_tlscl/Results/brlen_analysis")
 
 require(ggplot2)
 library(ggpubr)
@@ -17,7 +17,7 @@ dm$model = factor(dm$model,levels=c("s0d100","s25d75","s50d50","s75d25","s100d0"
 dm$variable = factor(dm$variable,levels=c("theoNmus","trueNmus","MPNMus","dML"),
                      labels=c("Num. mutations (theoretical)",
                               "Num. mutations (empirical)",
-                              "MP branch length","sc-MAIL"))
+                              "MP branch length","LAML"))
 
 ggplot(dm,aes(x=d2root,y=value/trueBrlen,color=variable)) +
   stat_summary_bin(size=0.1,bins=50)+ 

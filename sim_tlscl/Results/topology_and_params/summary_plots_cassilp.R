@@ -1,4 +1,4 @@
-#setwd("/Users/gc3045/problin_experiments/sim_tlscl/Results/topology_and_params")
+setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/sim_tlscl/Results/topology_and_params")
 library(extrafont)
 font_import() 
 loadfonts(device="pdf")
@@ -30,7 +30,7 @@ rf_df = d[, c("modelcondition", "startle_rf", "cassg_rf", "cassilp_rf", "problin
 
 df2 <- melt(rf_df)
 df2
-df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","Cass-ilp", "ProbLin", "Neighbor-Joining"))
+df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","Cass-ilp", "LAML", "Neighbor-Joining"))
 
 plot0 <- ggplot(df2,aes(x=variable,y=value)) + geom_boxplot() + stat_summary() + 
   #facet_wrap(~modelcondition) + theme_classic() +
@@ -71,7 +71,7 @@ head(llh_df)
 df2 <- melt(llh_df)
 head(df2)
 
-df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","Cass-ilp", "ProbLin", "Neighbor-Joining"))
+df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy","Cass-ilp", "LAML", "Neighbor-Joining"))
 
 plot1 <- ggplot(df2,aes(x=variable,y=value)) + geom_boxplot() + stat_summary() + 
   #facet_wrap(~modelcondition) + theme_classic() +
@@ -96,7 +96,7 @@ head(wp_df)
 df2 <- melt(wp_df)
 head(df2)
 
-df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy", "Cass-ilp", "ProbLin", "Neighbor-Joining"))
+df2$variable = factor(df2$variable,labels = c("Startle-NNI","Cass-greedy", "Cass-ilp", "LAML", "Neighbor-Joining"))
 plot2 <- ggplot(df2,aes(x=variable,y=-value)) + geom_boxplot() + stat_summary() + 
   #facet_wrap(~modelcondition) + theme_classic() +
   xlab("Method") + 

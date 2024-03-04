@@ -1,10 +1,10 @@
-setwd("/Users/gc3045/problin_experiments/Real_biodata/intMEMOIR/topology")
+setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/Real_biodata/intMEMOIR/topology")
 
 require(ggplot2)
 library('stringr')
 library(reshape2)
 
-d = read.table("intMemoir_results.txt", sep=",",header=T)
+d = read.table("old_intMemoir_results.txt", sep=",",header=T)
 length(d$Sample)
 
 #d[d$Sample == "s5c3",]
@@ -27,7 +27,7 @@ head(all_df)
 # head(d)
 d <- all_df[order(all_df$NumNodes), ]
 df <- data.frame(d$Sample, d$NumNodes, as.numeric(d$Startle_RF), as.numeric(d$CassH_RF), as.numeric(d$Problin_RF), as.numeric(d$TideTreePub_RF)) 
-colnames(df) <- c("Sample", "NumNodes", "Startle-NNI", "Cassiopeia", "Problin", "TiDeTree (Pub)")
+colnames(df) <- c("Sample", "NumNodes", "Startle-NNI", "Cassiopeia", "LAML", "TiDeTree (Pub)")
 #df <- na.omit(df)
 dfm <- melt(df, id.vars=c("Sample", "NumNodes"))
 head(dfm)
@@ -45,7 +45,7 @@ p1 <- ggplot(dfm, aes(x=NumNodes, y=value, color=variable))  +
 
 # compare RF error, but a second plot on the bottom comparing the WPS or LLH
 df <- data.frame(d$Sample, d$NumNodes, as.numeric(d$Startle_NLLH), as.numeric(d$CassH_NLLH), as.numeric(d$Problin_NLLH)) #, as.numeric(d$TideTreePub_RF)) 
-colnames(df) <- c("Sample", "NumNodes", "Startle-NNI", "Cassiopeia", "Problin") #, "TiDeTree (Pub)")
+colnames(df) <- c("Sample", "NumNodes", "Startle-NNI", "Cassiopeia", "LAML") #, "TiDeTree (Pub)")
 dfm <- melt(df, id.vars=c("Sample", "NumNodes"))
 head(dfm)
 p2 <- ggplot(dfm, aes(x=NumNodes, y=value, color=variable))  + 
@@ -60,7 +60,7 @@ p2 <- ggplot(dfm, aes(x=NumNodes, y=value, color=variable))  +
   #theme(legend.position = c(0.9, 0.3), legend.justification = c(1, 1)) # Adjust the position  
 
 df <- data.frame(d$Sample, d$NumNodes, as.numeric(d$Startle_WPS), as.numeric(d$CassH_WPS), as.numeric(d$Problin_WPS)) #, as.numeric(d$TideTreePub_RF)) 
-colnames(df) <- c("Sample", "NumNodes", "Startle-NNI", "Cassiopeia", "Problin") #, "TiDeTree (Pub)")
+colnames(df) <- c("Sample", "NumNodes", "Startle-NNI", "Cassiopeia", "LAML") #, "TiDeTree (Pub)")
 dfm <- melt(df, id.vars=c("Sample", "NumNodes"))
 head(dfm)
 p3 <- ggplot(dfm, aes(x=NumNodes, y=value, color=variable))  + 
@@ -83,7 +83,7 @@ grid_plots <- grid.arrange(p1, p2, p3, nrow = 3)
 grid_plots
 
 # compare topology via RF distance between the different methods
-d2 = read.table("/Users/gc3045/sc-mail-experiments/Real_biodata/intMEMOIR/topology/intMemoir_cmp_topology.txt", sep=",",header=T)
+d2 = read.table("intMemoir_cmp_topology.txt", sep=",",header=T)
 head(d2)
 d2 <- d2[order(d2$NumNodes), ]
 df <- data.frame(d2$Sample, d2$NumNodes, as.numeric(d2$Startle_RF_Problin), as.numeric(d2$CassH_RF_Problin), as.numeric(d2$TideTreePub_RF_Problin)) 
@@ -101,24 +101,30 @@ p4 <- ggplot(dfm, aes(x=NumNodes, y=value, color=variable))  +
   xlab("Number of Cells") +
   labs(color="Method") +#, title="intMEMOIR Topology RF Comparison") + 
   theme_classic() 
+
+mean(dfm[dfm$variable == "Startle-NNI",]$value, na.rm=TRUE) # 0.312
+mean(dfm[dfm$variable == "Cassiopeia",]$value, na.rm=TRUE) # 0.462
+mean(dfm[dfm$variable == "TiDeTree (Pub)",]$value, na.rm=TRUE) # 0.462
+
 grid_plots <- grid.arrange(p1, p4, nrow = 2)
-ggsave("/Users/gc3045/sc-mail-experiments/Real_biodata/intMEMOIR/topology/intmemoir_all_rfcmp_across_numnodes.pdf", grid_plots, width=8, height=5)
+ggsave("/Users/gc3045/scmail_v1/sc-mail-experiments/Real_biodata/intMEMOIR/topology/intmemoir_all_rfcmp_across_numnodes.pdf", grid_plots, width=8, height=5)
 
 
 
 
 
+tidetree_results = read.table("all_pubtrees_scores.txt", sep=",", header=T)
+colnames(tidetree_results) <- c("Sample", "Method", "TideTreePub_RF")
 
 tidetree_results
-tidetree_results$rf <- as.numeric(tidetree_results$rf)
+tidetree_results$rf <- as.numeric(tidetree_results$TideTreePub_RF)
 #tidetree_indep = tidetree_results[tidetree_results$method == "indep",]
-tidetree_pub = tidetree_results[tidetree_results$method == "pub",]
-
+tidetree_pub = tidetree_results[tidetree_results$Method == "pub",]
 
 
 # plot RF
 df <- data.frame(d$Sample, d$NumNodes, as.numeric(d$Startle_RF), as.numeric(d$CassH_RF), as.numeric(d$Problin_RF), as.numeric(tidetree_pub$rf)) #, d$NumNodes)
-colnames(df) <- c("Sample", "NumNodes", "Startle-NNI", "Cassiopeia", "Problin", "TiDeTree (Pub)")
+colnames(df) <- c("Sample", "NumNodes", "Startle-NNI", "Cassiopeia", "LAML", "TiDeTree (Pub)")
 #df <- na.omit(df)
 dfm <- melt(df, id.vars=c("Sample", "NumNodes"))
 head(dfm)

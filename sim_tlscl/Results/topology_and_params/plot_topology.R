@@ -6,7 +6,7 @@ loadfonts(device="pdf")
 library("stringr")                       # Load stringr package
 library("ggplot2")
 library("reshape")
-setwd("/Users/gc3045/sc-mail-experiments/sim_tlscl/Results/topology_and_params")
+setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/sim_tlscl/Results/topology_and_params")
 dclear_rf <- read.table("dclear_output.csv", sep=",", header=T)
 #dclear_rf['modelcondition'] <- str_split_fixed(dclear_rf$modelcond, "p", 2)
 dclear_rf['ModelCond'] <- paste(dclear_rf$modelcond, dclear_rf$num_sampled, dclear_rf$rep, sep="_")
@@ -40,7 +40,7 @@ head(rfdist)
 rfdist=rfdist[,c(7, 1, 8, 6, 9, 11, 10, 12, 13)]
 head(rfdist)
 
-colnames(rfdist) = c('tcount', 'ModelCond', 'Cass-greedy', 'DCLEAR (KRD)', 'Neighbor-Joining', 'Startle-NNI', 'ProbLin', 'modelcondition', 'sProp')
+colnames(rfdist) = c('tcount', 'ModelCond', 'Cass-greedy', 'DCLEAR (KRD)', 'Neighbor-Joining', 'Startle-NNI', 'LAML', 'modelcondition', 'sProp')
 
 df = melt(rfdist, id=c("tcount", "sProp", "modelcondition", "ModelCond"))
 ggplot2::guides(color=ggplot2::guide_legend(ncol=2))
@@ -58,6 +58,10 @@ ggplot(df, aes(x=sProp/4, y=value, color=variable)) +
   coord_cartesian(xlim=c(-0.004,0.254), clip="off")  
   #+
   # annotate("text", x=-0.026, y=0.7, label="(A)", size=7, family="Times New Roman")
+
+mean(df[df$sProp == 0.0 & df$variable == "Startle-NNI",]$value) - mean(df[df$sProp == 0.0 & df$variable == "sc-MAIL",]$value)
+mean(df[df$sProp == 1.0 & df$variable == "Startle-NNI",]$value) - mean(df[df$sProp == 1.0 & df$variable == "sc-MAIL",]$value)
+
 
 ggsave("sim_tlscl_rfdist.pdf", width=4, height=4, family="Times")
 

@@ -1,4 +1,4 @@
-setwd("/Users/gc3045/problin_experiments/sim_tlscl/Results/topology_and_params")
+setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/sim_tlscl/Results/topology_and_params")
 library(extrafont)
 font_import() 
 loadfonts(device="pdf")
@@ -142,4 +142,4 @@ ggplot(df1[df1$Method != "true",], aes(x=nu, y=phi, color=Method,group=Method,sh
   #annotate("text", x=-0.05, y=0.28, label="(B)", clip="off", family="Times New Roman", size=7)
 #guides(color = guide_legend(nrow = 2))
 
-ggsave("sim_tlscl_estmissingparams.pdf", width=4, height=4)
+ggsave("sim_tlscl_estmissingparams.pdf", width=5, height=5)

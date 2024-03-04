@@ -39,3 +39,24 @@ ggplot(d, aes(x=scaled_interval_start, y=per_all_lineages, fill=transition_type)
                        
 # update the 
 ggsave("transition_type_pers.png", width=15, height = 4)
+
+
+index_first_nonzero <- which(d$per_all_lineages != 0 & d$transition_type == "p2n_transition_norm")[1]
+d$scaled_interval_start[index_first_nonzero]
+
+dp2n <- d[d$transition_type == "p2n_transition_norm", ]
+length(d$transition_type)
+length(dp2n$transition_type)
+index_max <- which(dp2n$per_all_lineages == max(dp2n$per_all_lineages))[1]
+index_max
+dp2n$scaled_interval_start[index_max]
+
+dp2n$scaled_interval_start[index_max + 46]
+dp2n$per_all_lineages[index_max + 46]
+dp2n$per_all_lineages[index_max]
+
+dn2p <- d[d$transition_type == "n2p_transition_norm", ]
+index_first_reseed <- which(dn2p$per_all_lineages != 0)[1]
+dn2p$scaled_interval_start[index_first_reseed]
+
+

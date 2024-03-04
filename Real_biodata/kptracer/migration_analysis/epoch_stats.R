@@ -30,3 +30,4 @@ ggplot(d, aes(x=epoch, y=branch_length * scale_factor, fill=epoch)) +
   theme_classic() + 
   theme(legend.position= "none")
 ggsave("epoch_branches.png", width=4, height = 4)
+
