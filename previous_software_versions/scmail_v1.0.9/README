@@ -1,0 +1,11 @@
+A release in the name "scmail", made on Jan 31, 2024. Used to have an associated PyPi release, but was removed.
+Release note: 
+"Now version 1.0.9., updated on pip.
+Merges the em_runtime2 branch into the timescaled branch.
+
+[x] Removed ultrametric flag, making default output an ultrametric tree (when possible) and adding the --timescale flag specifying experiment time. Branch lengths are now output in time-scale. Additionally outputs the estimated mutation rate.
+[x] Implements the convex closed-form (no heritable silencing missing data) solution in the EM algorithm.
+[x] Adds runtime of E and M steps to the verbose output.
+[x] Added back the MLSolver tests for the scmail_tests suite. There are now 79 tests (runs in <14 seconds).
+[x] Updated test case example 1.
+[x] Updates to readme. "

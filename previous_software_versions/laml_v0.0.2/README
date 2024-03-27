@@ -1,0 +1,5 @@
+The first stable release in the name "LAML", made on March 20, 2024. 
+Still available on Github release: https://github.com/raphael-group/LAML/releases
+Has an associated pip release https://pypi.org/project/LAML/0.0.2
+Release note: "Introducing LAML, package published on pip (scmail no longer available)."
+

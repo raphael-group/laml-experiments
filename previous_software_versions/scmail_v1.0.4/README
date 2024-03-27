@@ -1,0 +1,2 @@
+A release in the name "scmail", made on Nov 14, 2023. Used to have an associated PyPi release, but was removed.
+Release note: "Updating with executable commands in setup.py: run_scmail and run_scmail_tests"

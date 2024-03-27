@@ -1,0 +1,2 @@
+A release in the name "scmail", made on Nov 16, 2023. Used to have an associated PyPi release, but was removed.
+Release note: "Updating to the pypi package -- test suite now consists of 58 tests that should run in about 20 seconds, with paths set for user"
