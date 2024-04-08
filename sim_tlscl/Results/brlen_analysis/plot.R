@@ -15,8 +15,8 @@ dm = melt(d,id.vars = c("model","prior","treeSize","rep","nodeID","d2root","true
 dm$model = factor(dm$model,levels=c("s0d100","s25d75","s50d50","s75d25","s100d0"),
                   labels=c("h0d100","h25d75","h50d50","h75d25","h100d0"))
 dm$variable = factor(dm$variable,levels=c("theoNmus","trueNmus","MPNMus","dML"),
-                     labels=c("Num. mutations (theoretical)",
-                              "Num. mutations (empirical)",
+                     labels=c("# mutations (theoretical)",
+                              "# mutations (empirical)",
                               "MP branch length","LAML"))
 
 ggplot(dm,aes(x=d2root,y=value/trueBrlen,color=variable)) +
@@ -39,7 +39,7 @@ ggplot(dm,aes(x=d2root,y=value/trueBrlen,color=variable)) +
   #facet_wrap(~model) + 
   xlab("Distance to root") +
   ylab("Ratio to true branch length") +
-  theme_classic() + theme(legend.title = element_blank(),legend.position = c(0.2,0.25))
+  theme_classic() + theme(legend.title = element_blank(),legend.position = c(0.27,0.175))
 ggsave("brlen_ratio_trueTopo_nofacet.pdf",width=4,height=4)
 
 
