@@ -1,0 +1,141 @@
+Launching LAML version 0.0.4
+LAML was called as follows: /Users/uym2/my_gits/LAML/run_laml.py -c ../../bar24/Bar24_character_matrix.txt -t place_outlier_2/augmented_tree_2_optimized_trees.nwk -o Bar24_improved_final -v -p ../../bar24/Bar24_priors.pickle --delimiter tab -m -1 --topology_search
+Prior keys mismatch with site names.
+Prior keys: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+Site names: ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8', 'r9', 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20', 'r21', 'r22', 'r23', 'r24', 'r25', 'r26', 'r27', 'r28', 'r29', 'r30']
+Attempting to infer mapping between site names and prior keys...
+Not all site names are present in the dictionary. Trying offset...
+Offset between input site names and prior keys is assumed to be 1
+Missing priors at site r30, filling in uniform priors...
+{'r1': 0, 'r2': 1, 'r3': 2, 'r4': 3, 'r5': 4, 'r6': 5, 'r7': 6, 'r8': 7, 'r9': 8, 'r10': 9, 'r11': 10, 'r12': 11, 'r13': 12, 'r14': 13, 'r15': 14, 'r16': 15, 'r17': 16, 'r18': 17, 'r19': 18, 'r20': 19, 'r21': 20, 'r22': 21, 'r23': 22, 'r24': 23, 'r25': 24, 'r26': 25, 'r27': 26, 'r28': 27, 'r29': 28, 'r30': 29}
+All polytomies will be resolved
+Starting topology search
+Running topology search sequentially...
+Performing nni-search 1
+Perform nni moves for full topology search
+Initial score: -5980.801109840024
+NNI Iter: 0
+Launching LAML version 0.0.4
+LAML was called as follows: /Users/uym2/my_gits/LAML/run_laml.py -c ../../bar24/Bar24_character_matrix.txt -t place_outlier_2/augmented_tree_2_optimized_trees.nwk -o Bar24_improved_final -v -p ../../bar24/Bar24_priors.pickle --delimiter tab -m -1 --topology_search
+Prior keys mismatch with site names.
+Prior keys: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+Site names: ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8', 'r9', 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20', 'r21', 'r22', 'r23', 'r24', 'r25', 'r26', 'r27', 'r28', 'r29', 'r30']
+Attempting to infer mapping between site names and prior keys...
+Not all site names are present in the dictionary. Trying offset...
+Offset between input site names and prior keys is assumed to be 1
+Missing priors at site r30, filling in uniform priors...
+{'r1': 0, 'r2': 1, 'r3': 2, 'r4': 3, 'r5': 4, 'r6': 5, 'r7': 6, 'r8': 7, 'r9': 8, 'r10': 9, 'r11': 10, 'r12': 11, 'r13': 12, 'r14': 13, 'r15': 14, 'r16': 15, 'r17': 16, 'r18': 17, 'r19': 18, 'r20': 19, 'r21': 20, 'r22': 21, 'r23': 22, 'r24': 23, 'r25': 24, 'r26': 25, 'r27': 26, 'r28': 27, 'r29': 28, 'r30': 29}
+All polytomies will be resolved
+Starting topology search
+Running topology search sequentially...
+Performing nni-search 1
+Perform nni moves for full topology search
+Initial score: -5980.801166632018
+NNI Iter: 0
+Current score: -5980.892592177823
+Runtime (s): 9.285296958
+NNI Iter: 1
+Current score: -5981.131926793796
+Runtime (s): 16.231814332999996
+NNI Iter: 2
+Current score: -5981.187301162091
+Runtime (s): 37.575160375
+NNI Iter: 3
+Current score: -5981.295976222592
+Runtime (s): 9.427805917
+NNI Iter: 4
+Launching LAML version 0.0.4
+LAML was called as follows: /Users/uym2/my_gits/LAML/run_laml.py -c ../../bar24/Bar24_character_matrix.txt -t place_outlier_2/augmented_tree_2_optimized_trees.nwk -o Bar24_improved_final -v -p ../../bar24/Bar24_priors.pickle --delimiter tab -m -1 --topology_search --parallel
+Prior keys mismatch with site names.
+Prior keys: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+Site names: ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8', 'r9', 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20', 'r21', 'r22', 'r23', 'r24', 'r25', 'r26', 'r27', 'r28', 'r29', 'r30']
+Attempting to infer mapping between site names and prior keys...
+Not all site names are present in the dictionary. Trying offset...
+Offset between input site names and prior keys is assumed to be 1
+Missing priors at site r30, filling in uniform priors...
+{'r1': 0, 'r2': 1, 'r3': 2, 'r4': 3, 'r5': 4, 'r6': 5, 'r7': 6, 'r8': 7, 'r9': 8, 'r10': 9, 'r11': 10, 'r12': 11, 'r13': 12, 'r14': 13, 'r15': 14, 'r16': 15, 'r17': 16, 'r18': 17, 'r19': 18, 'r20': 19, 'r21': 20, 'r22': 21, 'r23': 22, 'r24': 23, 'r25': 24, 'r26': 25, 'r27': 26, 'r28': 27, 'r29': 28, 'r30': 29}
+All polytomies will be resolved
+Starting topology search
+Running topology search in parallel...
+Performing nni-search 1
+Perform nni moves for full topology search
+Initial score: -5980.801137070352
+NNI Iter: 0
+Current score: -5980.761931680621
+Runtime (s): 59.507482083000006
+NNI Iter: 1
+Current score: -5979.380131878393
+Runtime (s): 43.283864584
+NNI Iter: 2
+Current score: -5979.278720754636
+Runtime (s): 4.201561708
+NNI Iter: 3
+Current score: -5979.615215990145
+Runtime (s): 3.691508083000002
+NNI Iter: 4
+Current score: -5982.689871831974
+Runtime (s): 4.76791025
+NNI Iter: 5
+Current score: -5982.570632157976
+Runtime (s): 4.454696708
+NNI Iter: 6
+Current score: -5981.672873405355
+Runtime (s): 5.220453292000002
+NNI Iter: 7
+Current score: -5981.751209628112
+Runtime (s): 31.16067799999999
+NNI Iter: 8
+Current score: -5981.834989298872
+Runtime (s): 21.549118958999998
+NNI Iter: 9
+Current score: -5981.789041683519
+Runtime (s): 30.089992709
+NNI Iter: 10
+Current score: -5982.3345404791735
+Runtime (s): 4.105081999999982
+NNI Iter: 11
+Current score: -5981.890197134548
+Runtime (s): 12.109545209000004
+NNI Iter: 12
+Current score: -5981.909528890803
+Runtime (s): 24.201316583999983
+NNI Iter: 13
+Current score: -5981.841709228171
+Runtime (s): 15.68684774999997
+NNI Iter: 14
+Current score: -5981.719697498107
+Runtime (s): 14.874433040999975
+NNI Iter: 15
+Current score: -5981.6681959358975
+Runtime (s): 9.359261624999988
+NNI Iter: 16
+Current score: -5981.671225199614
+Runtime (s): 32.868294375000005
+NNI Iter: 17
+Current score: -5975.5953913048015
+Runtime (s): 48.13296437499997
+NNI Iter: 18
+Best score for this search: -5975.5953913048015
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -5975.65371720423
+Tree height pre-scaling: 0.6817698407312436, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6817698407312436
+Tree height pre-scaling: 0.681769840984753, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.681769840984753
+Tree height pre-scaling: 0.6817698408269748, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6817698408269748
+Tree height pre-scaling: 0.6817698408234072, input timescale: 1.0
+Tree height after scaling: 0.9999999999999999, mutation rate: 0.6817698408234072
+Tree height pre-scaling: 0.6817698409985764, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6817698409985764
+Tree height pre-scaling: 0.6817698408057913, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6817698408057913
+Tree height pre-scaling: 0.6817698413592335, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6817698413592335
+Tree height pre-scaling: 0.6817698411611033, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6817698411611033
+Tree height pre-scaling: 0.6817698408373869, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6817698408373869
+Tree height pre-scaling: 0.6817698416699622, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6817698416699622
+Runtime (s): 447.79117620899996

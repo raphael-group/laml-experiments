@@ -1,0 +1,467 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=363;
+	taxlabels
+	AAACCCAGTCTCTCAC-1[&LentiBarcode="2",symbolName="-"]
+	AAAGGATTCGCACGAC-1[&LentiBarcode="?",symbolName="."]
+	AAAGGTAAGAATTGTG-1[&LentiBarcode="4",symbolName="-"]
+	AAAGGTATCAATGTCG-1[&LentiBarcode="?",symbolName="."]
+	AAAGGTATCGACTCCT-1[&LentiBarcode="?",symbolName="."]
+	AAAGTCCAGCTCACTA-1[&LentiBarcode="2",symbolName="-"]
+	AACAACCTCCTAACAG-1[&LentiBarcode="2",symbolName="-"]
+	AACAAGACATTAGGAA-1[&LentiBarcode="?",symbolName="."]
+	AACCAACTCGTTCAGA-1[&LentiBarcode="?",symbolName="."]
+	AACCATGAGTTGGACG-1[&LentiBarcode="7",symbolName="-"]
+	AACCCAAAGACTTCGT-1[&LentiBarcode="?",symbolName="."]
+	AACCCAAGTGGTTTGT-1[&LentiBarcode="?",symbolName="."]
+	AACGAAATCCGATAAC-1[&LentiBarcode="?",symbolName="."]
+	AACGTCAGTTTACACG-1[&LentiBarcode="?",symbolName="."]
+	AAGACAATCCACTTTA-1[&LentiBarcode="10",symbolName="-"]
+	AAGACTCAGCAGTACG-1[&LentiBarcode="?",symbolName="."]
+	AAGACTCTCGGAGCAA-1[&LentiBarcode="4",symbolName="-"]
+	AAGGAATGTGACTAAA-1[&LentiBarcode="?",symbolName="."]
+	AAGTGAAAGGATGCGT-1[&LentiBarcode="12",symbolName="-"]
+	AATCACGTCTGAGATC-1[&LentiBarcode="13",symbolName="-"]
+	AATGGAAAGCGTCAGA-1[&LentiBarcode="?",symbolName="."]
+	AATGGAATCTTTCGAT-1[&LentiBarcode="14",symbolName="-"]
+	AATGGCTAGCTAAATG-1[&LentiBarcode="?",symbolName="."]
+	AATGGCTAGGGTGAAA-1[&LentiBarcode="15",symbolName="-"]
+	AATTCCTGTGGCTGCT-1[&LentiBarcode="?",symbolName="."]
+	ACAACCAGTACGTAGG-1[&LentiBarcode="?",symbolName="."]
+	ACAAGCTTCCAAACCA-1[&LentiBarcode="?",symbolName="."]
+	ACAGAAAAGTCGCCCA-1[&LentiBarcode="18",symbolName="-"]
+	ACCAACATCACTAGCA-1[&LentiBarcode="?",symbolName="."]
+	ACCCAAAGTATCGAGG-1[&LentiBarcode="18",symbolName="-"]
+	ACCCAAAGTCAAGTTC-1[&LentiBarcode="?",symbolName="."]
+	ACCCAAATCGTTCAGA-1[&LentiBarcode="14",symbolName="-"]
+	ACCGTTCCAGTCAGAG-1[&LentiBarcode="4",symbolName="-"]
+	ACCGTTCGTCACCACG-1[&LentiBarcode="4",symbolName="-"]
+	ACCGTTCTCTTCCGTG-1[&LentiBarcode="?",symbolName="."]
+	ACCTACCCAGAGAGGG-1[&LentiBarcode="?",symbolName="."]
+	ACGATCATCCGTTGGG-1[&LentiBarcode="15",symbolName="-"]
+	ACGGAAGTCACGGAGA-1[&LentiBarcode="2",symbolName="-"]
+	ACGGTTAGTTAAGTCC-1[&LentiBarcode="14",symbolName="-"]
+	ACGTCCTTCCCTCTAG-1[&LentiBarcode="4",symbolName="-"]
+	ACTACGAAGGAGATAG-1[&LentiBarcode="15",symbolName="-"]
+	ACTATCTCAGAGTAAT-1[&LentiBarcode="?",symbolName="."]
+	ACTATTCGTCTGATAC-1[&LentiBarcode="22",symbolName="-"]
+	ACTATTCGTGCAATGG-1[&LentiBarcode="2",symbolName="-"]
+	ACTCTCGGTGAGCGAT-1[&LentiBarcode="4",symbolName="-"]
+	ACTGTCCTCGCAATTG-1[&LentiBarcode="2",symbolName="-"]
+	ACTTAGGGTTAGGGTG-1[&LentiBarcode="?",symbolName="."]
+	ACTTCGCCAATAGAGT-1[&LentiBarcode="10",symbolName="-"]
+	ACTTTGTCAGCGGTCT-1[&LentiBarcode="15",symbolName="-"]
+	AGAAGCGCAGTTCCAA-1[&LentiBarcode="15",symbolName="-"]
+	AGACAAATCCAACACA-1[&LentiBarcode="?",symbolName="."]
+	AGACAGGGTTGTGCAT-1[&LentiBarcode="?",symbolName="."]
+	AGACCATCAGACAATA-1[&LentiBarcode="18",symbolName="-"]
+	AGACCATCATCACCAA-1[&LentiBarcode="?",symbolName="."]
+	AGAGCCCAGATGAATC-1[&LentiBarcode="23",symbolName="-"]
+	AGAGCCCAGTTTCGGT-1[&LentiBarcode="?",symbolName="."]
+	AGATAGACAGCTGAAG-1[&LentiBarcode="10",symbolName="-"]
+	AGCATCATCCTGATAG-1[&LentiBarcode="?",symbolName="."]
+	AGCCACGGTCATCAGT-1[&LentiBarcode="?",symbolName="."]
+	AGCGCCAGTCGTTGCG-1[&LentiBarcode="?",symbolName="."]
+	AGCGCTGGTTAAGAAC-1[&LentiBarcode="?",symbolName="."]
+	AGCGTATTCGGAGTGA-1[&LentiBarcode="?",symbolName="."]
+	AGCTCAACAGTTTCGA-1[&LentiBarcode="4",symbolName="-"]
+	AGGAATACAGAGGTTG-1[&LentiBarcode="?",symbolName="."]
+	AGGCATTGTCGTTGGC-1[&LentiBarcode="14",symbolName="-"]
+	AGGGAGTTCGCGTGAC-1[&LentiBarcode="?",symbolName="."]
+	AGTAACCCAGACTGCC-1[&LentiBarcode="?",symbolName="."]
+	AGTAGCTTCAGCAATC-1[&LentiBarcode="18",symbolName="-"]
+	AGTCAACCACATCATG-1[&LentiBarcode="10",symbolName="-"]
+	AGTCAACCAGCTGAGA-1[&LentiBarcode="4",symbolName="-"]
+	AGTCTCCGTCACTCGG-1[&LentiBarcode="18",symbolName="-"]
+	AGTCTCCTCTCCTACG-1[&LentiBarcode="4",symbolName="-"]
+	AGTTCCCCACAGGATG-1[&LentiBarcode="7",symbolName="-"]
+	AGTTCGAGTAGTGATA-1[&LentiBarcode="?",symbolName="."]
+	ATACCGATCAGCGGAA-1[&LentiBarcode="?",symbolName="."]
+	ATAGACCTCTCTTCAA-1[&LentiBarcode="?",symbolName="."]
+	ATCACGAAGCAAACAT-1[&LentiBarcode="?",symbolName="."]
+	ATCACGACAGTGGCTC-1[&LentiBarcode="?",symbolName="."]
+	ATCACGATCGACGATT-1[&LentiBarcode="4",symbolName="-"]
+	ATCAGGTCAGCACGAA-1[&LentiBarcode="29",symbolName="-"]
+	ATCCGTCAGGCACAAC-1[&LentiBarcode="?",symbolName="."]
+	ATCCGTCCAGGATTCT-1[&LentiBarcode="?",symbolName="."]
+	ATCCTATAGCTGACAG-1[&LentiBarcode="?",symbolName="."]
+	ATCGGATAGCGTTGTT-1[&LentiBarcode="18",symbolName="-"]
+	ATCGTGACAGTTAAAG-1[&LentiBarcode="?",symbolName="."]
+	ATCGTGATCCAAGCTA-1[&LentiBarcode="15",symbolName="-"]
+	ATCTCTACAAGGTCAG-1[&LentiBarcode="?",symbolName="."]
+	ATGAGGGCAGGCACAA-1[&LentiBarcode="14",symbolName="-"]
+	ATGAGTCGTACCATAC-1[&LentiBarcode="14",symbolName="-"]
+	ATGATCGTCGACATCA-1[&LentiBarcode="2",symbolName="-"]
+	ATGGTTGGTTGGAGGT-1[&LentiBarcode="2",symbolName="-"]
+	ATGTCCCGTCAGTCCG-1[&LentiBarcode="?",symbolName="."]
+	ATTACTCGTAGCTGCC-1[&LentiBarcode="7",symbolName="-"]
+	ATTATCCCAGCAGATG-1[&LentiBarcode="?",symbolName="."]
+	ATTCATCTCTGCGTCT-1[&LentiBarcode="14",symbolName="-"]
+	ATTCCTACAGCCTACG-1[&LentiBarcode="2",symbolName="-"]
+	ATTCTACTCTAGATCG-1[&LentiBarcode="?",symbolName="."]
+	ATTGGGTTCTTAAGGC-1[&LentiBarcode="14",symbolName="-"]
+	ATTGTTCCACTCCACT-1[&LentiBarcode="14",symbolName="-"]
+	CAAAGAATCAACCGAT-1[&LentiBarcode="2",symbolName="-"]
+	CAACAGTTCCCATGGG-1[&LentiBarcode="?",symbolName="."]
+	CAACGATAGGCCCGTT-1[&LentiBarcode="2",symbolName="-"]
+	CAACGATCAAATCAAG-1[&LentiBarcode="4",symbolName="-"]
+	CAAGAGGCAGACATCT-1[&LentiBarcode="4",symbolName="-"]
+	CACCAAAAGTAAGAGG-1[&LentiBarcode="?",symbolName="."]
+	CACGAATGTCGCATCG-1[&LentiBarcode="?",symbolName="."]
+	CACGGGTAGAGTCAAT-1[&LentiBarcode="14",symbolName="-"]
+	CACGTGGTCTCTGCCA-1[&LentiBarcode="?",symbolName="."]
+	CACTGAAGTTTACCAG-1[&LentiBarcode="34",symbolName="-"]
+	CACTTCGTCCCTCGAT-1[&LentiBarcode="?",symbolName="."]
+	CAGATACGTGCGAGTA-1[&LentiBarcode="?",symbolName="."]
+	CAGATTGGTTGAGGAC-1[&LentiBarcode="34",symbolName="-"]
+	CAGCAATGTCCAGAAG-1[&LentiBarcode="?",symbolName="."]
+	CAGCACGGTGAGTAAT-1[&LentiBarcode="?",symbolName="."]
+	CAGCAGCCAACCGCTG-1[&LentiBarcode="4",symbolName="-"]
+	CAGCAGCGTTTGCAGT-1[&LentiBarcode="?",symbolName="."]
+	CAGCCAGAGTGGAAAG-1[&LentiBarcode="?",symbolName="."]
+	CAGGCCACAAATCGTC-1[&LentiBarcode="37",symbolName="-"]
+	CAGTGCGTCAAGAAAC-1[&LentiBarcode="?",symbolName="."]
+	CATAAGCAGCACCTGC-1[&LentiBarcode="?",symbolName="."]
+	CATAAGCCACTTCAGA-1[&LentiBarcode="?",symbolName="."]
+	CATACTTCAATCCTAG-1[&LentiBarcode="?",symbolName="."]
+	CATCGGGGTAAGGCTG-1[&LentiBarcode="?",symbolName="."]
+	CATCGTCTCGGAGTAG-1[&LentiBarcode="2",symbolName="-"]
+	CATGCCTAGCTGACAG-1[&LentiBarcode="2",symbolName="-"]
+	CATTCCGAGGAAAGGT-1[&LentiBarcode="?",symbolName="."]
+	CATTCTAAGAATTGTG-1[&LentiBarcode="?",symbolName="."]
+	CATTGTTGTGTCTTGA-1[&LentiBarcode="15",symbolName="-"]
+	CATTGTTTCATCAGTG-1[&LentiBarcode="2",symbolName="-"]
+	CATTTCACACTGATTG-1[&LentiBarcode="?",symbolName="."]
+	CATTTCAGTCACTTCC-1[&LentiBarcode="18",symbolName="-"]
+	CCAAGCGAGGTACAAT-1[&LentiBarcode="23",symbolName="-"]
+	CCAAGCGGTCCTTGTC-1[&LentiBarcode="?",symbolName="."]
+	CCACTTGGTTAGGAGC-1[&LentiBarcode="2",symbolName="-"]
+	CCATCACGTCGGAAAC-1[&LentiBarcode="37",symbolName="-"]
+	CCCGAAGTCAAGTTGC-1[&LentiBarcode="15",symbolName="-"]
+	CCCTCAAAGTATGAGT-1[&LentiBarcode="2",symbolName="-"]
+	CCCTCTCCAGACTGCC-1[&LentiBarcode="?",symbolName="."]
+	CCGAACGGTGTGTCCG-1[&LentiBarcode="37",symbolName="-"]
+	CCGCAAGCACGTACAT-1[&LentiBarcode="?",symbolName="."]
+	CCGGGTAAGTGCGACA-1[&LentiBarcode="?",symbolName="."]
+	CCGGGTAGTATGAGGC-1[&LentiBarcode="?",symbolName="."]
+	CCGGGTATCTGGCCAG-1[&LentiBarcode="?",symbolName="."]
+	CCGTTCACACACGGAA-1[&LentiBarcode="13",symbolName="-"]
+	CCTACGTTCCATGATG-1[&LentiBarcode="?",symbolName="."]
+	CCTCAACTCGTAGGAG-1[&LentiBarcode="?",symbolName="."]
+	CCTCAGTTCAGGCGAA-1[&LentiBarcode="?",symbolName="."]
+	CCTCAGTTCATCACCC-1[&LentiBarcode="4",symbolName="-"]
+	CCTCCAAAGACGACGT-1[&LentiBarcode="2",symbolName="-"]
+	CCTCTAGAGACCAAAT-1[&LentiBarcode="14",symbolName="-"]
+	CCTGTTGAGGCTAAAT-1[&LentiBarcode="12",symbolName="-"]
+	CCTTCAGCACGTACTA-1[&LentiBarcode="14",symbolName="-"]
+	CGAAGTTGTTATGGTC-1[&LentiBarcode="23",symbolName="-"]
+	CGAGGCTTCTCGGTCT-1[&LentiBarcode="?",symbolName="."]
+	CGATCGGCACGGTAGA-1[&LentiBarcode="4",symbolName="-"]
+	CGATGCGTCCGCGAGT-1[&LentiBarcode="?",symbolName="."]
+	CGCCAGAGTCATGGCC-1[&LentiBarcode="14",symbolName="-"]
+	CGCCATTCACGACTAT-1[&LentiBarcode="37",symbolName="-"]
+	CGCCATTCAGATTAAG-1[&LentiBarcode="14",symbolName="-"]
+	CGCCATTGTCCCGCAA-1[&LentiBarcode="13",symbolName="-"]
+	CGCGTGAGTGAGAACC-1[&LentiBarcode="?",symbolName="."]
+	CGGAACCGTGACCGAA-1[&LentiBarcode="15",symbolName="-"]
+	CGGAATTTCTACGGTA-1[&LentiBarcode="14",symbolName="-"]
+	CGGACACCAGCAGTTT-1[&LentiBarcode="?",symbolName="."]
+	CGGACACTCGTCTAAG-1[&LentiBarcode="14",symbolName="-"]
+	CGGGACTTCAGCATTG-1[&LentiBarcode="18",symbolName="-"]
+	CGGGCATGTGACTCTA-1[&LentiBarcode="14",symbolName="-"]
+	CGGGCATTCGTGACTA-1[&LentiBarcode="?",symbolName="."]
+	CGGGTCACACCCTATC-1[&LentiBarcode="?",symbolName="."]
+	CGTAGTAAGACCAGAC-1[&LentiBarcode="10",symbolName="-"]
+	CGTCAAAAGGGATCGT-1[&LentiBarcode="?",symbolName="."]
+	CGTGTCTCAAATGATG-1[&LentiBarcode="?",symbolName="."]
+	CTAACCCCAGTTAGGG-1[&LentiBarcode="14",symbolName="-"]
+	CTACAGACATCGAAGG-1[&LentiBarcode="?",symbolName="."]
+	CTACCTGGTTACCCTC-1[&LentiBarcode="?",symbolName="."]
+	CTCAGAACAACTGAAA-1[&LentiBarcode="10",symbolName="-"]
+	CTCCCAAAGTGCCAGA-1[&LentiBarcode="2",symbolName="-"]
+	CTCCCAATCCGAGCTG-1[&LentiBarcode="37",symbolName="-"]
+	CTCCTCCTCGACGAGA-1[&LentiBarcode="23",symbolName="-"]
+	CTCCTTTAGAGGCGTT-1[&LentiBarcode="?",symbolName="."]
+	CTCCTTTAGGCACTAG-1[&LentiBarcode="?",symbolName="."]
+	CTCCTTTTCCCACAGG-1[&LentiBarcode="?",symbolName="."]
+	CTCTCGAAGAATGTTG-1[&LentiBarcode="14",symbolName="-"]
+	CTGCAGGCAGACCGCT-1[&LentiBarcode="?",symbolName="."]
+	CTGCAGGGTATCAGGG-1[&LentiBarcode="2",symbolName="-"]
+	CTGCATCTCATGCCAA-1[&LentiBarcode="?",symbolName="."]
+	CTGCTCAAGTAACGAT-1[&LentiBarcode="18",symbolName="-"]
+	CTGGACGGTTCAACGT-1[&LentiBarcode="?",symbolName="."]
+	CTGTAGAAGAGGGTAA-1[&LentiBarcode="?",symbolName="."]
+	CTGTATTGTAGGTGCA-1[&LentiBarcode="?",symbolName="."]
+	CTGTCGTGTCTGGTTA-1[&LentiBarcode="10",symbolName="-"]
+	CTTCGGTTCGGTAACT-1[&LentiBarcode="?",symbolName="."]
+	CTTCTCTGTTGCTGAT-1[&LentiBarcode="?",symbolName="."]
+	CTTGATTCAGAACTCT-1[&LentiBarcode="4",symbolName="-"]
+	GAACTGTTCCGCGAGT-1[&LentiBarcode="4",symbolName="-"]
+	GAAGAATGTAGGCAGT-1[&LentiBarcode="?",symbolName="."]
+	GACAGCCGTGCGACAA-1[&LentiBarcode="14",symbolName="-"]
+	GACCAATGTTCAGCGC-1[&LentiBarcode="?",symbolName="."]
+	GACCGTGGTCACTTAG-1[&LentiBarcode="?",symbolName="."]
+	GACGCTGAGGATTTAG-1[&LentiBarcode="2",symbolName="-"]
+	GAGACCCCACTACAGT-1[&LentiBarcode="?",symbolName="."]
+	GAGGCAACAACCTAAC-1[&LentiBarcode="4",symbolName="-"]
+	GAGGGATAGTCACTCA-1[&LentiBarcode="2",symbolName="-"]
+	GAGGGTACAAAGTGTA-1[&LentiBarcode="?",symbolName="."]
+	GAGTCATTCGAAATCC-1[&LentiBarcode="4",symbolName="-"]
+	GATCGTATCTCCGATC-1[&LentiBarcode="?",symbolName="."]
+	GATGAGGTCGCTCTAC-1[&LentiBarcode="?",symbolName="."]
+	GATTCTTGTACCATAC-1[&LentiBarcode="?",symbolName="."]
+	GCACGGTTCACGAACT-1[&LentiBarcode="?",symbolName="."]
+	GCAGCTGAGATGTTAG-1[&LentiBarcode="12",symbolName="-"]
+	GCATCTCGTCGCCTAG-1[&LentiBarcode="12",symbolName="-"]
+	GCATCTCGTTAACCTG-1[&LentiBarcode="15",symbolName="-"]
+	GCATCTCTCCAGGACC-1[&LentiBarcode="13",symbolName="-"]
+	GCATGATCAAGTGACG-1[&LentiBarcode="2",symbolName="-"]
+	GCATTAGGTATGTCCA-1[&LentiBarcode="10",symbolName="-"]
+	GCCAGCAGTTCCTACC-1[&LentiBarcode="4",symbolName="-"]
+	GCCAGGTGTGGCGCTT-1[&LentiBarcode="4",symbolName="-"]
+	GCCATGGAGACCAAAT-1[&LentiBarcode="?",symbolName="."]
+	GCCCAGAAGACATCCT-1[&LentiBarcode="18",symbolName="-"]
+	GCCCAGAGTCTGTCAA-1[&LentiBarcode="2",symbolName="-"]
+	GCCGATGAGATAGCAT-1[&LentiBarcode="23",symbolName="-"]
+	GCGGATCAGGAAGTAG-1[&LentiBarcode="2",symbolName="-"]
+	GCGGATCCAATAGAGT-1[&LentiBarcode="?",symbolName="."]
+	GCGTGCAAGCTGGAGT-1[&LentiBarcode="15",symbolName="-"]
+	GCTCAAAGTAGACACG-1[&LentiBarcode="7",symbolName="-"]
+	GCTTCACCAGGCAATG-1[&LentiBarcode="12",symbolName="-"]
+	GCTTTCGGTGTGTGTT-1[&LentiBarcode="37",symbolName="-"]
+	GGAATCTAGGATTTGA-1[&LentiBarcode="29",symbolName="-"]
+	GGAGGTACAAGAATGT-1[&LentiBarcode="?",symbolName="."]
+	GGGACCTTCGAACGGA-1[&LentiBarcode="2",symbolName="-"]
+	GGGACTCGTGTTCCTC-1[&LentiBarcode="?",symbolName="."]
+	GGGTATTCACCAAAGG-1[&LentiBarcode="?",symbolName="."]
+	GGTAACTCACTACACA-1[&LentiBarcode="2",symbolName="-"]
+	GGTAATCTCACGACTA-1[&LentiBarcode="18",symbolName="-"]
+	GGTGATTAGTTTCGGT-1[&LentiBarcode="14",symbolName="-"]
+	GGTGTCGGTTAAGGGC-1[&LentiBarcode="15",symbolName="-"]
+	GGTTCTCGTGCCTTCT-1[&LentiBarcode="4",symbolName="-"]
+	GGTTGTAAGTCGAAAT-1[&LentiBarcode="?",symbolName="."]
+	GGTTGTAGTCCGGCAT-1[&LentiBarcode="?",symbolName="."]
+	GTAACACCAAGGGTCA-1[&LentiBarcode="10",symbolName="-"]
+	GTAACACGTAACAGTA-1[&LentiBarcode="?",symbolName="."]
+	GTAACACGTTTCTATC-1[&LentiBarcode="14",symbolName="-"]
+	GTAAGTCAGGTCGTGA-1[&LentiBarcode="?",symbolName="."]
+	GTAGATCCAGAACTCT-1[&LentiBarcode="?",symbolName="."]
+	GTAGATCCATCATGAC-1[&LentiBarcode="34",symbolName="-"]
+	GTAGATCGTTGGTAGG-1[&LentiBarcode="14",symbolName="-"]
+	GTAGGTTAGAAACTCA-1[&LentiBarcode="7",symbolName="-"]
+	GTCAAACCACCGTGCA-1[&LentiBarcode="15",symbolName="-"]
+	GTCCCATCAGACCGCT-1[&LentiBarcode="?",symbolName="."]
+	GTCGCGATCGAAGTGG-1[&LentiBarcode="?",symbolName="."]
+	GTCGTAATCATTTGTC-1[&LentiBarcode="13",symbolName="-"]
+	GTGAGGACAGACCCGT-1[&LentiBarcode="22",symbolName="-"]
+	GTGCAGCCAGTATACC-1[&LentiBarcode="7",symbolName="-"]
+	GTGGAGACACTTGTGA-1[&LentiBarcode="4",symbolName="-"]
+	GTGTGGCGTTGGGATG-1[&LentiBarcode="14",symbolName="-"]
+	GTTACAGCATGAAAGT-1[&LentiBarcode="2",symbolName="-"]
+	GTTATGGGTTTACTTC-1[&LentiBarcode="14",symbolName="-"]
+	GTTATGGTCGGTAAGG-1[&LentiBarcode="?",symbolName="."]
+	GTTCATTTCCGTGTCT-1[&LentiBarcode="?",symbolName="."]
+	GTTCGCTCAATTGCTG-1[&LentiBarcode="?",symbolName="."]
+	GTTCGCTTCGCCGATG-1[&LentiBarcode="14",symbolName="-"]
+	GTTGTCCAGAATCGAT-1[&LentiBarcode="15",symbolName="-"]
+	GTTGTCCCAAAGTGTA-1[&LentiBarcode="22",symbolName="-"]
+	GTTGTCCCATCATCTT-1[&LentiBarcode="4",symbolName="-"]
+	GTTGTGACAGCTCCTT-1[&LentiBarcode="?",symbolName="."]
+	GTTGTGATCGGATACT-1[&LentiBarcode="?",symbolName="."]
+	TAAGTCGAGGACGCAT-1[&LentiBarcode="12",symbolName="-"]
+	TAATCTCTCTTGCAGA-1[&LentiBarcode="?",symbolName="."]
+	TAATTCCCAGGTGTTT-1[&LentiBarcode="?",symbolName="."]
+	TACACCCAGCAGTAAT-1[&LentiBarcode="?",symbolName="."]
+	TACATTCGTGCGGTAA-1[&LentiBarcode="15",symbolName="-"]
+	TACCCGTAGTCACTGT-1[&LentiBarcode="22",symbolName="-"]
+	TACCCGTCAAATCGGG-1[&LentiBarcode="?",symbolName="."]
+	TACCGGGCAGTTTGGT-1[&LentiBarcode="?",symbolName="."]
+	TACCTCGGTTAGTTCG-1[&LentiBarcode="4",symbolName="-"]
+	TACTGCCCACCACTGG-1[&LentiBarcode="4",symbolName="-"]
+	TACTGCCTCACATACG-1[&LentiBarcode="2",symbolName="-"]
+	TAGACCAGTCACTAGT-1[&LentiBarcode="14",symbolName="-"]
+	TAGACTGGTAGCGTAG-1[&LentiBarcode="4",symbolName="-"]
+	TAGATCGCAGCTGGTC-1[&LentiBarcode="?",symbolName="."]
+	TAGGAGGGTTGAAGTA-1[&LentiBarcode="?",symbolName="."]
+	TAGGGTTAGTCTTCGA-1[&LentiBarcode="2",symbolName="-"]
+	TAGGGTTCACCCTAGG-1[&LentiBarcode="?",symbolName="."]
+	TAGGGTTGTCACGACC-1[&LentiBarcode="?",symbolName="."]
+	TAGTGCAGTGACCTGC-1[&LentiBarcode="?",symbolName="."]
+	TATCAGGAGGCAGCTA-1[&LentiBarcode="14",symbolName="-"]
+	TATTCCACAGGATGAC-1[&LentiBarcode="?",symbolName="."]
+	TATTCCAGTTCCGCAG-1[&LentiBarcode="?",symbolName="."]
+	TCAAGTGGTGGTCTCG-1[&LentiBarcode="?",symbolName="."]
+	TCACACCCAGCTGTCG-1[&LentiBarcode="?",symbolName="."]
+	TCAGCCTAGCTCGGCT-1[&LentiBarcode="37",symbolName="-"]
+	TCAGCCTAGGTAAGAG-1[&LentiBarcode="?",symbolName="."]
+	TCAGGGCTCTGATTCT-1[&LentiBarcode="15",symbolName="-"]
+	TCATACTAGATGTTGA-1[&LentiBarcode="2",symbolName="-"]
+	TCATCATGTTGCTCAA-1[&LentiBarcode="?",symbolName="."]
+	TCATGGAAGAACAAGG-1[&LentiBarcode="?",symbolName="."]
+	TCATGGATCGTGTGGC-1[&LentiBarcode="?",symbolName="."]
+	TCATTGTCATACAGAA-1[&LentiBarcode="15",symbolName="-"]
+	TCATTTGAGCTCACTA-1[&LentiBarcode="?",symbolName="."]
+	TCCAGAATCATGAAAG-1[&LentiBarcode="?",symbolName="."]
+	TCGAACACAAATCAAG-1[&LentiBarcode="?",symbolName="."]
+	TCGAACATCGCAGTGC-1[&LentiBarcode="15",symbolName="-"]
+	TCGACGGCATTGTGCA-1[&LentiBarcode="?",symbolName="."]
+	TCGTCCAAGCTGACTT-1[&LentiBarcode="7",symbolName="-"]
+	TCGTGGGGTGCTCTCT-1[&LentiBarcode="2",symbolName="-"]
+	TCTAACTGTCGCCTAG-1[&LentiBarcode="4",symbolName="-"]
+	TCTACATAGGCATGCA-1[&LentiBarcode="?",symbolName="."]
+	TCTCCGACAACTCGTA-1[&LentiBarcode="12",symbolName="-"]
+	TCTCCGATCGCTGCGA-1[&LentiBarcode="?",symbolName="."]
+	TGAATGCAGCTCTGTA-1[&LentiBarcode="?",symbolName="."]
+	TGACCCTAGGAGTCTG-1[&LentiBarcode="23",symbolName="-"]
+	TGAGACTCACTAGGTT-1[&LentiBarcode="?",symbolName="."]
+	TGAGGTTAGCTGGAGT-1[&LentiBarcode="18",symbolName="-"]
+	TGATGGTTCGATTCCC-1[&LentiBarcode="34",symbolName="-"]
+	TGCGACGCAGTCAGCC-1[&LentiBarcode="?",symbolName="."]
+	TGCTCCATCATTTCGT-1[&LentiBarcode="?",symbolName="."]
+	TGCTCGTCACTAACCA-1[&LentiBarcode="?",symbolName="."]
+	TGCTGAAAGCGTCAAG-1[&LentiBarcode="2",symbolName="-"]
+	TGCTTGCCAAAGAGTT-1[&LentiBarcode="34",symbolName="-"]
+	TGGAACTCAGACCAGA-1[&LentiBarcode="12",symbolName="-"]
+	TGGAGAGAGAGTGTGC-1[&LentiBarcode="29",symbolName="-"]
+	TGGGAAGCAAGCTACT-1[&LentiBarcode="15",symbolName="-"]
+	TGGGAGAAGTCACTAC-1[&LentiBarcode="?",symbolName="."]
+	TGGGTTATCATCCTAT-1[&LentiBarcode="4",symbolName="-"]
+	TGGTGATGTCAGTCGC-1[&LentiBarcode="4",symbolName="-"]
+	TGTAAGCCAATGGGTG-1[&LentiBarcode="2",symbolName="-"]
+	TGTACAGCACGTCTCT-1[&LentiBarcode="13",symbolName="-"]
+	TGTCCTGTCGTTCAGA-1[&LentiBarcode="14",symbolName="-"]
+	TGTGAGTGTGCACATT-1[&LentiBarcode="37",symbolName="-"]
+	TGTGATGGTACTTGTG-1[&LentiBarcode="15",symbolName="-"]
+	TGTGCGGTCGGTTAGT-1[&LentiBarcode="4",symbolName="-"]
+	TGTTTGTAGGGCTGAT-1[&LentiBarcode="?",symbolName="."]
+	TTAATCCCACTCAAGT-1[&LentiBarcode="?",symbolName="."]
+	TTACGTTAGAGGGTAA-1[&LentiBarcode="15",symbolName="-"]
+	TTACTGTGTTATGTGC-1[&LentiBarcode="4",symbolName="-"]
+	TTACTGTTCAAATGCC-1[&LentiBarcode="?",symbolName="."]
+	TTAGGCACACACAGCC-1[&LentiBarcode="13",symbolName="-"]
+	TTAGGGTAGACTTCCA-1[&LentiBarcode="14",symbolName="-"]
+	TTAGTCTCAGTCAGCC-1[&LentiBarcode="14",symbolName="-"]
+	TTCACGCGTAACACGG-1[&LentiBarcode="4",symbolName="-"]
+	TTCAGGAAGACTAGAT-1[&LentiBarcode="?",symbolName="."]
+	TTCCAATCATCTAACG-1[&LentiBarcode="2",symbolName="-"]
+	TTCCTAATCTCCTGAC-1[&LentiBarcode="?",symbolName="."]
+	TTCCTTCCAGCTGTTA-1[&LentiBarcode="34",symbolName="-"]
+	TTCCTTCGTCGGAAAC-1[&LentiBarcode="18",symbolName="-"]
+	TTCCTTCTCGAGTGAG-1[&LentiBarcode="14",symbolName="-"]
+	TTCTAGTTCTCTCGAC-1[&LentiBarcode="?",symbolName="."]
+	TTCTGTAGTCTTGTCC-1[&LentiBarcode="?",symbolName="."]
+	TTCTGTAGTTCCTACC-1[&LentiBarcode="29",symbolName="-"]
+	TTCTTGAAGAGCCCAA-1[&LentiBarcode="29",symbolName="-"]
+	TTGAGTGTCCCTCTTT-1[&LentiBarcode="7",symbolName="-"]
+	TTGCATTGTCGAGCAA-1[&LentiBarcode="10",symbolName="-"]
+	TTGCTGCCAGCGCTTG-1[&LentiBarcode="34",symbolName="-"]
+	TTGGATGAGGAGTATT-1[&LentiBarcode="?",symbolName="."]
+	TTGGATGAGTTACTCG-1[&LentiBarcode="22",symbolName="-"]
+	TTTACCATCAGAACCT-1[&LentiBarcode="?",symbolName="."]
+	TTTAGTCGTAAGGCTG-1[&LentiBarcode="?",symbolName="."]
+	TTTCAGTGTGCACGCT-1[&LentiBarcode="4",symbolName="-"]
+	TTTCATGCAGCACGAA-1[&LentiBarcode="10",symbolName="-"]
+	TTTCGATTCACCATAG-1[&LentiBarcode="29",symbolName="-"]
+	TTTCGATTCTCGCCTA-1[&LentiBarcode="2",symbolName="-"]
+	TTTGACTAGCGTCAAG-1[&LentiBarcode="4",symbolName="-"]
+	TTTGGAGGTCGTCATA-1[&LentiBarcode="2",symbolName="-"]
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] ((AGCGTATTCGGAGTGA-1[&!color=#dd474d]:0.835391,(((AAGACAATCCACTTTA-1[&!color=#dd4784]:0.091079,AGTCAACCACATCATG-1[&!color=#dd4784]:0.091079)[&!color=#dd474d]:0.22843,CTGTCGTGTCTGGTTA-1[&!color=#dd474d]:0.319509)[&!color=#dd474d]:0.356248,TTTCATGCAGCACGAA-1[&!color=#dd474d]:0.675756)[&!color=#dd474d]:0.159635,(GTAACACCAAGGGTCA-1[&!color=#dd474d]:0.378211,AGTAACCCAGACTGCC-1[&!color=#dd474d]:0.378211)[&!color=#dd474d]:0.45718,(((((CACGAATGTCGCATCG-1[&!color=#dd474d]:0.205091,CACTTCGTCCCTCGAT-1[&!color=#dd474d]:0.205091,GTCCCATCAGACCGCT-1[&!color=#dd474d]:0.205091,ACCGTTCTCTTCCGTG-1[&!color=#dd474d]:0.205091)[&!color=#dd4784]:0.10009,((GTTATGGTCGGTAAGG-1[&!color=#dd4784]:0.2361,CATAAGCCACTTCAGA-1[&!color=#dd474d]:0.2361)[&!color=#dd4784]:0.02956,((AACGTCAGTTTACACG-1[&!color=#dd474d]:0.155399,TTGGATGAGGAGTATT-1[&!color=#dd474d]:0.155399)[&!color=#dd474d]:0.060141,CAGCACGGTGAGTAAT-1[&!color=#dd474d]:0.21554)[&!color=#dd474d]:0.05012)[&!color=#dd474d]:0.039521,AGCCACGGTCATCAGT-1[&!color=#dd474d]:0.305181)[&!color=#dd474d]:0.115448,((TGCGACGCAGTCAGCC-1[&!color=#dd474d]:0.225779,TCATGGAAGAACAAGG-1[&!color=#dd474d]:0.225779)[&!color=#dd4784]:0.143291,CAGCAATGTCCAGAAG-1[&!color=#dd474d]:0.369069)[&!color=#dd4784]:0.05156,CGTAGTAAGACCAGAC-1[&!color=#dd474d]:0.420629,ACCTACCCAGAGAGGG-1[&!color=#dd474d]:0.420629)[&!color=#dd474d]:0.216461,((CTGTAGAAGAGGGTAA-1[&!color=#dd474d]:0.260146,(CATTCTAAGAATTGTG-1[&!color=#dd474d]:0.139824,TCATTTGAGCTCACTA-1[&!color=#dd474d]:0.139824)[&!color=#dd474d]:0.120322,GCATTAGGTATGTCCA-1[&!color=#dd474d]:0.260146)[&!color=#dd474d]:0.27154,(((GGGTATTCACCAAAGG-1[&!color=#dd474d]:0.186974,AGATAGACAGCTGAAG-1[&!color=#dd474d]:0.186974)[&!color=#dd474d]:0.024717,ACTTCGCCAATAGAGT-1[&!color=#dd474d]:0.211691,CTCCTTTAGAGGCGTT-1[&!color=#dd474d]:0.211691)[&!color=#dd474d]:0.123879,TTGCATTGTCGAGCAA-1[&!color=#dd474d]:0.33557)[&!color=#dd4784]:0.196116)[&!color=#dd4784]:0.105404,(((TCAGCCTAGGTAAGAG-1[&!color=#dd474d]:0.106696,AGGGAGTTCGCGTGAC-1[&!color=#dd474d]:0.106696)[&!color=#dd474d]:0.326007,CTCAGAACAACTGAAA-1[&!color=#dd474d]:0.432702)[&!color=#dd4784]:0.15669,CACCAAAAGTAAGAGG-1[&!color=#dd474d]:0.589392)[&!color=#dd4784]:0.047698)[&!color=#dd474d]:0.183659,((GCGGATCCAATAGAGT-1[&!color=#dd474d]:0.229496,GTAACACGTAACAGTA-1[&!color=#dd474d]:0.229496)[&!color=#dd474d]:0.232099,GACCGTGGTCACTTAG-1[&!color=#dd474d]:0.461595)[&!color=#dd474d]:0.359154)[&!color=#dd474d]:0.014642)[&label=10,!color=#dd474d]:0.164609,((TAATTCCCAGGTGTTT-1[&!color=#d87f47]:0.565056,TAAGTCGAGGACGCAT-1[&!color=#d87f47]:0.565056)[&!color=#d87f47]:0.273997,(((TCTCCGACAACTCGTA-1[&!color=#d87f47]:0.006448,AAGTGAAAGGATGCGT-1[&!color=#d87f47]:0.006448)[&!color=#d87f47]:0.084342,(GCTTCACCAGGCAATG-1[&!color=#d87f47]:0.066318,GCAGCTGAGATGTTAG-1[&!color=#d87f47]:0.066318)[&!color=#d87f47]:0.024472,((GCATCTCGTCGCCTAG-1[&!color=#d87f47]:0.006448,CCTGTTGAGGCTAAAT-1[&!color=#d87f47]:0.006448)[&!color=#d87f47]:0.025873,TCAAGTGGTGGTCTCG-1[&!color=#d87f47]:0.032321)[&!color=#d87f47]:0.058469)[&!color=#d87f47]:0.113494,TTCTGTAGTCTTGTCC-1[&!color=#d87f47]:0.204284,TGGAACTCAGACCAGA-1[&!color=#d87f47]:0.204284)[&!color=#d87f47]:0.634769)[&label=12,!color=#e67a38]:0.160947,((ATAGACCTCTCTTCAA-1[&!color=#d1b33c]:0.430347,(CGTCAAAAGGGATCGT-1[&!color=#d1b33c]:0.253285,AAAGGATTCGCACGAC-1[&!color=#d1b33c]:0.253285)[&!color=#d1b33c]:0.177062)[&!color=#d7b206]:0.510561,(((GCATCTCTCCAGGACC-1[&!color=#d1b33c]:0.269011,(CCGTTCACACACGGAA-1[&!color=#d1b33c]:0.12629,TTAGGCACACACAGCC-1[&!color=#d1b33c]:0.12629)[&!color=#d1b33c]:0.142722)[&!color=#d1b33c]:0.136746,CGCCATTGTCCCGCAA-1[&!color=#d1b33c]:0.405758)[&!color=#d1b33c]:0.309335,((AATCACGTCTGAGATC-1[&!color=#d1b33c]:0.374602,TGTACAGCACGTCTCT-1[&!color=#d1b33c]:0.374602)[&!color=#d1b33c]:0.125767,GTCGTAATCATTTGTC-1[&!color=#d1b33c]:0.500369)[&!color=#d1b33c]:0.214723)[&!color=#d7b206]:0.225816)[&label=13,!color=#d7b206]:0.059092,((((((((CTAACCCCAGTTAGGG-1[&!color=#aecd36]:0.171617,CCTTCAGCACGTACTA-1[&!color=#aecd36]:0.171617)[&!color=#aecd36]:0.039183,CCTCTAGAGACCAAAT-1[&!color=#aecd36]:0.2108,(ATTGTTCCACTCCACT-1[&!color=#aecd36]:0.09474,CGGGCATGTGACTCTA-1[&!color=#aecd36]:0.09474)[&!color=#aecd36]:0.11606,GTTATGGGTTTACTTC-1[&!color=#aecd36]:0.2108)[&!color=#aecd36]:0.065024,(GATTCTTGTACCATAC-1[&!color=#aecd36]:0.129713,GGTGATTAGTTTCGGT-1[&!color=#aecd36]:0.129713)[&!color=#aecd36]:0.146111)[&!color=#aecd36]:0.121774,(TTAGTCTCAGTCAGCC-1[&!color=#aecd36]:0.23606,GTTCGCTTCGCCGATG-1[&!color=#aecd36]:0.23606)[&!color=#aecd36]:0.161537)[&!color=#aecd36]:0.062618,((GAGGGTACAAAGTGTA-1[&!color=#aecd36]:0.154699,TTAGGGTAGACTTCCA-1[&!color=#aecd36]:0.154699,ACGGTTAGTTAAGTCC-1[&!color=#aecd36]:0.154699)[&!color=#aecd36]:0.169941,TAGACCAGTCACTAGT-1[&!color=#aecd36]:0.324639)[&!color=#aecd36]:0.135576)[&!color=#aecd36]:0.077499,(((ACCCAAATCGTTCAGA-1[&!color=#aecd36]:0.137196,AGGCATTGTCGTTGGC-1[&!color=#aecd36]:0.137196,GTAGATCGTTGGTAGG-1[&!color=#aecd36]:0.137196)[&!color=#aecd36]:0.136911,ATGAGTCGTACCATAC-1[&!color=#aecd36]:0.274106)[&!color=#aecd36]:0.157373,AATGGAATCTTTCGAT-1[&!color=#aecd36]:0.431479)[&!color=#aecd36]:0.106235)[&!color=#aecd36]:0.203606,((CGGACACTCGTCTAAG-1[&!color=#aecd36]:0.529539,((ATCTCTACAAGGTCAG-1[&!color=#aecd36]:0.422874,(CGCCATTCAGATTAAG-1[&!color=#aecd36]:0.328654,CACGGGTAGAGTCAAT-1[&!color=#aecd36]:0.328654)[&!color=#aecd36]:0.09422)[&!color=#aecd36]:0.03721,(GTGTGGCGTTGGGATG-1[&!color=#aecd36]:0.378354,ATTGGGTTCTTAAGGC-1[&!color=#aecd36]:0.378354)[&!color=#aecd36]:0.081729,(CGGAATTTCTACGGTA-1[&!color=#aecd36]:0.241696,TATCAGGAGGCAGCTA-1[&!color=#aecd36]:0.241696)[&!color=#aecd36]:0.218388)[&!color=#aecd36]:0.069456,(ATGAGGGCAGGCACAA-1[&!color=#aecd36]:0.303251,CGCCAGAGTCATGGCC-1[&!color=#aecd36]:0.303251)[&!color=#aecd36]:0.226288)[&!color=#aecd36]:0.133769,TTCCTTCTCGAGTGAG-1[&!color=#aecd36]:0.663309)[&!color=#aecd36]:0.078011)[&!color=#aecd36]:0.052502,((((((TGTTTGTAGGGCTGAT-1[&!color=#aecd36]:0.122985,CTGTATTGTAGGTGCA-1[&!color=#aecd36]:0.122985)[&!color=#aecd36]:0.124336,CATTCCGAGGAAAGGT-1[&!color=#aecd36]:0.247321)[&!color=#aecd36]:0.065322,((CGTGTCTCAAATGATG-1[&!color=#aecd36]:0.148007,TACCCGTCAAATCGGG-1[&!color=#aecd36]:0.148007)[&!color=#aecd36]:0.04974,CGCGTGAGTGAGAACC-1[&!color=#aecd36]:0.197746,TCTACATAGGCATGCA-1[&!color=#aecd36]:0.197746)[&!color=#aecd36]:0.114897)[&!color=#aecd36]:0.066157,(TATTCCAGTTCCGCAG-1[&!color=#aecd36]:0.183464,TAGATCGCAGCTGGTC-1[&!color=#aecd36]:0.183464)[&!color=#aecd36]:0.195336)[&!color=#aecd36]:0.162667,(TTCAGGAAGACTAGAT-1[&!color=#aecd36]:0.364579,((AAGGAATGTGACTAAA-1[&!color=#aecd36]:0.10696,GAGACCCCACTACAGT-1[&!color=#aecd36]:0.10696,TATTCCACAGGATGAC-1[&!color=#aecd36]:0.10696)[&!color=#aecd36]:0.179745,CCGGGTAGTATGAGGC-1[&!color=#aecd36]:0.286705)[&!color=#aecd36]:0.077874)[&!color=#aecd36]:0.176888)[&!color=#aecd36]:0.112851,((CGGACACCAGCAGTTT-1[&!color=#aecd36]:0.328614,(ATGTCCCGTCAGTCCG-1[&!color=#aecd36]:0.229079,CATACTTCAATCCTAG-1[&!color=#aecd36]:0.229079)[&!color=#aecd36]:0.099536,CAGATACGTGCGAGTA-1[&!color=#aecd36]:0.328614)[&!color=#aecd36]:0.196199,(((CTGGACGGTTCAACGT-1[&!color=#aecd36]:0.19653,CGAGGCTTCTCGGTCT-1[&!color=#aecd36]:0.19653,TTACTGTTCAAATGCC-1[&!color=#aecd36]:0.19653)[&!color=#aecd36]:0.172348,AGTTCGAGTAGTGATA-1[&!color=#aecd36]:0.368878)[&!color=#aecd36]:0.107702,((GGTTGTAGTCCGGCAT-1[&!color=#aecd36]:0.143649,GACAGCCGTGCGACAA-1[&!color=#aecd36]:0.143649,CTACAGACATCGAAGG-1[&!color=#aecd36]:0.143649)[&!color=#aecd36]:0.256484,CTACCTGGTTACCCTC-1[&!color=#aecd36]:0.400133)[&!color=#aecd36]:0.076447)[&!color=#aecd36]:0.048233)[&!color=#aecd36]:0.129505)[&!color=#aecd36]:0.139503,((((TTAATCCCACTCAAGT-1[&!color=#aecd36]:0.103078,AGGAATACAGAGGTTG-1[&!color=#aecd36]:0.103078)[&!color=#aecd36]:0.05786,AACCCAAAGACTTCGT-1[&!color=#aecd36]:0.160938)[&!color=#aecd36]:0.034212,ATTCATCTCTGCGTCT-1[&!color=#aecd36]:0.19515)[&!color=#aecd36]:0.148087,GTTCGCTCAATTGCTG-1[&!color=#aecd36]:0.343237)[&!color=#aecd36]:0.450584,(GTAACACGTTTCTATC-1[&!color=#aecd36]:0.49751,CTCTCGAAGAATGTTG-1[&!color=#aecd36]:0.49751,(((TGTCCTGTCGTTCAGA-1[&!color=#aecd36]:0.062348,ACCCAAAGTCAAGTTC-1[&!color=#aecd36]:0.062348)[&!color=#aecd36]:0.021333,ATCGTGACAGTTAAAG-1[&!color=#aecd36]:0.083681,ACAAGCTTCCAAACCA-1[&!color=#aecd36]:0.083681)[&!color=#aecd36]:0.089027,CCGGGTATCTGGCCAG-1[&!color=#aecd36]:0.172708)[&!color=#aecd36]:0.324801)[&!color=#aecd36]:0.296311)[&label=14,!color=#aecd36]:0.206179,(((((((TACATTCGTGCGGTAA-1[&!color=#69ce39]:0.454278,ACTACGAAGGAGATAG-1[&!color=#69ce39]:0.454278)[&!color=#69ce39]:0.142696,((CATTGTTGTGTCTTGA-1[&!color=#69ce39]:0.357702,CGGAACCGTGACCGAA-1[&!color=#69ce39]:0.357702,AATGGCTAGGGTGAAA-1[&!color=#69ce39]:0.357702,TCAGGGCTCTGATTCT-1[&!color=#69ce39]:0.357702)[&!color=#69ce39]:0.052949,GTCAAACCACCGTGCA-1[&!color=#69ce39]:0.41065)[&!color=#69ce39]:0.186323)[&!color=#69ce39]:0.041374,(CCCGAAGTCAAGTTGC-1[&!color=#69ce39]:0.459409,GGTGTCGGTTAAGGGC-1[&!color=#69ce39]:0.459409)[&!color=#69ce39]:0.178939)[&!color=#69ce39]:0.071348,(((((TGGGAAGCAAGCTACT-1[&!color=#69ce39]:0.257302,ACTTTGTCAGCGGTCT-1[&!color=#69ce39]:0.257302)[&!color=#69ce39]:0.059921,AGAAGCGCAGTTCCAA-1[&!color=#69ce39]:0.317223,GTTGTCCAGAATCGAT-1[&!color=#69ce39]:0.317223)[&!color=#69ce39]:0.129034,((TGTGATGGTACTTGTG-1[&!color=#69ce39]:0.226245,TCGAACATCGCAGTGC-1[&!color=#69ce39]:0.226245)[&!color=#69ce39]:0.143974,TCATTGTCATACAGAA-1[&!color=#69ce39]:0.370218)[&!color=#69ce39]:0.076039,CAGCCAGAGTGGAAAG-1[&!color=#69ce39]:0.446257)[&!color=#69ce39]:0.143647,ATCGTGATCCAAGCTA-1[&!color=#69ce39]:0.589904)[&!color=#69ce39]:0.070621,(TTACGTTAGAGGGTAA-1[&!color=#69ce39]:0.431248,GCGTGCAAGCTGGAGT-1[&!color=#69ce39]:0.431248)[&!color=#69ce39]:0.229278)[&!color=#69ce39]:0.04917)[&!color=#69ce39]:0.034645,ACGATCATCCGTTGGG-1[&!color=#69ce39]:0.74434)[&!color=#69ce39]:0.045737,GCATCTCGTTAACCTG-1[&!color=#69ce39]:0.790077)[&!color=#69ce39]:0.158734,CGGGTCACACCCTATC-1[&!color=#69ce39]:0.948812)[&label=15,!color=#69ce39]:0.051188,(((CGGGACTTCAGCATTG-1[&!color=#00cf3c]:0.387917,AGTAGCTTCAGCAATC-1[&!color=#00cf3c]:0.387917)[&!color=#00cf3c]:0.150907,(ATCGGATAGCGTTGTT-1[&!color=#00cf3c]:0.390445,AGTCTCCGTCACTCGG-1[&!color=#00cf3c]:0.390445)[&!color=#00cf3c]:0.148379,AGACCATCAGACAATA-1[&!color=#00cf3c]:0.538824)[&!color=#00cf3c]:0.16808,(((((TGAGGTTAGCTGGAGT-1[&!color=#00cf3c]:0.134981,ACCCAAAGTATCGAGG-1[&!color=#00cf3c]:0.134981)[&!color=#00cf3c]:0.022424,ACAGAAAAGTCGCCCA-1[&!color=#00cf3c]:0.157404)[&!color=#00cf3c]:0.082815,((TTCCTTCGTCGGAAAC-1[&!color=#00cf3c]:0.006448,GGTAATCTCACGACTA-1[&!color=#00cf3c]:0.006448)[&!color=#00cf3c]:0.158232,CTGCTCAAGTAACGAT-1[&!color=#00cf3c]:0.16468)[&!color=#00cf3c]:0.075539)[&!color=#00cf3c]:0.099013,GCCCAGAAGACATCCT-1[&!color=#00cf3c]:0.339233)[&!color=#00cf3c]:0.079432,CATTTCAGTCACTTCC-1[&!color=#00cf3c]:0.418665)[&!color=#00cf3c]:0.28824)[&label=18,!color=#00cf3c]:0.293096,(((TACCCGTAGTCACTGT-1[&!color=#00cfb3]:0.334998,ACTATTCGTCTGATAC-1[&!color=#00cfb3]:0.334998,TTGGATGAGTTACTCG-1[&!color=#00cfb3]:0.334998)[&!color=#00cfb3]:0.345478,GTTGTCCCAAAGTGTA-1[&!color=#00cfb3]:0.680476)[&!color=#00cfb3]:0.055177,GTGAGGACAGACCCGT-1[&!color=#00cfb3]:0.735653)[&label=22,!color=#00d3b2]:0.264347,(((TGACCCTAGGAGTCTG-1[&!color=#02b7cf]:0.412661,CCAAGCGAGGTACAAT-1[&!color=#02b7cf]:0.412661)[&!color=#02b7cf]:0.095606,(CGAAGTTGTTATGGTC-1[&!color=#02b7cf]:0.286996,CTCCTCCTCGACGAGA-1[&!color=#02b7cf]:0.286996)[&!color=#02b7cf]:0.221272)[&!color=#02b7cf]:0.089539,((GCCGATGAGATAGCAT-1[&!color=#02b7cf]:0.208074,CCGCAAGCACGTACAT-1[&!color=#02b7cf]:0.208074)[&!color=#02b7cf]:0.171185,AGAGCCCAGATGAATC-1[&!color=#02b7cf]:0.379259)[&!color=#02b7cf]:0.218547)[&label=23,!color=#00bad2]:0.402194,((CTCCTTTAGGCACTAG-1[&!color=#dd4784]:0.829733,((GGGACTCGTGTTCCTC-1[&!color=#dd4784]:0.57584,GATCGTATCTCCGATC-1[&!color=#dd4784]:0.57584)[&!color=#dd4784]:0.229634,ATCCGTCCAGGATTCT-1[&!color=#dd4784]:0.805474)[&!color=#dd4784]:0.024259)[&!color=#dd4784]:0.034828,((((TGCTCCATCATTTCGT-1[&!color=#dd4784]:0.373592,ACTTAGGGTTAGGGTG-1[&!color=#dd4784]:0.373592)[&!color=#dd4784]:0.155463,AAAGGTATCGACTCCT-1[&!color=#dd4784]:0.529055,AACCCAAGTGGTTTGT-1[&!color=#dd4784]:0.529055)[&!color=#dd4784]:0.257627,CCTCAACTCGTAGGAG-1[&!color=#dd4784]:0.786682,((ATTATCCCAGCAGATG-1[&!color=#dd4784]:0.402323,CAACAGTTCCCATGGG-1[&!color=#dd4784]:0.402323)[&!color=#dd4784]:0.278511,(TAGGGTTCACCCTAGG-1[&!color=#dd4784]:0.47594,((TGGGAGAAGTCACTAC-1[&!color=#dd4784]:0.180385,GGTTGTAAGTCGAAAT-1[&!color=#dd4784]:0.180385)[&!color=#dd4784]:0.260391,GTTCATTTCCGTGTCT-1[&!color=#dd4784]:0.440776)[&!color=#dd4784]:0.035163)[&!color=#dd4784]:0.204894)[&!color=#dd4784]:0.105848,((AATGGCTAGCTAAATG-1[&!color=#dd4784]:0.2822,GTAGATCCAGAACTCT-1[&!color=#dd4784]:0.2822)[&!color=#dd4784]:0.194342,ATCCGTCAGGCACAAC-1[&!color=#dd4784]:0.476542)[&!color=#dd4784]:0.31014)[&!color=#dd4784]:0.037774,((((AGCATCATCCTGATAG-1[&!color=#dd4784]:0.285484,CTTCGGTTCGGTAACT-1[&!color=#dd4784]:0.285484)[&!color=#dd4784]:0.413386,((GAAGAATGTAGGCAGT-1[&!color=#dd4784]:0.345709,GTTGTGACAGCTCCTT-1[&!color=#dd4784]:0.345709)[&!color=#dd4784]:0.175087,ACAACCAGTACGTAGG-1[&!color=#dd4784]:0.520796,ACTATCTCAGAGTAAT-1[&!color=#dd4784]:0.520796,(TAGGAGGGTTGAAGTA-1[&!color=#dd4784]:0.490522,TTCTAGTTCTCTCGAC-1[&!color=#dd4784]:0.490522)[&!color=#dd4784]:0.030273,CATTTCACACTGATTG-1[&!color=#dd4784]:0.520796,((GCCATGGAGACCAAAT-1[&!color=#dd4784]:0.163126,ATACCGATCAGCGGAA-1[&!color=#dd4784]:0.163126)[&!color=#dd4784]:0.32887,TGAATGCAGCTCTGTA-1[&!color=#dd4784]:0.491996)[&!color=#dd4784]:0.0288)[&!color=#dd4784]:0.178075,TCATCATGTTGCTCAA-1[&!color=#dd4784]:0.69887)[&!color=#dd4784]:0.042306,(TAATCTCTCTTGCAGA-1[&!color=#dd4784]:0.27333,(AACCAACTCGTTCAGA-1[&!color=#dd4784]:0.142801,CTGCAGGCAGACCGCT-1[&!color=#dd4784]:0.142801)[&!color=#dd4784]:0.130529)[&!color=#dd4784]:0.467846)[&!color=#dd4784]:0.042662,((CAGCAGCGTTTGCAGT-1[&!color=#dd4784]:0.422659,(TACACCCAGCAGTAAT-1[&!color=#dd4784]:0.286248,AATTCCTGTGGCTGCT-1[&!color=#dd4784]:0.286248)[&!color=#dd4784]:0.13641)[&!color=#dd4784]:0.11592,TACCGGGCAGTTTGGT-1[&!color=#dd4784]:0.538579,GATGAGGTCGCTCTAC-1[&!color=#dd4784]:0.538579)[&!color=#dd4784]:0.245259)[&!color=#dd4784]:0.040617)[&!color=#dd4784]:0.040105,((CCCTCTCCAGACTGCC-1[&!color=#dd4784]:0.454165,(ATCACGACAGTGGCTC-1[&!color=#dd4784]:0.097828,CCTCAGTTCAGGCGAA-1[&!color=#dd4784]:0.097828)[&!color=#dd4784]:0.356336)[&!color=#dd4784]:0.372492,TTTAGTCGTAAGGCTG-1[&!color=#dd4784]:0.826657)[&!color=#dd4784]:0.037904,(CTGCATCTCATGCCAA-1[&!color=#dd4784]:0.784358,(AACGAAATCCGATAAC-1[&!color=#dd4784]:0.418064,(GCACGGTTCACGAACT-1[&!color=#dd4784]:0.325023,TGCTCGTCACTAACCA-1[&!color=#dd4784]:0.325023)[&!color=#dd4784]:0.093041)[&!color=#dd4784]:0.366295,TTTACCATCAGAACCT-1[&!color=#dd4784]:0.784358,((TTCCTAATCTCCTGAC-1[&!color=#dd4784]:0.198305,GTTGTGATCGGATACT-1[&!color=#dd4784]:0.198305)[&!color=#dd4784]:0.278689,TCGAACACAAATCAAG-1[&!color=#dd4784]:0.476994)[&!color=#dd4784]:0.307365)[&!color=#dd4784]:0.080202,(TGAGACTCACTAGGTT-1[&!color=#dd4784]:0.34119,(GTCGCGATCGAAGTGG-1[&!color=#dd4784]:0.156689,CATCGGGGTAAGGCTG-1[&!color=#dd4784]:0.156689,AATGGAAAGCGTCAGA-1[&!color=#dd4784]:0.156689)[&!color=#dd4784]:0.184501)[&!color=#dd4784]:0.523371)[&label="?",!color=#dd4784]:0.135439,((AACAAGACATTAGGAA-1[&!color=#dd47b9]:0.226802,AGACAAATCCAACACA-1[&!color=#dd47b9]:0.226802)[&!color=#dd47b9]:0.518897,(ATTACTCGTAGCTGCC-1[&!color=#dd47b9]:0.715603,(GTAGGTTAGAAACTCA-1[&!color=#dd47b9]:0.689486,((AACCATGAGTTGGACG-1[&!color=#dd47b9]:0.401389,TCGTCCAAGCTGACTT-1[&!color=#dd47b9]:0.401389)[&!color=#dd47b9]:0.216449,(GTGCAGCCAGTATACC-1[&!color=#dd47b9]:0.577094,AGTTCCCCACAGGATG-1[&!color=#dd47b9]:0.577094,(TTGAGTGTCCCTCTTT-1[&!color=#dd47b9]:0.471955,GCTCAAAGTAGACACG-1[&!color=#dd47b9]:0.471955)[&!color=#dd47b9]:0.105138)[&!color=#dd47b9]:0.040744)[&!color=#dd47b9]:0.071648)[&!color=#dd47b9]:0.026116)[&!color=#dd47b9]:0.030097,(AAGACTCAGCAGTACG-1[&!color=#dd47b9]:0.167926,CAGTGCGTCAAGAAAC-1[&!color=#dd47b9]:0.167926)[&!color=#dd47b9]:0.577774)[&label=7,!color=#dd47b9]:0.2543,((AGTCAACCAGCTGAGA-1[&!color=#c24ad2]:0.223548,CAAGAGGCAGACATCT-1[&!color=#c24ad2]:0.223548)[&!color=#c24ad2]:0.675889,AGCGCTGGTTAAGAAC-1[&!color=#c24ad2]:0.899437,(AGCGCCAGTCGTTGCG-1[&!color=#c24ad2]:0.654312,((GACCAATGTTCAGCGC-1[&!color=#c24ad2]:0.381857,(CCTACGTTCCATGATG-1[&!color=#c24ad2]:0.308498,GGAGGTACAAGAATGT-1[&!color=#c24ad2]:0.308498)[&!color=#c24ad2]:0.073359)[&!color=#c24ad2]:0.237209,ATCCTATAGCTGACAG-1[&!color=#c24ad2]:0.619067,(((CACGTGGTCTCTGCCA-1[&!color=#c24ad2]:0.330036,(CATAAGCAGCACCTGC-1[&!color=#c24ad2]:0.111252,TCCAGAATCATGAAAG-1[&!color=#c24ad2]:0.111252)[&!color=#c24ad2]:0.218783)[&!color=#c24ad2]:0.105074,AGAGCCCAGTTTCGGT-1[&!color=#c24ad2]:0.435109)[&!color=#c24ad2]:0.080951,(CGATGCGTCCGCGAGT-1[&!color=#c24ad2]:0.418435,(AAAGGTAAGAATTGTG-1[&!color=#c24ad2]:0.273488,ATTCTACTCTAGATCG-1[&!color=#c24ad2]:0.273488)[&!color=#c24ad2]:0.144947)[&!color=#c24ad2]:0.097625)[&!color=#c24ad2]:0.103006,((ATCACGAAGCAAACAT-1[&!color=#c24ad2]:0.349362,(TCACACCCAGCTGTCG-1[&!color=#c24ad2]:0.312967,TCGACGGCATTGTGCA-1[&!color=#c24ad2]:0.312967)[&!color=#c24ad2]:0.036395,CCAAGCGGTCCTTGTC-1[&!color=#c24ad2]:0.349362)[&!color=#c24ad2]:0.221208,(ACCAACATCACTAGCA-1[&!color=#c24ad2]:0.350212,TCTCCGATCGCTGCGA-1[&!color=#c24ad2]:0.350212)[&!color=#c24ad2]:0.220358)[&!color=#c24ad2]:0.048496)[&!color=#c24ad2]:0.035245)[&!color=#c24ad2]:0.245126,((TTTGACTAGCGTCAAG-1[&!color=#c24ad2]:0.40586,((TACTGCCCACCACTGG-1[&!color=#c24ad2]:0.163669,ACGTCCTTCCCTCTAG-1[&!color=#c24ad2]:0.163669,TGGGTTATCATCCTAT-1[&!color=#c24ad2]:0.163669)[&!color=#c24ad2]:0.178048,((((TTTCAGTGTGCACGCT-1[&!color=#c24ad2]:0.006448,AGTCTCCTCTCCTACG-1[&!color=#c24ad2]:0.006448)[&!color=#c24ad2]:0.110031,GTGGAGACACTTGTGA-1[&!color=#c24ad2]:0.116479,(ACCGTTCCAGTCAGAG-1[&!color=#c24ad2]:0.06466,ATCACGATCGACGATT-1[&!color=#c24ad2]:0.06466)[&!color=#c24ad2]:0.05182,TAGACTGGTAGCGTAG-1[&!color=#c24ad2]:0.116479)[&!color=#c24ad2]:0.070846,((ACCGTTCGTCACCACG-1[&!color=#c24ad2]:0.006448,CAGCAGCCAACCGCTG-1[&!color=#c24ad2]:0.006448)[&!color=#c24ad2]:0.174429,(TGTGCGGTCGGTTAGT-1[&!color=#c24ad2]:0.112831,TGGTGATGTCAGTCGC-1[&!color=#c24ad2]:0.112831)[&!color=#c24ad2]:0.068047)[&!color=#c24ad2]:0.006448)[&!color=#c24ad2]:0.023588,TCTAACTGTCGCCTAG-1[&!color=#c24ad2]:0.210914,((AAGACTCTCGGAGCAA-1[&!color=#c24ad2]:0.006448,CGATCGGCACGGTAGA-1[&!color=#c24ad2]:0.006448)[&!color=#c24ad2]:0.089063,TTACTGTGTTATGTGC-1[&!color=#c24ad2]:0.095511)[&!color=#c24ad2]:0.115403,CTTGATTCAGAACTCT-1[&!color=#c24ad2]:0.210914)[&!color=#c24ad2]:0.130804,GGTTCTCGTGCCTTCT-1[&!color=#c24ad2]:0.341718)[&!color=#c24ad2]:0.064143)[&!color=#c24ad2]:0.247221,(((CCTCAGTTCATCACCC-1[&!color=#c24ad2]:0.283621,(GCCAGCAGTTCCTACC-1[&!color=#c24ad2]:0.102183,AGCTCAACAGTTTCGA-1[&!color=#c24ad2]:0.102183)[&!color=#c24ad2]:0.181438)[&!color=#c24ad2]:0.188421,ACTCTCGGTGAGCGAT-1[&!color=#c24ad2]:0.472042,(((GAACTGTTCCGCGAGT-1[&!color=#c24ad2]:0.139529,GAGGCAACAACCTAAC-1[&!color=#c24ad2]:0.139529)[&!color=#c24ad2]:0.054059,(GCCAGGTGTGGCGCTT-1[&!color=#c24ad2]:0.105268,CAACGATCAAATCAAG-1[&!color=#c24ad2]:0.105268)[&!color=#c24ad2]:0.08832)[&!color=#c24ad2]:0.136187,GTTGTCCCATCATCTT-1[&!color=#c24ad2]:0.329776)[&!color=#c24ad2]:0.142267,(TACCTCGGTTAGTTCG-1[&!color=#c24ad2]:0.408091,GAGTCATTCGAAATCC-1[&!color=#c24ad2]:0.408091)[&!color=#c24ad2]:0.063951)[&!color=#c24ad2]:0.066251,TTCACGCGTAACACGG-1[&!color=#c24ad2]:0.538294)[&!color=#c24ad2]:0.114788)[&!color=#c24ad2]:0.246356)[&label=4,!color=#c24ad2]:0.100563,(((TCAGCCTAGCTCGGCT-1[&!color=#8b4fd3]:0.006448,CCGAACGGTGTGTCCG-1:0.006448,CGCCATTCACGACTAT-1[&!color=#8b4fd3]:0.006448)[&!color=#8b4fd3]:0.037439,(GCTTTCGGTGTGTGTT-1[&!color=#8b4fd3]:0.006448,CTTCTCTGTTGCTGAT-1[&!color=#8b4fd3]:0.006448)[&!color=#8b4fd3]:0.037439)[&!color=#8b4fd3]:0.87851,(TAGTGCAGTGACCTGC-1[&!color=#8b4fd3]:0.399032,((CAGGCCACAAATCGTC-1[&!color=#8b4fd3]:0.12175,(AGACCATCATCACCAA-1[&!color=#8b4fd3]:0.06055,TGTGAGTGTGCACATT-1[&!color=#8b4fd3]:0.06055)[&!color=#8b4fd3]:0.0612)[&!color=#8b4fd3]:0.063571,(CCATCACGTCGGAAAC-1[&!color=#8b4fd3]:0.07924,CCGGGTAAGTGCGACA-1[&!color=#8b4fd3]:0.07924)[&!color=#8b4fd3]:0.106082)[&!color=#8b4fd3]:0.213711)[&!color=#8b4fd3]:0.523365,CTCCCAATCCGAGCTG-1[&!color=#8b4fd3]:0.922397)[&label=37,!color=#8b4fd3]:0.077603,(CAGATTGGTTGAGGAC-1[&!color=#5252d3]:0.63884,(TGCTTGCCAAAGAGTT-1[&!color=#5252d3]:0.529678,(TTCCTTCCAGCTGTTA-1[&!color=#5252d3]:0.419587,(CACTGAAGTTTACCAG-1[&!color=#5252d3]:0.315037,(GTAGATCCATCATGAC-1[&!color=#5252d3]:0.266886,TGATGGTTCGATTCCC-1[&!color=#5252d3]:0.266886)[&!color=#5252d3]:0.048151)[&!color=#5252d3]:0.10455,TTGCTGCCAGCGCTTG-1[&!color=#5252d3]:0.419587)[&!color=#5252d3]:0.110091)[&!color=#5252d3]:0.109162)[&label=34,!color=#5252db]:0.36116,(((AAAGGTATCAATGTCG-1[&!color=#00cf7c]:0.258823,(CTCCTTTTCCCACAGG-1[&!color=#00cf7c]:0.173893,(TTTCGATTCTCGCCTA-1[&!color=#00cf7c]:0.120072,AGACAGGGTTGTGCAT-1[&!color=#00cf7c]:0.120072)[&!color=#00cf7c]:0.053821)[&!color=#00cf7c]:0.08493)[&!color=#00cf7c]:0.095634,CGGGCATTCGTGACTA-1[&!color=#00cf7c]:0.354457)[&!color=#00cf7c]:0.425892,((((ATTCCTACAGCCTACG-1[&!color=#00cf7c]:0.277118,(TGCTGAAAGCGTCAAG-1[&!color=#00cf7c]:0.167713,ATGATCGTCGACATCA-1[&!color=#00cf7c]:0.167713)[&!color=#00cf7c]:0.109405)[&!color=#00cf7c]:0.206754,CTCCCAAAGTGCCAGA-1[&!color=#00cf7c]:0.483872)[&!color=#00cf7c]:0.127862,((((TACTGCCTCACATACG-1[&!color=#00cf7c]:0.148461,ACGGAAGTCACGGAGA-1[&!color=#00cf7c]:0.148461)[&!color=#00cf7c]:0.075197,CTGCAGGGTATCAGGG-1[&!color=#00cf7c]:0.223657,ATGGTTGGTTGGAGGT-1[&!color=#00cf7c]:0.223657,CAAAGAATCAACCGAT-1[&!color=#00cf7c]:0.223657)[&!color=#00cf7c]:0.148163,GACGCTGAGGATTTAG-1[&!color=#00cf7c]:0.37182)[&!color=#00cf7c]:0.141191,(CCCTCAAAGTATGAGT-1[&!color=#00cf7c]:0.186342,(GGGACCTTCGAACGGA-1[&!color=#00cf7c]:0.032354,CATGCCTAGCTGACAG-1[&!color=#00cf7c]:0.032354)[&!color=#00cf7c]:0.153988,GTTACAGCATGAAAGT-1[&!color=#00cf7c]:0.186342)[&!color=#00cf7c]:0.32667,(GGTAACTCACTACACA-1[&!color=#00cf7c]:0.304041,ACTATTCGTGCAATGG-1[&!color=#00cf7c]:0.304041,TAGGGTTAGTCTTCGA-1[&!color=#00cf7c]:0.304041)[&!color=#00cf7c]:0.208971)[&!color=#00cf7c]:0.098723)[&!color=#00cf7c]:0.080054,(GCCCAGAGTCTGTCAA-1[&!color=#00cf7c]:0.476891,GCGGATCAGGAAGTAG-1[&!color=#00cf7c]:0.476891,CATCGTCTCGGAGTAG-1[&!color=#00cf7c]:0.476891,((AAAGTCCAGCTCACTA-1[&!color=#00cf7c]:0.341544,CCACTTGGTTAGGAGC-1[&!color=#00cf7c]:0.341544,GCATGATCAAGTGACG-1[&!color=#00cf7c]:0.341544)[&!color=#00cf7c]:0.09934,TCGTGGGGTGCTCTCT-1[&!color=#00cf7c]:0.440883,(TTCCAATCATCTAACG-1[&!color=#00cf7c]:0.279642,((TGTAAGCCAATGGGTG-1[&!color=#00cf7c]:0.03227,CCTCCAAAGACGACGT-1[&!color=#00cf7c]:0.03227)[&!color=#00cf7c]:0.163633,AACAACCTCCTAACAG-1[&!color=#00cf7c]:0.195903)[&!color=#00cf7c]:0.083738)[&!color=#00cf7c]:0.161242)[&!color=#00cf7c]:0.036007)[&!color=#00cf7c]:0.214897)[&!color=#00cf7c]:0.088561,(TTTGGAGGTCGTCATA-1[&!color=#00cf7c]:0.363687,GAGGGATAGTCACTCA-1[&!color=#00cf7c]:0.363687)[&!color=#00cf7c]:0.416663,((TCATACTAGATGTTGA-1[&!color=#00cf7c]:0.323387,ACTGTCCTCGCAATTG-1[&!color=#00cf7c]:0.323387)[&!color=#00cf7c]:0.329243,AAACCCAGTCTCTCAC-1[&!color=#00cf7c]:0.65263,(TCATGGATCGTGTGGC-1[&!color=#00cf7c]:0.164841,TAGGGTTGTCACGACC-1[&!color=#00cf7c]:0.164841)[&!color=#00cf7c]:0.487789,(CAACGATAGGCCCGTT-1[&!color=#00cf7c]:0.502226,CATTGTTTCATCAGTG-1[&!color=#00cf7c]:0.502226)[&!color=#00cf7c]:0.150404)[&!color=#00cf7c]:0.12772)[&label=2,!color=#00cf7c]:0.219651,(GTAAGTCAGGTCGTGA-1[&!color=#1d87d8]:0.973676,(((ATCAGGTCAGCACGAA-1[&!color=#4185d2]:0.420037,(TTCTTGAAGAGCCCAA-1[&!color=#4185d2]:0.210425,TTCTGTAGTTCCTACC-1[&!color=#4185d2]:0.210425)[&!color=#4185d2]:0.209611)[&!color=#4185d2]:0.094605,(TTTCGATTCACCATAG-1[&!color=#4185d2]:0.462633,GGAATCTAGGATTTGA-1[&!color=#4185d2]:0.462633)[&!color=#4185d2]:0.052009)[&!color=#4185d2]:0.12853,TGGAGAGAGAGTGTGC-1[&!color=#4185d2]:0.643171)[&!color=#1d87d8]:0.330505)[&label=29,!color=#1d87d8]:0.026324);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=2.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="sansserif";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set colour.order.lentibarcode="LentiBarcode:10,12,13,14,15,18,2,22,23,29,34,37,4,7,?";
+	set colour.scheme.lentibarcode="LentiBarcode:HSBDiscrete{hue,1,0.0,1.0,0.6,0.6,0.0,0.8}";
+	set layout.expansion=0;
+	set layout.layoutType="POLAR";
+	set layout.zoom=0;
+	set legend.attribute="label";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="label";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=14;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=true;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=125;
+	set polarLayout.showRoot=false;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=false;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.2;
+	set tipLabels.colorAttribute="LentiBarcode";
+	set tipLabels.displayAttribute="symbolName";
+	set tipLabels.fontName="sansserif";
+	set tipLabels.fontSize=32;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=true;
+	set trees.orderType="increasing";
+	set trees.rooting=false;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+

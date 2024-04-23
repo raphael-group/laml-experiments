@@ -1,0 +1,1036 @@
+Launching LAML version 0.0.4
+LAML was called as follows: /Users/uym2/my_gits/LAML/run_laml.py -c ../../evaluation/Bar10/Bar10_character_matrix.txt -t progenitor_6_starting.nwk -o progenitor_6_improved --topology_search --parallel -v -p ../../evaluation/Bar10/Bar10_priors.pickle --delimiter tab -m -1 --randomreps 15
+Prior keys mismatch with site names.
+Prior keys: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+Site names: ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8', 'r9', 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20', 'r21', 'r22', 'r23', 'r24', 'r25', 'r26', 'r27', 'r28', 'r29', 'r30']
+Attempting to infer mapping between site names and prior keys...
+{'r1': 0, 'r2': 1, 'r3': 2, 'r4': 3, 'r5': 4, 'r6': 5, 'r7': 6, 'r8': 7, 'r9': 8, 'r10': 9, 'r11': 10, 'r12': 11, 'r13': 12, 'r14': 13, 'r15': 14, 'r16': 15, 'r17': 16, 'r18': 17, 'r19': 18, 'r20': 19, 'r21': 20, 'r22': 21, 'r23': 22, 'r24': 23, 'r25': 24, 'r26': 25, 'r27': 26, 'r28': 27, 'r29': 28, 'r30': 29}
+Detected polytomies in the input trees.
+Flag --keep_polytomies is off. All polytomies will be resolved.
+Starting topology search
+Running topology search in parallel...
+Performing nni-search 1
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Launching LAML version 0.0.4
+LAML was called as follows: /Users/uym2/my_gits/LAML/run_laml.py -c ../../evaluation/Bar10/Bar10_character_matrix.txt -t progenitor_6_starting.nwk -o progenitor_6_improved --topology_search --parallel -v -p ../../evaluation/Bar10/Bar10_priors.pickle --delimiter tab -m -1 --randomreps 15
+Prior keys mismatch with site names.
+Prior keys: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+Site names: ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8', 'r9', 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20', 'r21', 'r22', 'r23', 'r24', 'r25', 'r26', 'r27', 'r28', 'r29', 'r30']
+Attempting to infer mapping between site names and prior keys...
+{'r1': 0, 'r2': 1, 'r3': 2, 'r4': 3, 'r5': 4, 'r6': 5, 'r7': 6, 'r8': 7, 'r9': 8, 'r10': 9, 'r11': 10, 'r12': 11, 'r13': 12, 'r14': 13, 'r15': 14, 'r16': 15, 'r17': 16, 'r18': 17, 'r19': 18, 'r20': 19, 'r21': 20, 'r22': 21, 'r23': 22, 'r24': 23, 'r25': 24, 'r26': 25, 'r27': 26, 'r28': 27, 'r29': 28, 'r30': 29}
+Detected polytomies in the input trees.
+Flag --keep_polytomies is off. All polytomies will be resolved.
+Starting topology search
+Running topology search in parallel...
+Performing nni-search 1
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0373960841724
+NNI Iter: 0
+Current score: -878.8618760319907
+Runtime (s): 1.8436717079999998
+NNI Iter: 1
+Current score: -878.6688943820377
+Runtime (s): 1.5330278339999999
+NNI Iter: 2
+Current score: -879.4296932625738
+Runtime (s): 1.7410341669999996
+NNI Iter: 3
+Current score: -878.8020281425039
+Runtime (s): 1.7638444169999996
+NNI Iter: 4
+Current score: -879.0057973747078
+Runtime (s): 1.808646874999999
+NNI Iter: 5
+Current score: -878.8281908649244
+Runtime (s): 2.299312208
+NNI Iter: 6
+Current score: -879.0516561046644
+Runtime (s): 1.888850958999999
+NNI Iter: 7
+Current score: -878.9077610905542
+Runtime (s): 4.968910167000001
+NNI Iter: 8
+Current score: -879.0271426272325
+Runtime (s): 1.6814785000000008
+NNI Iter: 9
+Current score: -879.0074340734803
+Runtime (s): 1.7248201250000008
+NNI Iter: 10
+Current score: -879.2684192731742
+Runtime (s): 1.7666351670000005
+NNI Iter: 11
+Current score: -879.1211455148922
+Runtime (s): 1.7379850840000017
+NNI Iter: 12
+Current score: -879.0651852967892
+Runtime (s): 1.7643198339999984
+NNI Iter: 13
+Current score: -879.1694116003946
+Runtime (s): 1.5432174999999972
+NNI Iter: 14
+Current score: -879.0651853330382
+Runtime (s): 1.7832584580000024
+NNI Iter: 15
+Current score: -879.0549391955659
+Runtime (s): 1.548026874999998
+NNI Iter: 16
+Current score: -878.8619576429247
+Runtime (s): 1.5938301660000036
+NNI Iter: 17
+Current score: -878.5579126317404
+Runtime (s): 1.8298277909999996
+NNI Iter: 18
+Best score for this search: -878.0373960841724
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0373948668783
+Performing nni-search 2
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0373925593678
+NNI Iter: 0
+Current score: -878.8271338164969
+Runtime (s): 3.2450852910000023
+NNI Iter: 1
+Current score: -878.5926312619308
+Runtime (s): 1.5778392080000003
+NNI Iter: 2
+Current score: -882.1798219424285
+Runtime (s): 1.636266125000006
+NNI Iter: 3
+Current score: -882.2276668247567
+Runtime (s): 1.7219373329999996
+NNI Iter: 4
+Current score: -882.2211653076772
+Runtime (s): 1.6253846249999953
+NNI Iter: 5
+Current score: -882.2276663770326
+Runtime (s): 1.8896038329999953
+NNI Iter: 6
+Current score: -881.9888040340675
+Runtime (s): 1.7859023329999957
+NNI Iter: 7
+Current score: -882.283264877612
+Runtime (s): 1.6664591669999993
+NNI Iter: 8
+Current score: -882.6358391276544
+Runtime (s): 1.6477619579999967
+NNI Iter: 9
+Current score: -882.6918913141103
+Runtime (s): 1.6407903329999982
+NNI Iter: 10
+Current score: -879.2619744512153
+Runtime (s): 2.0002963330000014
+NNI Iter: 11
+Current score: -878.9575508011391
+Runtime (s): 1.6431414999999916
+NNI Iter: 12
+Current score: -878.7285655585816
+Runtime (s): 1.649683207999999
+NNI Iter: 13
+Current score: -878.8128581711392
+Runtime (s): 1.9000728750000064
+NNI Iter: 14
+Current score: -878.310397031251
+Runtime (s): 3.5831381670000013
+NNI Iter: 15
+Best score for this search: -878.0373925593678
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0374015021152
+Performing nni-search 3
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0374015685397
+NNI Iter: 0
+Current score: -878.6818943452895
+Runtime (s): 1.8760397499999897
+NNI Iter: 1
+Current score: -878.905636134185
+Runtime (s): 2.3694762079999947
+NNI Iter: 2
+Current score: -879.1624095319635
+Runtime (s): 1.6723057079999961
+NNI Iter: 3
+Current score: -878.6653702412823
+Runtime (s): 1.7375912499999941
+NNI Iter: 4
+Current score: -878.9442016916042
+Runtime (s): 1.9181752910000114
+NNI Iter: 5
+Current score: -878.8570338655363
+Runtime (s): 3.4437443340000016
+NNI Iter: 6
+Current score: -878.9049752060455
+Runtime (s): 1.9710518330000042
+NNI Iter: 7
+Current score: -879.1752669763414
+Runtime (s): 2.01774254099999
+NNI Iter: 8
+Current score: -878.9822849024192
+Runtime (s): 2.1928315409999897
+NNI Iter: 9
+Current score: -879.1759415607406
+Runtime (s): 1.9527999160000036
+NNI Iter: 10
+Current score: -879.1360489292522
+Runtime (s): 2.2514266250000077
+NNI Iter: 11
+Current score: -879.6702548076904
+Runtime (s): 1.7360761670000073
+NNI Iter: 12
+Current score: -879.3743961913859
+Runtime (s): 1.7590187499999956
+NNI Iter: 13
+Current score: -879.2133673903471
+Runtime (s): 1.7432327919999864
+NNI Iter: 14
+Current score: -878.9931245535994
+Runtime (s): 3.534506042000004
+NNI Iter: 15
+Current score: -878.9411243183064
+Runtime (s): 1.5373903339999941
+NNI Iter: 16
+Current score: -878.6012523282516
+Runtime (s): 1.7373323329999977
+NNI Iter: 17
+Current score: -878.590672766929
+Runtime (s): 3.4133213340000026
+NNI Iter: 18
+Best score for this search: -878.0374015685397
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0374002048729
+Performing nni-search 4
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0373933682699
+NNI Iter: 0
+Current score: -878.8643104784511
+Runtime (s): 3.4142370830000175
+NNI Iter: 1
+Current score: -879.330559187222
+Runtime (s): 1.7327798339999845
+NNI Iter: 2
+Current score: -879.2455691651538
+Runtime (s): 1.596493584000001
+NNI Iter: 3
+Current score: -878.9941923989795
+Runtime (s): 3.134401542000006
+NNI Iter: 4
+Current score: -879.3283392806987
+Runtime (s): 1.5422624170000176
+NNI Iter: 5
+Current score: -879.5983548633542
+Runtime (s): 1.5465659170000094
+NNI Iter: 6
+Current score: -879.6873297497241
+Runtime (s): 1.6942584589999967
+NNI Iter: 7
+Current score: -879.8715603527393
+Runtime (s): 1.5719672079999896
+NNI Iter: 8
+Current score: -879.2507197201634
+Runtime (s): 1.7281277920000093
+NNI Iter: 9
+Current score: -879.2433492487942
+Runtime (s): 1.652389625000012
+NNI Iter: 10
+Current score: -879.2552440387573
+Runtime (s): 1.6881912499999885
+NNI Iter: 11
+Current score: -879.2786968953113
+Runtime (s): 1.6066830839999966
+NNI Iter: 12
+Current score: -879.3345677880259
+Runtime (s): 1.7525713750000023
+NNI Iter: 13
+Current score: -879.0105234350997
+Runtime (s): 1.6671510409999826
+NNI Iter: 14
+Current score: -878.9649685553019
+Runtime (s): 1.707102458999998
+NNI Iter: 15
+Current score: -878.9125580905369
+Runtime (s): 3.0840473339999903
+NNI Iter: 16
+Current score: -878.4097790041801
+Runtime (s): 1.551547499999998
+NNI Iter: 17
+Best score for this search: -878.0373933682699
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0373998736322
+Performing nni-search 5
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0373995112585
+NNI Iter: 0
+Current score: -879.2203068611003
+Runtime (s): 1.6345112500000027
+NNI Iter: 1
+Current score: -879.4069048050688
+Runtime (s): 1.6614894580000055
+NNI Iter: 2
+Current score: -878.6129466679681
+Runtime (s): 1.5378814159999763
+NNI Iter: 3
+Current score: -878.6292207806717
+Runtime (s): 3.2840888749999806
+NNI Iter: 4
+Current score: -879.1912892664445
+Runtime (s): 3.4835691250000025
+NNI Iter: 5
+Current score: -879.1826081938787
+Runtime (s): 1.6176374580000186
+NNI Iter: 6
+Current score: -878.563624392123
+Runtime (s): 1.8771098750000021
+NNI Iter: 7
+Current score: -879.1912892664445
+Runtime (s): 2.0999658750000094
+NNI Iter: 8
+Current score: -879.1826081938787
+Runtime (s): 1.8738164580000216
+NNI Iter: 9
+Current score: -879.109993867189
+Runtime (s): 1.7489126249999742
+NNI Iter: 10
+Current score: -879.3676155357377
+Runtime (s): 1.784694916999996
+NNI Iter: 11
+Current score: -879.7210834921224
+Runtime (s): 3.065486082999996
+NNI Iter: 12
+Current score: -879.7379744390511
+Runtime (s): 3.409494708000011
+NNI Iter: 13
+Current score: -879.4430703304638
+Runtime (s): 1.6788802079999812
+NNI Iter: 14
+Current score: -879.4430703304638
+Runtime (s): 1.8343365830000096
+NNI Iter: 15
+Current score: -879.4296954193729
+Runtime (s): 1.6182727910000096
+NNI Iter: 16
+Current score: -879.1476771434948
+Runtime (s): 1.8267498749999902
+NNI Iter: 17
+Current score: -878.4973775753624
+Runtime (s): 5.009935915999989
+NNI Iter: 18
+Best score for this search: -878.0373995112585
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0373924316036
+Performing nni-search 6
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0373911440118
+NNI Iter: 0
+Current score: -878.8618738272244
+Runtime (s): 1.8280703749999816
+NNI Iter: 1
+Current score: -879.5255457870253
+Runtime (s): 1.6982151670000007
+NNI Iter: 2
+Current score: -879.4517347664065
+Runtime (s): 1.807733667000008
+NNI Iter: 3
+Current score: -879.4210125631196
+Runtime (s): 1.6730577499999981
+NNI Iter: 4
+Current score: -879.8612900454499
+Runtime (s): 1.5884722500000237
+NNI Iter: 5
+Current score: -880.0624473522771
+Runtime (s): 1.6248190840000234
+NNI Iter: 6
+Current score: -880.0849339911254
+Runtime (s): 1.7787381249999896
+NNI Iter: 7
+Current score: -879.7073660766679
+Runtime (s): 1.5478201250000154
+NNI Iter: 8
+Current score: -879.5635041862936
+Runtime (s): 1.7253870840000047
+NNI Iter: 9
+Current score: -879.8966490097422
+Runtime (s): 1.6965946669999994
+NNI Iter: 10
+Current score: -879.1608128926271
+Runtime (s): 1.8132124170000168
+NNI Iter: 11
+Current score: -879.5256470609928
+Runtime (s): 1.8482540830000005
+NNI Iter: 12
+Current score: -879.0284797770411
+Runtime (s): 1.8468457919999821
+NNI Iter: 13
+Current score: -879.0490399428569
+Runtime (s): 3.3674048750000054
+NNI Iter: 14
+Current score: -879.5541193220037
+Runtime (s): 3.5206569169999966
+NNI Iter: 15
+Current score: -879.5541186795475
+Runtime (s): 1.8993819169999995
+NNI Iter: 16
+Current score: -879.5541186795475
+Runtime (s): 1.766408791999993
+NNI Iter: 17
+Current score: -879.4117685391743
+Runtime (s): 1.7086427499999957
+NNI Iter: 18
+Current score: -879.4338585040084
+Runtime (s): 1.7487648750000062
+NNI Iter: 19
+Current score: -879.0447623611466
+Runtime (s): 3.554584333000008
+NNI Iter: 20
+Current score: -879.0111382857934
+Runtime (s): 6.220419749999962
+NNI Iter: 21
+Current score: -878.6449457731262
+Runtime (s): 3.4604761670000244
+NNI Iter: 22
+Best score for this search: -878.0373911440118
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0373984158232
+Performing nni-search 7
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0373879080425
+NNI Iter: 0
+Current score: -878.7506202109316
+Runtime (s): 1.9583524170000146
+NNI Iter: 1
+Current score: -878.7001145352916
+Runtime (s): 2.002294541000026
+NNI Iter: 2
+Current score: -878.7839802415888
+Runtime (s): 1.6804075420000117
+NNI Iter: 3
+Current score: -879.1304868320626
+Runtime (s): 1.8746196249999798
+NNI Iter: 4
+Current score: -879.0899057781195
+Runtime (s): 1.5575384169999893
+NNI Iter: 5
+Current score: -879.2920360538426
+Runtime (s): 1.529622833000019
+NNI Iter: 6
+Current score: -878.7570742611931
+Runtime (s): 1.7277183340000306
+NNI Iter: 7
+Current score: -878.8705133999849
+Runtime (s): 1.697764416000041
+NNI Iter: 8
+Current score: -879.0425486624935
+Runtime (s): 1.7017370410000012
+NNI Iter: 9
+Current score: -879.3347758173886
+Runtime (s): 1.7612288330000183
+NNI Iter: 10
+Current score: -879.9153642165224
+Runtime (s): 1.8130630829999745
+NNI Iter: 11
+Current score: -879.8282777855476
+Runtime (s): 1.653694291000022
+NNI Iter: 12
+Current score: -879.8282777855476
+Runtime (s): 1.7322741250000036
+NNI Iter: 13
+Current score: -879.6300814955035
+Runtime (s): 1.4973850829999833
+NNI Iter: 14
+Current score: -879.4916480755717
+Runtime (s): 1.8216584999999554
+NNI Iter: 15
+Current score: -879.5010639139492
+Runtime (s): 1.5148430000000417
+NNI Iter: 16
+Current score: -879.5010639139492
+Runtime (s): 1.5705219170000078
+NNI Iter: 17
+Current score: -879.4102131076368
+Runtime (s): 1.751323124999999
+NNI Iter: 18
+Current score: -879.0175272901304
+Runtime (s): 1.5292569590000085
+NNI Iter: 19
+Current score: -878.6078738413675
+Runtime (s): 1.5445472920000043
+NNI Iter: 20
+Best score for this search: -878.0373879080425
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0374034936434
+Performing nni-search 8
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0374065424339
+NNI Iter: 0
+Current score: -878.7411845713298
+Runtime (s): 1.6495434159999718
+NNI Iter: 1
+Current score: -878.7506384774258
+Runtime (s): 1.6679576250000423
+NNI Iter: 2
+Current score: -878.771147308805
+Runtime (s): 1.6830497920000198
+NNI Iter: 3
+Current score: -878.4744950904673
+Runtime (s): 1.6491522919999966
+NNI Iter: 4
+Current score: -878.9717211231356
+Runtime (s): 1.674626165999996
+NNI Iter: 5
+Current score: -878.7787388026454
+Runtime (s): 1.5460234999999898
+NNI Iter: 6
+Current score: -879.0605462649606
+Runtime (s): 1.6339794160000451
+NNI Iter: 7
+Current score: -878.9653798230814
+Runtime (s): 1.7778636660000302
+NNI Iter: 8
+Current score: -879.2259522302983
+Runtime (s): 1.8150640420000173
+NNI Iter: 9
+Current score: -879.7583879279277
+Runtime (s): 1.5781008330000077
+NNI Iter: 10
+Current score: -879.5049822772527
+Runtime (s): 1.5311308330000202
+NNI Iter: 11
+Current score: -879.2217713870076
+Runtime (s): 3.0333712920000266
+NNI Iter: 12
+Current score: -879.10244947719
+Runtime (s): 1.648042083000007
+NNI Iter: 13
+Current score: -879.169405175141
+Runtime (s): 2.9567965000000527
+NNI Iter: 14
+Current score: -879.4073587222837
+Runtime (s): 1.4720014579999656
+NNI Iter: 15
+Current score: -879.3095340320491
+Runtime (s): 1.559432500000014
+NNI Iter: 16
+Current score: -878.6949903177632
+Runtime (s): 1.863028541999995
+NNI Iter: 17
+Current score: -878.571752624599
+Runtime (s): 1.7615093750000028
+NNI Iter: 18
+Current score: -878.6282569004771
+Runtime (s): 1.7126172920000045
+NNI Iter: 19
+Current score: -878.6037822051157
+Runtime (s): 1.8145879589999936
+NNI Iter: 20
+Best score for this search: -878.0374065424339
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0374012079246
+Performing nni-search 9
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0374024214653
+NNI Iter: 0
+Current score: -878.6887088367461
+Runtime (s): 3.5112993750000214
+NNI Iter: 1
+Current score: -878.6568728693861
+Runtime (s): 1.67478029199998
+NNI Iter: 2
+Current score: -878.9930483638819
+Runtime (s): 1.5503082500000005
+NNI Iter: 3
+Current score: -879.7710874123875
+Runtime (s): 1.9800157079999963
+NNI Iter: 4
+Current score: -879.8619640455446
+Runtime (s): 1.9597647499999766
+NNI Iter: 5
+Current score: -879.5844494805119
+Runtime (s): 1.598134875000028
+NNI Iter: 6
+Current score: -879.8726099780506
+Runtime (s): 1.707911082999999
+NNI Iter: 7
+Current score: -880.0052498041008
+Runtime (s): 1.8534410409999964
+NNI Iter: 8
+Current score: -879.7321044424856
+Runtime (s): 1.6675577919999682
+NNI Iter: 9
+Current score: -879.9106132977881
+Runtime (s): 1.7399482920000082
+NNI Iter: 10
+Current score: -879.6172489516365
+Runtime (s): 1.769730332999984
+NNI Iter: 11
+Current score: -879.1926999349419
+Runtime (s): 2.0000617079999756
+NNI Iter: 12
+Current score: -878.5455653488818
+Runtime (s): 2.040263583000012
+NNI Iter: 13
+Current score: -878.6630568295263
+Runtime (s): 3.3570511670000087
+NNI Iter: 14
+Current score: -878.6784996178692
+Runtime (s): 1.7721722500000396
+NNI Iter: 15
+Current score: -878.676386830859
+Runtime (s): 1.6437872500000026
+NNI Iter: 16
+Current score: -878.6825454317724
+Runtime (s): 1.567105665999975
+NNI Iter: 17
+Current score: -878.6692360304332
+Runtime (s): 3.549182332999976
+NNI Iter: 18
+Current score: -878.676386830859
+Runtime (s): 3.4308256250000113
+NNI Iter: 19
+Current score: -878.6438360292723
+Runtime (s): 4.985156167000014
+NNI Iter: 20
+Current score: -878.6138817516214
+Runtime (s): 3.568747541999983
+NNI Iter: 21
+Current score: -878.5825733385861
+Runtime (s): 1.8489104999999881
+NNI Iter: 22
+Current score: -878.5454424324229
+Runtime (s): 1.604472082999962
+NNI Iter: 23
+Best score for this search: -878.0374024214653
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0373927125662
+Performing nni-search 10
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0373992021387
+NNI Iter: 0
+Current score: -878.7506312928097
+Runtime (s): 1.8102350000000342
+NNI Iter: 1
+Current score: -879.2750043115154
+Runtime (s): 1.7793244160000086
+NNI Iter: 2
+Current score: -879.202390509201
+Runtime (s): 1.8225034579999715
+NNI Iter: 3
+Current score: -879.651145414334
+Runtime (s): 1.7859673330000305
+NNI Iter: 4
+Current score: -880.0001560198236
+Runtime (s): 1.6780959579999717
+NNI Iter: 5
+Current score: -879.9417435599504
+Runtime (s): 1.7465932079999789
+NNI Iter: 6
+Current score: -880.1473090981003
+Runtime (s): 1.8174413329999766
+NNI Iter: 7
+Current score: -879.5447292311551
+Runtime (s): 3.6892449169999963
+NNI Iter: 8
+Current score: -879.4826278556037
+Runtime (s): 1.9682628749999935
+NNI Iter: 9
+Current score: -879.403111921491
+Runtime (s): 1.6531205830000317
+NNI Iter: 10
+Current score: -879.5646656639606
+Runtime (s): 1.7709750839999856
+NNI Iter: 11
+Current score: -879.337010748598
+Runtime (s): 1.6081565420000175
+NNI Iter: 12
+Current score: -878.9649142559697
+Runtime (s): 1.5703912920000107
+NNI Iter: 13
+Current score: -879.3370106351313
+Runtime (s): 1.8580887080000252
+NNI Iter: 14
+Current score: -878.9658271179603
+Runtime (s): 1.9413121659999888
+NNI Iter: 15
+Current score: -878.5759497863985
+Runtime (s): 3.673146499999973
+NNI Iter: 16
+Current score: -878.5750943204191
+Runtime (s): 1.8384663749999959
+NNI Iter: 17
+Best score for this search: -878.0373992021387
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0374017336253
+Performing nni-search 11
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0374061714949
+NNI Iter: 0
+Current score: -878.6818982432839
+Runtime (s): 1.940952541999991
+NNI Iter: 1
+Current score: -878.6585662268456
+Runtime (s): 1.896000249999986
+NNI Iter: 2
+Current score: -878.3645483439484
+Runtime (s): 1.9698114160000273
+NNI Iter: 3
+Current score: -878.3648440059047
+Runtime (s): 3.6924289170000293
+NNI Iter: 4
+Current score: -878.8618825962895
+Runtime (s): 1.6850896659999535
+NNI Iter: 5
+Current score: -879.0812741757888
+Runtime (s): 1.8469660830000407
+NNI Iter: 6
+Current score: -879.2866234686785
+Runtime (s): 3.6975244160000216
+NNI Iter: 7
+Current score: -879.2858859713621
+Runtime (s): 1.9778946669999868
+NNI Iter: 8
+Current score: -879.8194508186114
+Runtime (s): 1.8793578749999824
+NNI Iter: 9
+Current score: -879.810769958972
+Runtime (s): 1.9487570000000005
+NNI Iter: 10
+Current score: -879.9071238033475
+Runtime (s): 1.8085182910000412
+NNI Iter: 11
+Current score: -879.7130458282744
+Runtime (s): 1.6258820420000006
+NNI Iter: 12
+Current score: -879.7551944496953
+Runtime (s): 1.8800312089999807
+NNI Iter: 13
+Current score: -879.7631272324172
+Runtime (s): 1.7398074589999624
+NNI Iter: 14
+Current score: -879.2947137766498
+Runtime (s): 1.9261052919999884
+NNI Iter: 15
+Current score: -879.3281864194521
+Runtime (s): 1.7017084579999846
+NNI Iter: 16
+Current score: -879.4796251091858
+Runtime (s): 4.806004125000015
+NNI Iter: 17
+Current score: -879.5040785787907
+Runtime (s): 1.6686517090000166
+NNI Iter: 18
+Current score: -879.4736263497409
+Runtime (s): 1.6257410839999693
+NNI Iter: 19
+Current score: -879.4893216588645
+Runtime (s): 1.7443510420000052
+NNI Iter: 20
+Current score: -879.2648802004818
+Runtime (s): 1.8836912090000055
+NNI Iter: 21
+Current score: -878.645897414616
+Runtime (s): 5.018039291999969
+NNI Iter: 22
+Best score for this search: -878.0374061714949
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0373972097885
+Performing nni-search 12
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0374010299771
+NNI Iter: 0
+Current score: -878.7506334273082
+Runtime (s): 1.7288699580000184
+NNI Iter: 1
+Current score: -878.8905213832605
+Runtime (s): 1.9648918749999211
+NNI Iter: 2
+Current score: -879.1473439426148
+Runtime (s): 1.7040287080000098
+NNI Iter: 3
+Current score: -879.2229465745904
+Runtime (s): 1.8094133749999628
+NNI Iter: 4
+Current score: -879.2943790123142
+Runtime (s): 1.6905866659999447
+NNI Iter: 5
+Current score: -879.0207545830864
+Runtime (s): 1.5248924589999433
+NNI Iter: 6
+Current score: -879.2362352029035
+Runtime (s): 1.654859375000001
+NNI Iter: 7
+Current score: -879.008502429834
+Runtime (s): 1.8254010829999743
+NNI Iter: 8
+Current score: -879.1726523278703
+Runtime (s): 1.683025208999993
+NNI Iter: 9
+Current score: -878.9458012340702
+Runtime (s): 1.9023915830000533
+NNI Iter: 10
+Current score: -879.00656695771
+Runtime (s): 1.6712954999999283
+NNI Iter: 11
+Current score: -878.9534732356042
+Runtime (s): 2.0815582499999437
+NNI Iter: 12
+Current score: -878.7549342747833
+Runtime (s): 2.130071125000086
+NNI Iter: 13
+Current score: -878.7549342747833
+Runtime (s): 5.252563624999993
+NNI Iter: 14
+Current score: -878.4508290005331
+Runtime (s): 3.803615708999928
+NNI Iter: 15
+Best score for this search: -878.0374010299771
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0374033169987
+Performing nni-search 13
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0374016243558
+NNI Iter: 0
+Current score: -878.9396001059902
+Runtime (s): 2.053101374999983
+NNI Iter: 1
+Current score: -879.1864499290731
+Runtime (s): 1.7020153749999736
+NNI Iter: 2
+Current score: -879.8026710331978
+Runtime (s): 1.6737029580000353
+NNI Iter: 3
+Current score: -879.1751089307467
+Runtime (s): 1.837111334000042
+NNI Iter: 4
+Current score: -879.444653859037
+Runtime (s): 1.8356864580000547
+NNI Iter: 5
+Current score: -879.251672365842
+Runtime (s): 1.8913269160000254
+NNI Iter: 6
+Current score: -879.3873668521663
+Runtime (s): 1.6701106250000066
+NNI Iter: 7
+Current score: -879.4639499144469
+Runtime (s): 1.6350895000000492
+NNI Iter: 8
+Current score: -878.9614914314919
+Runtime (s): 1.8090086659999542
+NNI Iter: 9
+Current score: -878.8093747391463
+Runtime (s): 3.3154234170000336
+NNI Iter: 10
+Current score: -879.1947464619337
+Runtime (s): 1.9076575000000275
+NNI Iter: 11
+Current score: -879.1914165176624
+Runtime (s): 1.9743269169999849
+NNI Iter: 12
+Current score: -879.0099037612833
+Runtime (s): 1.6062060000000429
+NNI Iter: 13
+Current score: -879.0293789139096
+Runtime (s): 1.5438114590000396
+NNI Iter: 14
+Current score: -879.2121126203758
+Runtime (s): 1.8981776250000166
+NNI Iter: 15
+Current score: -879.4122462570557
+Runtime (s): 1.6882518329999812
+NNI Iter: 16
+Current score: -879.6818173834051
+Runtime (s): 1.8025508749999517
+NNI Iter: 17
+Current score: -879.4888355079883
+Runtime (s): 1.890809499999932
+NNI Iter: 18
+Current score: -879.4888355079883
+Runtime (s): 1.6590157080000836
+NNI Iter: 19
+Current score: -879.4888355079883
+Runtime (s): 1.6961925840000731
+NNI Iter: 20
+Current score: -879.1847005434153
+Runtime (s): 3.386405374999981
+NNI Iter: 21
+Current score: -879.078003612638
+Runtime (s): 3.136684917000025
+NNI Iter: 22
+Current score: -878.7468562891596
+Runtime (s): 3.3998617919999106
+NNI Iter: 23
+Current score: -878.6139481622533
+Runtime (s): 4.999757208999995
+NNI Iter: 24
+Current score: -878.5945382109242
+Runtime (s): 3.3899064580000413
+NNI Iter: 25
+Current score: -878.5752348273405
+Runtime (s): 5.1354145829999425
+NNI Iter: 26
+Best score for this search: -878.0374016243558
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.037399441127
+Performing nni-search 14
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0374026318094
+NNI Iter: 0
+Current score: -878.9395993491165
+Runtime (s): 1.8387967920000392
+NNI Iter: 1
+Current score: -879.1864483265496
+Runtime (s): 1.6019407500000398
+NNI Iter: 2
+Current score: -878.9473157285784
+Runtime (s): 1.6664943749999566
+NNI Iter: 3
+Current score: -879.1779764482095
+Runtime (s): 1.528955083000028
+NNI Iter: 4
+Current score: -879.0439782026383
+Runtime (s): 1.5430388340000718
+NNI Iter: 5
+Current score: -879.0246301277377
+Runtime (s): 3.0253337089999377
+NNI Iter: 6
+Current score: -879.1563026762632
+Runtime (s): 1.5923735000000079
+NNI Iter: 7
+Current score: -878.8625800856812
+Runtime (s): 1.5005038330000389
+NNI Iter: 8
+Current score: -878.8636828482937
+Runtime (s): 1.5896614999999201
+NNI Iter: 9
+Current score: -879.0791385623285
+Runtime (s): 1.66486862499994
+NNI Iter: 10
+Current score: -878.8977837626328
+Runtime (s): 1.501423999999929
+NNI Iter: 11
+Current score: -878.9479249475887
+Runtime (s): 1.5457622919999494
+NNI Iter: 12
+Current score: -879.1657741996172
+Runtime (s): 1.640808833000051
+NNI Iter: 13
+Current score: -879.032590845279
+Runtime (s): 1.8479485830000613
+NNI Iter: 14
+Current score: -878.9479249805838
+Runtime (s): 1.5050747500000625
+NNI Iter: 15
+Current score: -878.8977837681027
+Runtime (s): 1.596698333000063
+NNI Iter: 16
+Current score: -878.9171318487147
+Runtime (s): 3.331114542000023
+NNI Iter: 17
+Current score: -878.8977837677435
+Runtime (s): 4.830092333000039
+NNI Iter: 18
+Current score: -878.947924975585
+Runtime (s): 1.6626756250000199
+NNI Iter: 19
+Current score: -878.8977837761535
+Runtime (s): 4.8445259999999735
+NNI Iter: 20
+Current score: -878.5508292956255
+Runtime (s): 3.485574124999971
+NNI Iter: 21
+Current score: -878.5339588050701
+Runtime (s): 4.838901125000007
+NNI Iter: 22
+Best score for this search: -878.0374026318094
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0373902548314
+Performing nni-search 15
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -878.0373978743963
+NNI Iter: 0
+Current score: -878.7506311145387
+Runtime (s): 1.621607250000011
+NNI Iter: 1
+Current score: -878.9253031347997
+Runtime (s): 1.7325093749999496
+NNI Iter: 2
+Current score: -879.1958010991742
+Runtime (s): 1.6600227909999603
+NNI Iter: 3
+Current score: -879.7284034673823
+Runtime (s): 1.530948125000009
+NNI Iter: 4
+Current score: -879.5761912621094
+Runtime (s): 1.6769915840000067
+NNI Iter: 5
+Current score: -879.6815452035602
+Runtime (s): 1.5476814590000458
+NNI Iter: 6
+Current score: -879.8578909352277
+Runtime (s): 1.7283979579999595
+NNI Iter: 7
+Current score: -879.8662888275662
+Runtime (s): 1.7106119999999692
+NNI Iter: 8
+Current score: -879.6082195632972
+Runtime (s): 1.5572583330000498
+NNI Iter: 9
+Current score: -879.5334779801326
+Runtime (s): 1.6380415410000069
+NNI Iter: 10
+Current score: -879.534480031288
+Runtime (s): 1.703611042000034
+NNI Iter: 11
+Current score: -879.7068532773945
+Runtime (s): 1.5814470420000362
+NNI Iter: 12
+Current score: -879.6729042406278
+Runtime (s): 1.5680428749999464
+NNI Iter: 13
+Current score: -879.823714978527
+Runtime (s): 1.601644624999949
+NNI Iter: 14
+Current score: -879.4553667083671
+Runtime (s): 1.5601452920000156
+NNI Iter: 15
+Current score: -879.3553154264339
+Runtime (s): 1.5011022090000097
+NNI Iter: 16
+Current score: -879.2974079852385
+Runtime (s): 1.379498042000023
+NNI Iter: 17
+Current score: -879.2838803917816
+Runtime (s): 1.4825495000000046
+NNI Iter: 18
+Current score: -879.2974079834737
+Runtime (s): 1.6084378340000285
+NNI Iter: 19
+Current score: -879.2838803917816
+Runtime (s): 3.1128967089999833
+NNI Iter: 20
+Current score: -878.9977448337552
+Runtime (s): 3.2056541250000237
+NNI Iter: 21
+Current score: -878.6021942643159
+Runtime (s): 1.470237083000029
+NNI Iter: 22
+Current score: -878.5879453884486
+Runtime (s): 4.63712354200004
+NNI Iter: 23
+Best score for this search: -878.0373978743963
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -878.0374002491066
+Tree height pre-scaling: 0.6078512125259569, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6078512125259569
+Runtime (s): 729.814236792
