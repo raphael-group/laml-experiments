@@ -1,0 +1,3 @@
+python ~/my_gits/LAML/run_laml.py -c ../../evaluation/Bar23/Bar23_character_matrix.txt -t progenitor_10_starting.nwk -o progenitor_10_improved --topology_search --parallel -v -p ../../evaluation/Bar23/Bar23_priors.pickle --delimiter tab -m -1 --randomreps 15 
+python ~/my_gits/LAML/run_laml.py -c ../../evaluation/Bar23/Bar23_character_matrix.txt -t progenitor_11_starting.nwk -o progenitor_11_improved --topology_search --parallel -v -p ../../evaluation/Bar23/Bar23_priors.pickle --delimiter tab -m -1 --randomreps 15 
+python ~/my_gits/LAML/run_laml.py -c ../../evaluation/Bar23/Bar23_character_matrix.txt -t progenitor_16_starting.nwk -o progenitor_16_improved --topology_search --parallel -v -p ../../evaluation/Bar23/Bar23_priors.pickle --delimiter tab -m -1 --randomreps 15 

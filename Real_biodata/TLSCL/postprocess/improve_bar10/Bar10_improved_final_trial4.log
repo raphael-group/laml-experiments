@@ -1,0 +1,111 @@
+Launching LAML version 0.0.4
+LAML was called as follows: /Users/uym2/my_gits/LAML/run_laml.py -c ../../evaluation/Bar10/Bar10_character_matrix.txt -t place_outlier4/augmented_tree_476_optimized_trees.nwk -o Bar10_improved_final_trial4 -v -p ../../evaluation/Bar10/Bar10_priors.pickle --delimiter tab -m -1 --topology_search --parallel
+Prior keys mismatch with site names.
+Prior keys: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+Site names: ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8', 'r9', 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20', 'r21', 'r22', 'r23', 'r24', 'r25', 'r26', 'r27', 'r28', 'r29', 'r30']
+Attempting to infer mapping between site names and prior keys...
+{'r1': 0, 'r2': 1, 'r3': 2, 'r4': 3, 'r5': 4, 'r6': 5, 'r7': 6, 'r8': 7, 'r9': 8, 'r10': 9, 'r11': 10, 'r12': 11, 'r13': 12, 'r14': 13, 'r15': 14, 'r16': 15, 'r17': 16, 'r18': 17, 'r19': 18, 'r20': 19, 'r21': 20, 'r22': 21, 'r23': 22, 'r24': 23, 'r25': 24, 'r26': 25, 'r27': 26, 'r28': 27, 'r29': 28, 'r30': 29}
+Detected polytomies in the input trees.
+Flag --keep_polytomies is off. All polytomies will be resolved.
+Starting topology search
+Running topology search in parallel...
+Performing nni-search 1
+Perform nni moves for full topology search
+Found polytomies in the input tree(s). Arbitrarily resolving them to obtain fully resolved initial tree(s).
+Initial score (polytomies were arbitrarily resolved): -10683.008680234405
+NNI Iter: 0
+Current score: -10681.411377336402
+Runtime (s): 7.786083584
+NNI Iter: 1
+Current score: -10680.901518381606
+Runtime (s): 19.841634792
+NNI Iter: 2
+Current score: -10680.93430979965
+Runtime (s): 57.491981333
+NNI Iter: 3
+Current score: -10681.037648250012
+Runtime (s): 28.696946458
+NNI Iter: 4
+Current score: -10681.21260743224
+Runtime (s): 6.294291916999995
+NNI Iter: 5
+Current score: -10681.039651205809
+Runtime (s): 17.429756333
+NNI Iter: 6
+Current score: -10680.870904627302
+Runtime (s): 12.976732791000018
+NNI Iter: 7
+Current score: -10682.0405309762
+Runtime (s): 5.4172848329999965
+NNI Iter: 8
+Current score: -10681.96734757237
+Runtime (s): 45.060200084
+NNI Iter: 9
+Current score: -10681.893285508393
+Runtime (s): 62.26113437500001
+NNI Iter: 10
+Current score: -10681.849890662967
+Runtime (s): 5.6450257079999915
+NNI Iter: 11
+Current score: -10681.797336283778
+Runtime (s): 15.584790082999973
+NNI Iter: 12
+Current score: -10681.063154313519
+Runtime (s): 51.794803540999965
+NNI Iter: 13
+Current score: -10680.526893635088
+Runtime (s): 41.958180958000014
+NNI Iter: 14
+Current score: -10670.27564929084
+Runtime (s): 80.99396466600001
+NNI Iter: 15
+Current score: -10670.28614479657
+Runtime (s): 85.41444858400001
+NNI Iter: 16
+Current score: -10670.286178535476
+Runtime (s): 84.94213574999992
+NNI Iter: 17
+Current score: -10670.322937879582
+Runtime (s): 106.178349583
+NNI Iter: 18
+Current score: -10670.2214636647
+Runtime (s): 82.82202170899996
+NNI Iter: 19
+Best score for this search: -10670.2214636647
+Optimal topology found. Re-optimizing other parameters ...
+Optimal score for this search: -10670.264212429813
+Tree height pre-scaling: 0.7004673887237598, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004673887237598
+Tree height pre-scaling: 0.7004673543964557, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004673543964557
+Tree height pre-scaling: 0.7004673612171068, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004673612171068
+Tree height pre-scaling: 0.7004673651964688, input timescale: 1.0
+Tree height after scaling: 1.0000000000000002, mutation rate: 0.7004673651964688
+Tree height pre-scaling: 0.7004673787180669, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004673787180669
+Tree height pre-scaling: 0.7004673203013078, input timescale: 1.0
+Tree height after scaling: 1.0000000000000002, mutation rate: 0.7004673203013078
+Tree height pre-scaling: 0.7004673784632536, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004673784632536
+Tree height pre-scaling: 0.7004674035668087, input timescale: 1.0
+Tree height after scaling: 0.9999999999999998, mutation rate: 0.7004674035668087
+Tree height pre-scaling: 0.7004674258347491, input timescale: 1.0
+Tree height after scaling: 1.0000000000000002, mutation rate: 0.7004674258347491
+Tree height pre-scaling: 0.7004673888776606, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004673888776606
+Tree height pre-scaling: 0.7004673498079761, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004673498079761
+Tree height pre-scaling: 0.7004674269555509, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004674269555509
+Tree height pre-scaling: 0.7004673797132173, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004673797132173
+Tree height pre-scaling: 0.7004677468265166, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004677468265166
+Tree height pre-scaling: 0.7004674553380145, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004674553380145
+Tree height pre-scaling: 0.7004673481170074, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.7004673481170074
+Tree height pre-scaling: 0.7004674497077013, input timescale: 1.0
+Tree height after scaling: 1.0000000000000002, mutation rate: 0.7004674497077013
+Runtime (s): 903.037631

@@ -12,4 +12,4 @@ while read tree; do
     selected_tree=`grep Negative-llh place_outlier$i/augmented_tree_*_optimized_params.txt | sed -e "s/(//g" -e "s/,.*)//g" | sort -nk2,2 | head -n1 | sed -e "s/_params.*/_trees.nwk/g"`
     rm $temp
     i=$((i+1))
-done < Bar10_improved_step1_trees.nwk   
+done < Bar10_outlier_clades.nwk 

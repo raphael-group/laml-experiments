@@ -1,0 +1,4 @@
+Dropout rate: 0
+Silencing rate: 0.2705648256109595
+Negative-llh: (7613.2131544577915, 'optimal')
+Mutation rate: 0.7136560147680894

@@ -21,7 +21,7 @@ while read tree; do
     selected_tree=`grep Negative-llh place_outlier$i/augmented_tree_*_optimized_params.txt | sed -e "s/(//g" -e "s/,.*)//g" | sort -nk2,2 | head -n1 | sed -e "s/_params.*/_trees.nwk/g"`
     rm $temp
     i=$((i+1))
-done < Bar10_improved_step1_trees.nwk   
+done < Bar10_outlier_clades.nwk 
 
 # step 4: do final topology search (repeat for multiple trials)
 python ~/my_gits/LAML/run_laml.py -c ../../evaluation/Bar10/Bar10_character_matrix.txt -t $selected_tree -o Bar10_improved_final -v -p ../../evaluation/Bar10/Bar10_priors.pickle --delimiter tab -m -1 --topology_search --parallel

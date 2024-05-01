@@ -1,0 +1,313 @@
+Launching LAML version 0.0.4
+LAML was called as follows: /Users/uym2/my_gits/LAML/run_laml.py -c ../../evaluation/Bar10/Bar10_character_matrix.txt -t place_outlier2/augmented_tree_50.nwk -o place_outlier2/augmented_tree_50_optimized -v -p ../../evaluation/Bar10/Bar10_priors.pickle --delimiter tab -m -1 --nInitials 1
+Prior keys mismatch with site names.
+Prior keys: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+Site names: ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8', 'r9', 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20', 'r21', 'r22', 'r23', 'r24', 'r25', 'r26', 'r27', 'r28', 'r29', 'r30']
+Attempting to infer mapping between site names and prior keys...
+{'r1': 0, 'r2': 1, 'r3': 2, 'r4': 3, 'r5': 4, 'r6': 5, 'r7': 6, 'r8': 7, 'r9': 8, 'r10': 9, 'r11': 10, 'r12': 11, 'r13': 12, 'r14': 13, 'r15': 14, 'r16': 15, 'r17': 16, 'r18': 17, 'r19': 18, 'r20': 19, 'r21': 20, 'r22': 21, 'r23': 22, 'r24': 23, 'r25': 24, 'r26': 25, 'r27': 26, 'r28': 27, 'r29': 28, 'r30': 29}
+Optimizing branch lengths, phi, and nu without topology search
+Optimization by EM algorithm
+Optimization start with 1 initials
+Initial point 1. Random seed: 3025
+Numerical optimization started with ultrametric constraint (default)
+Initial phi: 0. Initial nu: 0.26955655566205877. Initial nllh: 13000.45507749937
+Starting EM iter: 1
+Estep
+Estep runtime (s): 0.1107492446899414
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.26955655566205877
+Optimizing nu
+Mstep runtime (s): 0.33403587341308594
+Finished EM iter: 1. Current nllh: 10620.323914753051
+Starting EM iter: 2
+Estep
+Estep runtime (s): 0.1498100757598877
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.28655609862054826
+Optimizing nu
+Mstep runtime (s): 0.314816951751709
+Finished EM iter: 2. Current nllh: 10595.121964138794
+Starting EM iter: 3
+Estep
+Estep runtime (s): 0.14952993392944336
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2891113955856859
+Optimizing nu
+Mstep runtime (s): 0.30646395683288574
+Finished EM iter: 3. Current nllh: 10593.081489172164
+Starting EM iter: 4
+Estep
+Estep runtime (s): 0.1502070426940918
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2892957407045302
+Optimizing nu
+Mstep runtime (s): 0.28938913345336914
+Finished EM iter: 4. Current nllh: 10592.839772632495
+Starting EM iter: 5
+Estep
+Estep runtime (s): 0.14984512329101562
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2894397861331173
+Optimizing nu
+Mstep runtime (s): 0.3301970958709717
+Finished EM iter: 5. Current nllh: 10592.762708060047
+Starting EM iter: 6
+Estep
+Estep runtime (s): 0.15014195442199707
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.28959699842633074
+Optimizing nu
+Mstep runtime (s): 0.29894208908081055
+Finished EM iter: 6. Current nllh: 10592.73087305739
+Starting EM iter: 7
+Estep
+Estep runtime (s): 0.1497952938079834
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2897250108962177
+Optimizing nu
+Mstep runtime (s): 0.29972290992736816
+Finished EM iter: 7. Current nllh: 10592.712006648191
+Starting EM iter: 8
+Estep
+Estep runtime (s): 0.15028595924377441
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.28982231324620494
+Optimizing nu
+Mstep runtime (s): 0.32378196716308594
+Finished EM iter: 8. Current nllh: 10592.699982537906
+Starting EM iter: 9
+Estep
+Estep runtime (s): 0.15000295639038086
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2898943023542072
+Optimizing nu
+Mstep runtime (s): 0.28797006607055664
+Finished EM iter: 9. Current nllh: 10592.691997130662
+Starting EM iter: 10
+Estep
+Estep runtime (s): 0.15129494667053223
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2899499466698943
+Optimizing nu
+Mstep runtime (s): 0.3280949592590332
+Finished EM iter: 10. Current nllh: 10592.686446066335
+Starting EM iter: 11
+Estep
+Estep runtime (s): 0.15016794204711914
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.28999273580082224
+Optimizing nu
+Mstep runtime (s): 0.3016490936279297
+Finished EM iter: 11. Current nllh: 10592.682502841593
+Starting EM iter: 12
+Estep
+Estep runtime (s): 0.15058684349060059
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.29002634450260584
+Optimizing nu
+Mstep runtime (s): 0.3065822124481201
+Finished EM iter: 12. Current nllh: 10592.679626347643
+Starting EM iter: 13
+Estep
+Estep runtime (s): 0.15026521682739258
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2900533472964984
+Optimizing nu
+Mstep runtime (s): 0.3344759941101074
+Finished EM iter: 13. Current nllh: 10592.677493826719
+Starting EM iter: 14
+Estep
+Estep runtime (s): 0.15082335472106934
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2900751191201385
+Optimizing nu
+Mstep runtime (s): 0.2847311496734619
+Finished EM iter: 14. Current nllh: 10592.675871289495
+Starting EM iter: 15
+Estep
+Estep runtime (s): 0.1503753662109375
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.29009352087080575
+Optimizing nu
+Mstep runtime (s): 0.2953836917877197
+Finished EM iter: 15. Current nllh: 10592.674619990137
+Starting EM iter: 16
+Estep
+Estep runtime (s): 0.15247082710266113
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2901086510155077
+Optimizing nu
+Mstep runtime (s): 0.29102301597595215
+Finished EM iter: 16. Current nllh: 10592.673646311678
+Starting EM iter: 17
+Estep
+Estep runtime (s): 0.15039992332458496
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.290121589397276
+Optimizing nu
+Mstep runtime (s): 0.28199124336242676
+Finished EM iter: 17. Current nllh: 10592.672859470882
+Starting EM iter: 18
+Estep
+Estep runtime (s): 0.15080785751342773
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2901328812661248
+Optimizing nu
+Mstep runtime (s): 0.28657078742980957
+Finished EM iter: 18. Current nllh: 10592.672233892376
+Starting EM iter: 19
+Estep
+Estep runtime (s): 0.15074992179870605
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.29014236556192524
+Optimizing nu
+Mstep runtime (s): 0.32616615295410156
+Finished EM iter: 19. Current nllh: 10592.671723464986
+Starting EM iter: 20
+Estep
+Estep runtime (s): 0.15088915824890137
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.29015079098579893
+Optimizing nu
+Mstep runtime (s): 0.31169724464416504
+Finished EM iter: 20. Current nllh: 10592.671418596427
+Starting EM iter: 21
+Estep
+Estep runtime (s): 0.1505143642425537
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.29015418238713164
+Optimizing nu
+Mstep runtime (s): 0.30711984634399414
+Finished EM iter: 21. Current nllh: 10592.67104005405
+Starting EM iter: 22
+Estep
+Estep runtime (s): 0.15099072456359863
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.29016311909742304
+Optimizing nu
+Mstep runtime (s): 0.3024768829345703
+Finished EM iter: 22. Current nllh: 10592.670707486337
+Starting EM iter: 23
+Estep
+Estep runtime (s): 0.15044283866882324
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2901691165679036
+Optimizing nu
+Mstep runtime (s): 0.29366493225097656
+Finished EM iter: 23. Current nllh: 10592.670454582658
+Starting EM iter: 24
+Estep
+Estep runtime (s): 0.15520310401916504
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.290174200648648
+Optimizing nu
+Mstep runtime (s): 0.29496312141418457
+Finished EM iter: 24. Current nllh: 10592.670237131937
+Starting EM iter: 25
+Estep
+Estep runtime (s): 0.15201807022094727
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2901788172093401
+Optimizing nu
+Mstep runtime (s): 0.2868659496307373
+Finished EM iter: 25. Current nllh: 10592.670068276297
+Starting EM iter: 26
+Estep
+Estep runtime (s): 0.15120601654052734
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.29018232567773067
+Optimizing nu
+Mstep runtime (s): 0.32239699363708496
+Finished EM iter: 26. Current nllh: 10592.669925492526
+Starting EM iter: 27
+Estep
+Estep runtime (s): 0.15070891380310059
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.290185386234635
+Optimizing nu
+Mstep runtime (s): 0.29172515869140625
+Finished EM iter: 27. Current nllh: 10592.66980221921
+Starting EM iter: 28
+Estep
+Estep runtime (s): 0.1509859561920166
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.2901884474175572
+Optimizing nu
+Mstep runtime (s): 0.32602691650390625
+Finished EM iter: 28. Current nllh: 10592.669686172903
+Starting EM iter: 29
+Estep
+Estep runtime (s): 0.150651216506958
+Mstep
+Optimizing phi
+Optimizing branch lengths. Current phi: 0. Current nu:0.29019123514975625
+Optimizing nu
+Mstep runtime (s): 0.30337095260620117
+Finished EM iter: 29. Current nllh: 10592.66960481712
+EM finished after 29 iterations.
+Optimal phi: 0. Optimal nu: 0.29019309695604095. Optimal nllh: 10592.66960481712
+Optimal point found for initial point 1
+Numerical optimization finished successfully
+Tree height pre-scaling: 0.6906872251704388, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872251704388
+Tree height pre-scaling: 0.6906872253846488, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872253846488
+Tree height pre-scaling: 0.6906872252422867, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872252422867
+Tree height pre-scaling: 0.6906872253636743, input timescale: 1.0
+Tree height after scaling: 0.9999999999999999, mutation rate: 0.6906872253636743
+Tree height pre-scaling: 0.6906872249995489, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872249995489
+Tree height pre-scaling: 0.6906872251994733, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872251994733
+Tree height pre-scaling: 0.6906872253131123, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872253131123
+Tree height pre-scaling: 0.6906872253102732, input timescale: 1.0
+Tree height after scaling: 0.9999999999999999, mutation rate: 0.6906872253102732
+Tree height pre-scaling: 0.6906872250758409, input timescale: 1.0
+Tree height after scaling: 0.9999999999999999, mutation rate: 0.6906872250758409
+Tree height pre-scaling: 0.6906872252677774, input timescale: 1.0
+Tree height after scaling: 1.0000000000000002, mutation rate: 0.6906872252677774
+Tree height pre-scaling: 0.690687225261369, input timescale: 1.0
+Tree height after scaling: 0.9999999999999999, mutation rate: 0.690687225261369
+Tree height pre-scaling: 0.6906872250873075, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872250873075
+Tree height pre-scaling: 0.6906872252246715, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872252246715
+Tree height pre-scaling: 0.6906872252196254, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872252196254
+Tree height pre-scaling: 0.6906872254571476, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872254571476
+Tree height pre-scaling: 0.6906872252429109, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872252429109
+Tree height pre-scaling: 0.6906872262019181, input timescale: 1.0
+Tree height after scaling: 1.0, mutation rate: 0.6906872262019181
+Runtime (s): 14.686437
