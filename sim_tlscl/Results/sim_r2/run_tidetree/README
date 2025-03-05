@@ -1,0 +1,110 @@
+Exampel command:
+
+`python create_input_xml.py k30s50d50p01_sub30_r01 /Users/gc3045/laml_experiments/rebuttal/data_set4/k30s50d50p01_sub30_r01/character_matrix_cass.csv /Users/gc3045/laml_experiments/rebuttal/data_set4/k30s50d50p01_sub30_r01.xml`
+
+- need to correct the number of states
+- how do i represent missing data?
+- does this run?
+
+downloading tidetree again jan 31. 2025. This is because they have updated their github repo with a new example template file and they've changed some variable names. Unclear if more has changed. 
+
+running the example gives error:
+"Package tidetree requires another package (feast) which is not available. Either uninstall tidetree or ask the package maintainer for information about this dependency. Unexpected bheavior may follow!" 
+- feast is installed and upgraded to version 8.4 with BEAUti. 
+
+It is unclear whether the editRate and the scarringRate are the same variable. Where one appears, the other does not seem to appear. Here is an example with 52 states https://github.com/seidels/tidetree-material/blob/main/Fig2/inference/fixScarring_10alignments.xml, and where the scarring frequencies do not sum to 1. In the provided example.xml, the edit frequences do sum to 1.
+
+The problem arises in that the alphabet is different for each column, and tidetree doesn't support this. Two ways of handling this:
+(1) Make values in each column distinct. Then you have an alphabet which contains the alphabets of each column. But then the probability for each edit possibility in each column is wrong, and much lower than it should be. 
+(2) Just take the explicit union of the alphabets of each column. But here the probability for each edit possibility in each column is also wrong. 
+
+After discussion with Ben, it seems like the explicit union of the alphabets of each column is best. Then we can provide the probabilities for each state.
+
+Feb12
+Passing in '?' (although consistent with nexus format) definitely causes indexing problems in tidetree. Takign this as example: https://github.com/seidels/tidetree-material/blob/0fb602dbcfa18df29c924c7ae67982f8ba6e93e6/Fig1/inference/realistic_inference_1type.xml, it doesn't indicate how to pass in missing data, but from Figure 1 in the paper, it suggests that we should give silencing its own state.
+
+Next test is in examples/testMissing_exampleMoreStates.xml, which just adds 4 as the silenced state, adds one to the nrOfStates, and increases the silencingRate parameter. Error:
+===============================================================================
+Warning: state contains a node silencingRate for which there is no operator.
+Warning: state contains a node mutationRate for which there is no operator.
+Warning: state contains a node proportionInvariant for which there is no operator.
+Warning: state contains a node samplingRate for which there is no operator.
+Warning: state contains a node rho for which there is no operator.
+Warning: state contains a node origin for which there is no operator.
+Start likelihood: -Infinity after 10 initialisation attempts
+P(posterior) = -Infinity (was -Infinity)
+	P(prior) = -255.14914204271267 (was -255.14914204271267)
+		P(birthDeathSamplingModel) = -248.56579702197362 (was -248.56579702197362)
+		P(editRatePrior) = -7.94204154582747 (was -7.94204154582747)
+		P(ClockPrior.c:LTv2_EBd32_cluster_1) = 0.0 (was 0.0)
+		P(birthRatePrior) = -0.25970786608368224 (was -0.25970786608368224)
+		P(deathRatePrior) = 1.618404391172097 (was 1.618404391172097)
+	P(likelihood) = -Infinity (was -Infinity)
+		P(treeLikelihood) = -Infinity (was -Infinity)
+java.lang.RuntimeException: Could not find a proper state to initialise. Perhaps try another seed.
+See http://www.beast2.org/2018/07/04/fatal-errors.html for other possible solutions.
+	at beast.base.inference.MCMC.run(MCMC.java:328)
+	at beastfx.app.beast.BeastMCMC.run(BeastMCMC.java:259)
+	at beastfx.app.beast.BeastMain.main(BeastMain.java:460)
+	at feast.app.FeastMain.main(FeastMain.java:92)
+
+- added a chnage on line 74: frequencies="1 0 0 0 0" (extra 0) still throws same error.
+
+Passing in ? gives the following error: 
+===============================================================================
+Warning: state contains a node silencingRate for which there is no operator.
+Warning: state contains a node mutationRate for which there is no operator.
+Warning: state contains a node proportionInvariant for which there is no operator.
+Warning: state contains a node samplingRate for which there is no operator.
+Warning: state contains a node rho for which there is no operator.
+Warning: state contains a node origin for which there is no operator.
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 25
+	at tidetree.distributions.CustomCore.calculateStatesPruning(CustomCore.java:492)
+	at tidetree.distributions.CustomCore.calculatePartialsBeforeParent(CustomCore.java:434)
+	at tidetree.distributions.CustomCore.calculatePartialsForCrossBranches(CustomCore.java:176)
+	at tidetree.distributions.TreeLikelihoodWithEditWindow.traverse(TreeLikelihoodWithEditWindow.java:293)
+	at tidetree.distributions.TreeLikelihoodWithEditWindow.traverse(TreeLikelihoodWithEditWindow.java:263)
+	at tidetree.distributions.TreeLikelihoodWithEditWindow.traverse(TreeLikelihoodWithEditWindow.java:263)
+	at tidetree.distributions.TreeLikelihoodWithEditWindow.traverse(TreeLikelihoodWithEditWindow.java:263)
+	at tidetree.distributions.TreeLikelihoodWithEditWindow.traverse(TreeLikelihoodWithEditWindow.java:263)
+	at tidetree.distributions.TreeLikelihoodWithEditWindow.traverse(TreeLikelihoodWithEditWindow.java:263)
+	at tidetree.distributions.TreeLikelihoodWithEditWindow.calculateLogP(TreeLikelihoodWithEditWindow.java:443)
+	at beast.base.inference.CompoundDistribution.calculateLogP(CompoundDistribution.java:113)
+	at beast.base.inference.CompoundDistribution.calculateLogP(CompoundDistribution.java:113)
+	at beast.base.inference.State.robustlyCalcPosterior(State.java:730)
+	at beast.base.inference.MCMC.run(MCMC.java:309)
+	at beastfx.app.beast.BeastMCMC.run(BeastMCMC.java:259)
+	at beastfx.app.beast.BeastMain.main(BeastMain.java:460)
+	at feast.app.FeastMain.main(FeastMain.java:92)
+
+With the same error if I pass in -1 as the missing value.
+
+So I got it to run if I updated the missing data to be an integer, and the silencing Rate is > 0.
+Currently getting the following error from running my version:
+===============================================================================
+Warning: state contains a node silencingRate for which there is no operator.
+Warning: state contains a node mutationRate for which there is no operator.
+Warning: state contains a node proportionInvariant for which there is no operator.
+Warning: state contains a node samplingRate for which there is no operator.
+Warning: state contains a node rho for which there is no operator.
+Warning: state contains a node origin for which there is no operator.
+2025-02-12 12:28:19.389 java[90204:6851454] +[IMKClient subclass]: chose IMKClient_Modern
+2025-02-12 12:28:19.389 java[90204:6851454] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+Start likelihood: -Infinity after 10 initialisation attempts
+P(posterior) = -Infinity (was -Infinity)
+	P(prior) = -978.7440042164144 (was -978.7440042164144)
+		P(birthDeathSamplingModel) = -971.6061770238805 (was -971.6061770238805)
+		P(editRatePrior) = -8.496523717622424 (was -8.496523717622424)
+		P(ClockPrior.c:LTv2_EBd32_cluster_1) = 0.0 (was 0.0)
+		P(birthRatePrior) = -0.25970786608368224 (was -0.25970786608368224)
+		P(deathRatePrior) = 1.618404391172097 (was 1.618404391172097)
+	P(likelihood) = -Infinity (was -Infinity)
+		P(treeLikelihood) = -Infinity (was -Infinity)
+java.lang.RuntimeException: Could not find a proper state to initialise. Perhaps try another seed.
+See http://www.beast2.org/2018/07/04/fatal-errors.html for other possible solutions.
+	at beast.base.inference.MCMC.run(MCMC.java:328)
+	at beastfx.app.beast.BeastMCMC.run(BeastMCMC.java:259)
+	at beastfx.app.beast.BeastMain.main(BeastMain.java:460)
+	at feast.app.FeastMain.main(FeastMain.java:92)
+
+When I subsampled down to 17 cells it worked.
