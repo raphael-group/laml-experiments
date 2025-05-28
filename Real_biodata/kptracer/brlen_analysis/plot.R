@@ -1,3 +1,4 @@
+require(ggplot2)
 setwd("/Users/gc3045/git/laml-experiments/Real_biodata/kptracer/brlen_analysis")
 
 d = read.table("MP_ML_d2root.txt",header=T)
@@ -70,13 +71,18 @@ ggplot(
     legend.title    = element_blank()
   )
 ggsave("dT_vs_dE_mutualInfo.cbf.pdf",width=4,height=4)
+library(dplyr)
 
-
-ggplot(dE_melt[dE_melt$sample == "3432_NT_T1",],aes(x=dE_type,y=value,group=variable,fill=variable)) + 
-  geom_col(position = "dodge",color="black") + 
+ggplot(dE_melt[dE_melt$sample == "3432_NT_T1",] %>% filter(dE_type != "umap"),
+       aes(x=dE_type,y=value,group=variable,fill=variable)) + 
+  geom_col(position = "dodge",color="black") +
+  scale_fill_manual(
+    values = okabe_ito[seq_len(dplyr::n_distinct(dE_melt$variable))]
+  ) +
   #facet_wrap(~sample,scale="free",nrow=2) + 
   scale_x_discrete(labels = c("pca" = "PCA", "scVI" = "scVI", "umap" = "UMAP")) + 
   xlab("Expression distance") +
   ylab("Mutual information") + 
   theme_classic() + theme(legend.position = "bottom",legend.title = element_blank())
-ggsave("dT_vs_dE_mutualInfo_3432.pdf",width=4,height=4)
+
+ggsave("dT_vs_dE_mutualInfo_3432.cbf.pdf",width=4,height=4)

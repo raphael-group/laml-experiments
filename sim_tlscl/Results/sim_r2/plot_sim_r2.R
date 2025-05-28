@@ -1,17 +1,18 @@
 
 library(dplyr)
 library(ggplot2)
-setwd("/Users/gc3045/laml_experiments/rebuttal/sim_r2")
+setwd("/Users/gc3045/git/laml-experiments/sim_tlscl/Results/sim_r2")
 
 
 method_colors <- c(
-  "Cassiopeia-Greedy" = "#F8766C",  
-  "Cassiopeia-Hybrid" = "#7DAE00",  
-  "Startle-NNI" = "#2ABFC3",         
-  "LAML" = "#C178F7",      
-  "LAML(Startle)" = "#6AB5F7",           
-  "LAML(Cass-Hybrid)" = "#DF78F7",
-  "LAML(Startle)-nomissing" = "#6AB"
+  "Cassiopeia-Greedy" = "#EE3377", 
+  "Cassiopeia-Hybrid" = "#56B4E9",  
+  "Cassiopeia-ILP-Def " = "#AA4499", 
+  "Startle-NNI" = "#0072B2",         
+  "LAML" = "#000000",     
+  "LAML(Startle)" = "#CC79A7",           
+  "LAML(Cass-Hybrid)" = "#D55E00",
+  "LAML(Startle)-nomissing" = "#E69F00"
 )
 
 ################################################################################################################################################################
@@ -50,7 +51,7 @@ ggplot(data, aes(x = k, y = rf, color = method)) +
     legend.position = "bottom"
   ) + 
   guides(color = guide_legend(nrow = 2))
-ggsave("pdfs/set1a.pdf")
+ggsave("pdfs/simr2_set1a.cbf.pdf", width=8, height=8)
 
 ################################################################################################################################################################
 # set 1b
@@ -94,7 +95,7 @@ ggplot(data, aes(x = k, y = rf, color = method)) +
   ) + 
   guides(color = guide_legend(nrow = 2))
 
-ggsave("pdfs/set1b.pdf")
+ggsave("pdfs/simr2_set1b.cbf.pdf", width=8, height=8)
 
 ################################################################################################################################################################
 # set 2
@@ -133,7 +134,7 @@ ggplot(data, aes(x = M, y = rf, color = method)) +
     legend.position = "bottom"
   ) + 
   guides(color = guide_legend(nrow = 2))
-ggsave("pdfs/set2.pdf")
+ggsave("pdfs/simr2_set2.cbf.pdf", width=8, height=8)
 
 ################################################################################################################################################################
 # set 3
@@ -197,7 +198,7 @@ ggplot(data, aes(x = m_prop, y = rf, color = method)) +
   ) + 
   guides(color = guide_legend(nrow = 2))
 
-ggsave("pdfs/set3.pdf")
+ggsave("pdfs/simr2_set3.cbf.pdf", width=8, height=8)
 
 ################################################################################################################################################################
 # set 4
@@ -237,4 +238,5 @@ ggplot(data, aes(x = method, y = rf, color = method)) +
     axis.text.x = element_text(angle = 45, hjust = 1) # Tilt x-axis labels by 45 degrees
   )
 
-ggsave("pdfs/set4.pdf")
+ggsave("pdfs/simr2_set4.cbf.pdf", width=8, height=8)
+
