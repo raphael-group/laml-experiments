@@ -4,7 +4,7 @@ library(patchwork)
 
 library(tidyr)
 # Read the CSV file
-data <- read.csv("/Users/gc3045/laml_experiments/rebuttal/scalability_parameter_estimation/evaluations.csv")
+data <- read.csv("/Users/gc3045/git/laml-experiments/sim_tlscl/Results/scalability_parameter_estimation/evaluations.csv")
 
 # compare laml and fast-laml-em-cpu
 result <- data %>%
@@ -51,7 +51,7 @@ library(dplyr)
 library(patchwork)
 
 # Define custom color palette with specific order
-custom_palette <- c("LAML-ultra" = "#E41A1C", 
+custom_palette <- c("LAML-ultra" = "#E69F00", 
                     "LAML-CPU" = "#377EB8", 
                     "LAML-GPU" = "#4DAF4A")
 
@@ -135,7 +135,7 @@ combined_plots <- combined_plots +
 print(combined_plots)
 
 # Save the combined plot
-ggsave("/Users/gc3045/laml_experiments/rebuttal/scalability_parameter_estimation/laml_parameter_estimation_comparison.pdf", 
+ggsave("/Users/gc3045/git/laml-experiments/sim_tlscl/Results/scalability_parameter_estimation/laml_parameter_estimation_comparison.cbf.pdf", 
        combined_plots, width = 18, height = 13, dpi = 300)
 
 # Create new plot with num em_iterations
@@ -222,5 +222,5 @@ print(em_iterations_plot)
 
 
 # Save the plot
-ggsave("/Users/gc3045/laml_experiments/rebuttal/scalability_parameter_estimation/em_iterations_comparison.pdf", 
+ggsave("/Users/gc3045/git/laml-experiments/sim_tlscl/Results/scalability_parameter_estimation/em_iterations_comparison.pdf", 
        em_iterations_plot, width = 12, height = 8)

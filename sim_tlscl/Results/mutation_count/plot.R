@@ -1,4 +1,4 @@
-setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/sim_tlscl/Results/mutation_count")
+setwd("/Users/gc3045/git/laml-experiments/sim_tlscl/Results/mutation_count")
 
 require(ggplot2)
 
@@ -6,31 +6,51 @@ d = read.table("count_mutations.txt",header=T)
 
 d$method = factor(d$method,levels = c("Cass-greedy","NJ","Startle","Problin"),labels=c("Cass-greedy","Neighbor-Joining","Startle-NNI","LAML"))
 
-ggplot(d,aes(x=trueNmus,y=estNmus,color=method)) + 
-  stat_summary(size=0.2,alpha=1) + 
-  geom_line(stat="summary") + 
-  #geom_smooth(size=1,method="lm",se = F) + 
-  geom_abline(linetype=1) +
-  xlab("True number of mutations") + ylab("Estimated number of mutations") + 
-  guides(fill=guide_legend(nrow=2,byrow=TRUE)) + 
-  theme_classic() + theme(legend.title = element_blank(), legend.position = c(0.6,0.22))
-  
-ggsave("count_mutations.pdf",width=5,height=5)
+okabe_ito <- c(
+  "#E69F00", "#56B4E9", "#009E73",
+  "black", "#0072B2", "#D55E00", "#CC79A7"
+)
+
+ggplot(d, aes(x = trueNmus, y = estNmus, colour = method)) +
+  stat_summary(size = 0.2, alpha = 1) +
+  geom_line(stat = "summary") +
+  geom_abline(linetype = 1) +
+  xlab("True number of mutations") +
+  ylab("Estimated number of mutations") +
+  scale_colour_manual(values = okabe_ito[seq_along(unique(d$method))]) +
+  guides(colour = guide_legend(nrow = 2, byrow = TRUE)) +
+  theme_classic() +
+  theme(
+    legend.title    = element_blank(),
+    legend.position = c(0.60, 0.22)
+  )
+# ggsave("count_mutations.pdf",width=5,height=5)
+ggsave("count_mutations.cbf.pdf",width=5,height=5)
 
 ggplot(d,aes(x=method,y=estNmus-trueNmus,fill=method)) + geom_boxplot(outlier.size = 0.2) + 
   stat_summary() + ylab("estimated - true") + 
   geom_hline(yintercept = 0) + theme_classic() + 
   theme(legend.position="None",axis.title.x = element_blank())
-ggsave("count_mutations_boxplot.pdf",width=4,height=4)
+#ggsave("count_mutations_boxplot.pdf",width=4,height=4)
 
-ggplot(d,aes(x=collision,y=abs(estNmus-trueNmus),color=method)) + 
-  stat_summary_bin(binwidth = 0.1) +
-  geom_line(stat="summary_bin",binwidth=0.1) + 
-  geom_smooth() + 
-  xlab("Collision probability") + ylab("Absolute error") +
-  theme_classic() + theme(legend.title = element_blank(), legend.position = "None") +
-  scale_x_continuous(breaks = c(0.1,0.3,0.5,0.7,0.9))
-ggsave("collision_vs_error.pdf",width=4,height=4)
+ggplot(d,
+       aes(x = collision,
+           y = abs(estNmus - trueNmus),
+           colour = method)) +
+  stat_summary_bin(binwidth = 0.1, size = 0.4) +              # binned means
+  geom_line(stat = "summary_bin", binwidth = 0.1) +           # connect them
+  geom_smooth(se = FALSE, size = 0.6) +                       # trend lines
+  scale_colour_manual(values = okabe_ito[seq_along(unique(d$method))]) +
+  scale_x_continuous(breaks = c(0.1, 0.3, 0.5, 0.7, 0.9)) +
+  xlab("Collision probability") +
+  ylab("Absolute error") +
+  theme_classic() +
+  theme(
+    legend.title    = element_blank(),
+    legend.position = "none"         # keep legend suppressed
+  )
+#ggsave("collision_vs_error.pdf",width=4,height=4)
+ggsave("collision_vs_error.cbf.pdf",width=4,height=4)
 
 #########Correlation with collision
 with(d[d$method == "Startle-NNI",],cor(collision,abs(trueNmus-estNmus)))

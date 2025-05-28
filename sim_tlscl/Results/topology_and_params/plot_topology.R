@@ -6,7 +6,8 @@ loadfonts(device="pdf")
 library("stringr")                       # Load stringr package
 library("ggplot2")
 library("reshape")
-setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/sim_tlscl/Results/topology_and_params")
+setwd("/Users/gc3045/git/laml-experiments/sim_tlscl/Results/topology_and_params/")
+
 dclear_rf <- read.table("dclear_output.csv", sep=",", header=T)
 #dclear_rf['modelcondition'] <- str_split_fixed(dclear_rf$modelcond, "p", 2)
 dclear_rf['ModelCond'] <- paste(dclear_rf$modelcond, dclear_rf$num_sampled, dclear_rf$rep, sep="_")
@@ -45,25 +46,37 @@ colnames(rfdist) = c('tcount', 'ModelCond', 'Cass-greedy', 'DCLEAR (KRD)', 'Neig
 df = melt(rfdist, id=c("tcount", "sProp", "modelcondition", "ModelCond"))
 ggplot2::guides(color=ggplot2::guide_legend(ncol=2))
 
-ggplot(df, aes(x=sProp/4, y=value, color=variable)) +
-  stat_summary(size=0.2) + 
-  geom_line(stat='summary') + 
-  guides(color=guide_legend(ncol=2)) + 
-  ylab("RF Error") + 
+okabe_ito <- c(
+               "#E69F00",  # orange
+               "#56B4E9",  # sky-blue
+               "#009E73",  # bluish-green
+               "#0072B2",  # blue
+               "#000000",  # black
+               "#D55E00",  # vermillion
+               "#CC79A7"  # reddish-purple
+               
+)
+
+ggplot(df, aes(x = sProp/4, y = value, color = variable)) +
+  stat_summary(size = 0.2) +
+  geom_line(stat = "summary") +
+  scale_color_manual(values = okabe_ito[seq_along(unique(df$variable))]) +
+  guides(color = guide_legend(ncol = 2)) +
+  ylab("RF Error") +
   xlab("Heritable Missing (%)") +
-  annotate("text", x=xx/400 + 0.004, y=0.0, label=labels, size=11/.pt) + 
-  scale_x_continuous(breaks = seq(0,0.25,0.25/4)) +
-  theme_classic() + 
-  theme(legend.position = c(0.39,0.22), legend.title = element_blank()) +
-  coord_cartesian(xlim=c(-0.004,0.254), clip="off")  
-  #+
-  # annotate("text", x=-0.026, y=0.7, label="(A)", size=7, family="Times New Roman")
+  annotate("text", x = xx/400 + 0.004, y = 0.0,
+           label = labels, size = 11/.pt) +
+  scale_x_continuous(breaks = seq(0, 0.25, 0.25/4)) +
+  theme_classic() +
+  theme(legend.position = c(0.39, 0.22),
+        legend.title = element_blank()) +
+  coord_cartesian(xlim = c(-0.004, 0.254), clip = "off")
 
 mean(df[df$sProp == 0.0 & df$variable == "Startle-NNI",]$value) - mean(df[df$sProp == 0.0 & df$variable == "sc-MAIL",]$value)
 mean(df[df$sProp == 1.0 & df$variable == "Startle-NNI",]$value) - mean(df[df$sProp == 1.0 & df$variable == "sc-MAIL",]$value)
 
 
-ggsave("sim_tlscl_rfdist.pdf", width=4, height=4, family="Times")
+ggsave("sim_tlscl_rfdist.cbf.pdf", width=4, height=4, family="Times")
 
 
       mean(rfdist$`Startle-NNI`[rfdist$modelcondition == 's0d100']) # 0.440225

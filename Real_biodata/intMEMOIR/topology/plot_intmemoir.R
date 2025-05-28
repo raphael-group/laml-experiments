@@ -1,4 +1,4 @@
-setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/Real_biodata/intMEMOIR/topology")
+setwd("/Users/gc3045/git/laml-experiments/Real_biodata/intMEMOIR/topology")
 
 require(ggplot2)
 library('stringr')
@@ -97,7 +97,7 @@ p4 <- ggplot(dfm, aes(x=NumNodes, y=value, color=variable))  +
   #geom_line() +
   geom_smooth(method = "loess", se = FALSE, span = 0.3) +
   stat_summary(alpha=0.5) +
-  ylab("RF Distance from sc-MAIL") + 
+  ylab("RF Distance from LAML") + 
   xlab("Number of Cells") +
   labs(color="Method") +#, title="intMEMOIR Topology RF Comparison") + 
   theme_classic() 
@@ -106,8 +106,32 @@ mean(dfm[dfm$variable == "Startle-NNI",]$value, na.rm=TRUE) # 0.312
 mean(dfm[dfm$variable == "Cassiopeia",]$value, na.rm=TRUE) # 0.462
 mean(dfm[dfm$variable == "TiDeTree (Pub)",]$value, na.rm=TRUE) # 0.462
 
-grid_plots <- grid.arrange(p1, p4, nrow = 2)
-ggsave("/Users/gc3045/scmail_v1/sc-mail-experiments/Real_biodata/intMEMOIR/topology/intmemoir_all_rfcmp_across_numnodes.pdf", grid_plots, width=8, height=5)
+# make color blind friendly 
+ok_cols <- c(
+  "#000000", # black
+  "#E69F00", # orange
+  "#56B4E9", # sky-blue
+  "#009E73", # bluish-green
+  "#F0E442", # yellow
+  "#0072B2", # blue
+  "#D55E00", # vermilion
+  "#CC79A7"  # reddish-purple
+)
+
+p1_cb <- p1 +
+  scale_colour_manual(values = ok_cols) +
+  scale_fill_manual(values = ok_cols)
+
+p4_cb <- p4 +
+  scale_colour_manual(values = ok_cols) +
+  scale_fill_manual(values = ok_cols)
+p1_cb
+p4_cb
+
+grid_plots <- grid.arrange(p1_cb, p4_cb, nrow = 2)
+#ggsave("/Users/gc3045/scmail_v1/sc-mail-experiments/Real_biodata/intMEMOIR/topology/intmemoir_all_rfcmp_across_numnodes.pdf", grid_plots, width=8, height=5)
+
+ggsave("intmemoir_all_rfcmp_across_numnodes.cbf.pdf", grid_plots, width=8, height=5)
 
 
 

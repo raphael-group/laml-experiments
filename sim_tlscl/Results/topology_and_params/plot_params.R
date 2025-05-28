@@ -1,4 +1,4 @@
-setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/sim_tlscl/Results/topology_and_params")
+setwd("/Users/gc3045/git/laml-experiments/sim_tlscl/Results/topology_and_params")
 library(extrafont)
 font_import() 
 loadfonts(device="pdf")
@@ -76,6 +76,7 @@ mint_green <- "#00BF7D"
 blue <- "#00B0F6"
 purple <- "#E76BF3"
 
+
 ggplot(df1[df1$Method != "true",], aes(x=nu, y=phi, color=Method,group=Method,shape=modelcondition, label="0.45")) + 
   geom_point(alpha=0.5,size=1) +
   # geom_text(x=0.25, y = 0, label="s0d100") + 
@@ -142,4 +143,104 @@ ggplot(df1[df1$Method != "true",], aes(x=nu, y=phi, color=Method,group=Method,sh
   #annotate("text", x=-0.05, y=0.28, label="(B)", clip="off", family="Times New Roman", size=7)
 #guides(color = guide_legend(nrow = 2))
 
-ggsave("sim_tlscl_estmissingparams.pdf", width=5, height=5)
+
+#ggsave("sim_tlscl_estmissingparams.pdf", width=5, height=5)
+
+
+
+# colorblind friendly version
+library(ggplot2)
+
+# ── Okabe–Ito colours for the four methods ────────────────────────────
+ok_cols <- c(
+  `Cassiopeia-\nGreedy`      = "#E69F00",  # vermillion
+  `Neighbor-Joining` = "#56B4E9",  # blue
+  `Startle-NNI`      = "#009E73",  # bluish green
+  ProbLin            = "black"   # reddish purple
+)
+
+ggplot(
+  df1[df1$Method != "true", ],
+  aes(x = nu, y = phi,
+      colour = Method, group = Method,
+      shape  = modelcondition)
+) +
+  geom_point(alpha = 0.5, size = 1) +
+  scale_colour_manual(values = ok_cols, guide = "none") +
+  scale_shape_manual(values = c(0, 2, 6, 9, 10)) +
+  
+  # ── Cass-greedy row ──────────────────────────────────────────────────
+  annotate("text",  x = x_s + 0.005, y = y_s + 0.02,
+           label = labels_cass, size = 8/.pt) +
+  annotate("point", x = 0.420 - 0.021, y = 0.015 + 0.02,
+           colour = ok_cols["Cassiopeia-\nGreedy"], shape = 2,  size = 2) +
+  annotate("point", x = 0.350 - 0.021, y = 0.080 + 0.02,
+           colour = ok_cols["Cassiopeia-\nGreedy"], shape = 13, size = 2) +
+  annotate("point", x = 0.235 - 0.021, y = 0.144 + 0.02,
+           colour = ok_cols["Cassiopeia-\nGreedy"], shape = 9,  size = 2) +
+  annotate("point", x = 0.150 - 0.021, y = 0.200 + 0.02,
+           colour = ok_cols["Cassiopeia-\nGreedy"], shape = 6,  size = 2) +
+  annotate("point", x = 0.045 - 0.021, y = 0.250 + 0.02,
+           colour = ok_cols["Cassiopeia-\nGreedy"], shape = 0,  size = 2) +
+  
+  # ── Neighbor-Joining row ────────────────────────────────────────────
+  annotate("text",  x = x_s + 0.005, y = y_s + 0.01,
+           label = labels_nj, size = 8/.pt) +
+  annotate("point", x = 0.420 - 0.021, y = 0.015 + 0.01,
+           colour = ok_cols["Neighbor-Joining"], shape = 2,  size = 2) +
+  annotate("point", x = 0.350 - 0.021, y = 0.080 + 0.01,
+           colour = ok_cols["Neighbor-Joining"], shape = 13, size = 2) +
+  annotate("point", x = 0.235 - 0.021, y = 0.144 + 0.01,
+           colour = ok_cols["Neighbor-Joining"], shape = 9,  size = 2) +
+  annotate("point", x = 0.150 - 0.021, y = 0.200 + 0.01,
+           colour = ok_cols["Neighbor-Joining"], shape = 6,  size = 2) +
+  annotate("point", x = 0.045 - 0.021, y = 0.250 + 0.01,
+           colour = ok_cols["Neighbor-Joining"], shape = 0,  size = 2) +
+  
+  # ── Startle-NNI row ─────────────────────────────────────────────────
+  annotate("text",  x = x_s + 0.005, y = y_s,
+           label = labels_startle, size = 8/.pt) +
+  annotate("point", x = 0.420 - 0.021, y = 0.015,
+           colour = ok_cols["Startle-NNI"], shape = 2,  size = 2) +
+  annotate("point", x = 0.350 - 0.021, y = 0.080,
+           colour = ok_cols["Startle-NNI"], shape = 13, size = 2) +
+  annotate("point", x = 0.235 - 0.021, y = 0.144,
+           colour = ok_cols["Startle-NNI"], shape = 9,  size = 2) +
+  annotate("point", x = 0.150 - 0.021, y = 0.200,
+           colour = ok_cols["Startle-NNI"], shape = 6,  size = 2) +
+  annotate("point", x = 0.045 - 0.021, y = 0.250,
+           colour = ok_cols["Startle-NNI"], shape = 0,  size = 2) +
+  
+  # ── ProbLin row ─────────────────────────────────────────────────────
+  annotate("text",  x = x_s + 0.005, y = y_s - 0.01,
+           label = labels_problin, size = 8/.pt, fontface = 2) +
+  annotate("point", x = 0.420 - 0.021, y = 0.015 - 0.01,
+           colour = ok_cols["ProbLin"], shape = 2,  size = 2) +
+  annotate("point", x = 0.350 - 0.021, y = 0.080 - 0.01,
+           colour = ok_cols["ProbLin"], shape = 13, size = 2) +
+  annotate("point", x = 0.235 - 0.021, y = 0.144 - 0.01,
+           colour = ok_cols["ProbLin"], shape = 9,  size = 2) +
+  annotate("point", x = 0.150 - 0.021, y = 0.200 - 0.01,
+           colour = ok_cols["ProbLin"], shape = 6,  size = 2) +
+  annotate("point", x = 0.045 - 0.021, y = 0.250 - 0.01,
+           colour = ok_cols["ProbLin"], shape = 0,  size = 2) +
+  
+  # ── “True” reference points ────────────────────────────────────────
+  geom_point(data = df1[df1$Method == "true", ],
+             aes(x = nu, y = phi, shape = modelcondition),
+             colour = "black", fill = "black", size = 3.5) +
+  
+  # ── Axes, legend, theme ────────────────────────────────────────────
+  xlab("Heritable Missing Rate") +
+  ylab("Dropout Missing Rate") +
+  coord_cartesian(xlim = c(0, 0.45), clip = "off") +
+  theme_classic() +
+  guides(shape = guide_legend(nrow = 3, order = 1)) +
+  theme(
+    legend.position  = c(0.75, 0.94),
+    legend.direction = "vertical",
+    legend.title     = element_blank()
+  )
+
+
+ggsave("sim_tlscl_estmissingparams.cbf.pdf", width=5, height=5)

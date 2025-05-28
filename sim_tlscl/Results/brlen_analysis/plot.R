@@ -1,4 +1,4 @@
-setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/sim_tlscl/Results/brlen_analysis")
+setwd("/Users/gc3045/git/laml-experiments/sim_tlscl/Results/brlen_analysis")
 
 require(ggplot2)
 library(ggpubr)
@@ -30,17 +30,27 @@ ggplot(dm,aes(x=d2root,y=value/trueBrlen,color=variable)) +
   theme_classic() + theme(legend.title = element_blank(),legend.position = c(0.8,0.3))
 ggsave("brlen_ratio_trueTopo.pdf",width=6,height=4)
 
-ggplot(dm,aes(x=d2root,y=value/trueBrlen,color=variable)) +
-  #geom_point() +
-  stat_summary_bin(size=0.1,bins=50)+ 
-  #stat_summary_bin(geom="line",bins=50)+ 
-  geom_hline(yintercept = 1) + 
-  geom_smooth() + 
-  #facet_wrap(~model) + 
+# Okabe–Ito (skip black)
+okabe_ito <- c(
+  "#E69F00", "#56B4E9", "#009E73",
+  "black", "#0072B2", "#D55E00", "#CC79A7"
+)
+
+ggplot(dm, aes(x = d2root,
+               y = value / trueBrlen,
+               colour = variable)) +
+  stat_summary_bin(size = 0.1, bins = 50) +     # binned means
+  geom_hline(yintercept = 1) +
+  geom_smooth(se = FALSE, size = 0.6) +          # trend line
   xlab("Distance to root") +
   ylab("Ratio to true branch length") +
-  theme_classic() + theme(legend.title = element_blank(),legend.position = c(0.27,0.175))
-ggsave("brlen_ratio_trueTopo_nofacet.pdf",width=4,height=4)
+  scale_colour_manual(values = okabe_ito[seq_along(unique(dm$variable))]) +
+  theme_classic() +
+  theme(
+    legend.title    = element_blank(),
+    legend.position = c(0.27, 0.175)
+  )
+ggsave("brlen_ratio_trueTopo_nofacet.cbf.pdf",width=4,height=4)
 
 
 ggplot(dm,aes(x=trueBrlen/0.095,y=value,color=variable)) + 

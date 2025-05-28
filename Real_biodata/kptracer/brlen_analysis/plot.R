@@ -1,4 +1,4 @@
-setwd("/Users/gc3045/scmail_v1/sc-mail-experiments/Real_biodata/kptracer/brlen_analysis")
+setwd("/Users/gc3045/git/laml-experiments/Real_biodata/kptracer/brlen_analysis")
 
 d = read.table("MP_ML_d2root.txt",header=T)
 
@@ -34,7 +34,42 @@ ggplot(dE_melt,aes(x=dE_type,y=value,group=variable,fill=variable)) +
   xlab("Expression distance") +
   ylab("Mutual information") + 
   theme_classic() + theme(legend.position = "bottom",legend.title = element_blank())
-ggsave("dT_vs_dE_mutualInfo.pdf",width=4,height=4)
+
+# drop UMAP and plot colorblind friendly
+
+okabe_ito <- c(
+  "#E69F00", # orange
+  "#56B4E9", # sky blue
+  "#009E73", # bluish green
+  "#F0E442", # yellow
+  "#0072B2", # blue
+  "#D55E00", # vermillion
+  "#CC79A7", # reddish purple
+  "#000000"  # black
+)
+
+ggplot(
+  dE_melt %>%                              # original data…
+    filter(dE_type != "umap"),             # …but drop the umap rows
+  aes(x = dE_type, y = value,
+      group = variable, fill = variable)
+) +
+  geom_col(position = position_dodge(0.8), colour = "black") +
+  facet_wrap(~ sample, scales = "free", nrow = 2) +
+  scale_fill_manual(
+    values = okabe_ito[seq_len(dplyr::n_distinct(dE_melt$variable))]
+  ) +
+  labs(
+    x    = "Expression distance",
+    y    = "Mutual information",
+    fill = NULL
+  ) +
+  theme_classic() +
+  theme(
+    legend.position = "bottom",
+    legend.title    = element_blank()
+  )
+ggsave("dT_vs_dE_mutualInfo.cbf.pdf",width=4,height=4)
 
 
 ggplot(dE_melt[dE_melt$sample == "3432_NT_T1",],aes(x=dE_type,y=value,group=variable,fill=variable)) + 
